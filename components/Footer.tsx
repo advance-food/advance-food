@@ -31,8 +31,12 @@ export default function Footer() {
               onClick={() => scrollToSection("home")}
               className="flex items-center gap-2 cursor-pointer text-left"
             >
-              <div className="h-10 w-10 rounded-lg bg-brand-primary flex items-center justify-center text-white font-extrabold text-xl">
-                AF
+              <div className="h-10 w-10 flex items-center justify-center overflow-hidden">
+                <img
+                  src="/logo.png"
+                  alt="Advance Food Logo"
+                  className="h-full w-full object-contain"
+                />
               </div>
               <div>
                 <span className="font-extrabold text-xl tracking-tight text-white block">

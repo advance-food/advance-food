@@ -58,8 +58,12 @@ export default function Header() {
             onClick={() => scrollToSection("home")}
             className="flex items-center gap-2 cursor-pointer group text-left"
           >
-            <div className="h-10 w-10 rounded-lg bg-brand-primary flex items-center justify-center text-white font-extrabold text-xl shadow-md group-hover:scale-105 transition-transform">
-              AF
+            <div className="h-10 w-10 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
+              <img
+                src="/logo.png"
+                alt="Advance Food Logo"
+                className="h-full w-full object-contain"
+              />
             </div>
             <div>
               <span className={`font-extrabold text-lg sm:text-xl tracking-tight transition-colors block ${isScrolled ? "text-brand-dark group-hover:text-brand-primary" : "text-white group-hover:text-orange-200"
@@ -125,8 +129,12 @@ export default function Header() {
           {/* Drawer Top Branding and Close */}
           <div className="flex items-center justify-between pb-6 border-b border-gray-100">
             <div className="flex items-center gap-2">
-              <div className="h-9 w-9 rounded-lg bg-brand-primary flex items-center justify-center text-white font-bold text-lg">
-                AF
+              <div className="h-9 w-9 flex items-center justify-center overflow-hidden">
+                <img
+                  src="/logo.png"
+                  alt="Advance Food Logo"
+                  className="h-full w-full object-contain"
+                />
               </div>
               <span className="font-bold text-lg tracking-tight text-brand-dark">
                 Advance Food
