@@ -48,8 +48,8 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 h-20"
-            : "bg-transparent h-24"
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 h-20"
+          : "bg-transparent h-24"
           } flex items-center`}
       >
         <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -91,12 +91,12 @@ export default function Header() {
             <a
               href="tel:+917622942202"
               className={`flex items-center gap-2 text-sm font-bold px-4 py-2 rounded-full border transition-all duration-300 ${isScrolled
-                  ? "border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white"
-                  : "border-white/40 text-white hover:bg-white hover:text-brand-dark"
+                ? "border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white"
+                : "border-white/40 text-white hover:bg-white hover:text-brand-dark"
                 }`}
             >
               <PhoneCall size={15} />
-              <span>+91 76229 42202</span>
+              <span>+91 9825895232</span>
             </a>
           </nav>
 
