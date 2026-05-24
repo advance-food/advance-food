@@ -26,7 +26,7 @@ export default function CTABanner({ onContactClick }: CTABannerProps) {
     <section id="why-choose-us" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="relative bg-brand-primary rounded-3xl py-16 px-6 sm:px-12 text-center flex flex-col items-center justify-center shadow-xl overflow-hidden group">
         {/* Subtle visual glows overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-linear-to-r from-orange-600/10 to-amber-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-linear-to-r from-sky-600/10 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         <div className="absolute -top-24 -left-24 w-64 h-64 bg-white/5 rounded-full filter blur-xl"></div>
         <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-black/5 rounded-full filter blur-xl"></div>
 
@@ -34,7 +34,7 @@ export default function CTABanner({ onContactClick }: CTABannerProps) {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
             Ready to Partner with Advance Food?
           </h2>
-          <p className="text-base sm:text-lg text-orange-100/90 max-w-2xl mt-4 leading-relaxed font-semibold">
+          <p className="text-base sm:text-lg text-sky-100/90 max-w-2xl mt-4 leading-relaxed font-semibold">
             Connect with our global export and processing specialists today. Get exact custom specification sheets, transparent containers pricing, and reliable delivery shipping schedules.
           </p>
 
@@ -42,7 +42,7 @@ export default function CTABanner({ onContactClick }: CTABannerProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8 w-full sm:w-auto">
             <button
               onClick={onContactClick}
-              className="w-full sm:w-auto flex items-center justify-center gap-2 bg-brand-secondary text-white hover:bg-brand-secondary/90 px-8 py-4 rounded-xl font-bold text-base transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 cursor-pointer"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-brand-primary hover:bg-brand-primary hover:text-white border border-transparent hover:border-white px-8 py-4 rounded-xl font-bold text-base transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 cursor-pointer"
             >
               <MessageSquare size={18} />
               <span>Contact Us Today</span>

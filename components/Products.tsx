@@ -52,7 +52,7 @@ export default function Products({ onProductSelect }: ProductsProps) {
 
   return (
     <section id="products" className="py-20 md:py-28 bg-gray-50 relative">
-      <div className="absolute top-0 left-0 w-64 h-64 bg-orange-50/40 rounded-full filter blur-3xl -z-10"></div>
+      <div className="absolute top-0 left-0 w-64 h-64 bg-sky-50/40 rounded-full filter blur-3xl -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Headers */}
@@ -85,7 +85,7 @@ export default function Products({ onProductSelect }: ProductsProps) {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute bottom-4 left-6 z-20">
-                  <span className="text-xs font-bold text-orange-200 uppercase tracking-widest block">
+                  <span className="text-xs font-bold text-sky-200 uppercase tracking-widest block">
                     {cat.subtitle}
                   </span>
                   <h3 className="text-2xl font-bold text-white mt-1">

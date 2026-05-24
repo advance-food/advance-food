@@ -32,7 +32,7 @@ export default function Hero({ onGetQuoteClick }: HeroProps) {
     >
       {/* Visual glowing elements for deep micro-animation premium feel */}
       <div className="absolute top-1/4 left-1/10 w-96 h-96 bg-brand-primary/10 rounded-full filter blur-3xl -z-10 animate-pulse"></div>
-      <div className="absolute bottom-1/4 right-1/10 w-96 h-96 bg-amber-500/10 rounded-full filter blur-3xl -z-10 animate-pulse" style={{ animationDelay: "2s" }}></div>
+      <div className="absolute bottom-1/4 right-1/10 w-96 h-96 bg-sky-500/10 rounded-full filter blur-3xl -z-10 animate-pulse" style={{ animationDelay: "2s" }}></div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center flex flex-col items-center animate-fade-in-up">
         {/* Milestone Pill indicator */}
@@ -42,8 +42,8 @@ export default function Hero({ onGetQuoteClick }: HeroProps) {
         </div>
 
         {/* Brand Main Slogan Headings */}
-        <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-          ADVANCE FOOD
+        <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight drop-shadow-md">
+          Advance <span className="bg-gradient-to-r from-sky-400 via-sky-300 to-sky-500 bg-clip-text text-transparent">Food</span><span className="text-sky-400">.</span>
         </h1>
         <p className="text-base sm:text-lg text-white/80 max-w-2xl mt-6 leading-relaxed">
           Premium processor and exporter of dehydrated vegetables and specialty spice powders. Connecting Indian agricultural excellence with international markets across 50+ countries.

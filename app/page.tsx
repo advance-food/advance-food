@@ -66,7 +66,7 @@ export default function Home() {
             <div className="bg-brand-primary p-6 text-white flex justify-between items-center">
               <div>
                 <h3 className="text-xl font-bold">Request a Business Quote</h3>
-                <p className="text-xs text-orange-100 mt-1">
+                <p className="text-xs text-sky-100 mt-1">
                   Fill out the specifications to dispatch an enquiry directly to our team.
                 </p>
               </div>

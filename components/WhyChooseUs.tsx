@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
   return (
     <section id="about" className="py-20 md:py-28 bg-white relative">
       {/* Decorative vector shape background */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-orange-50/40 rounded-full filter blur-3xl -z-10"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 bg-sky-50/40 rounded-full filter blur-3xl -z-10"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title Headers */}
@@ -48,7 +48,7 @@ export default function WhyChooseUs() {
               className="bg-white p-8 rounded-2xl border border-gray-150 shadow-xs hover:shadow-xl hover:border-brand-primary/20 hover:-translate-y-1 transition-all duration-300 flex flex-col group"
             >
               {/* Icon Holder */}
-              <div className="h-16 w-16 rounded-xl bg-orange-50 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-primary/10 transition-all duration-300">
+              <div className="h-16 w-16 rounded-xl bg-sky-50 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-primary/10 transition-all duration-300">
                 {card.icon}
               </div>
               <h3 className="text-xl font-bold text-gray-900 group-hover:text-brand-primary transition-colors">

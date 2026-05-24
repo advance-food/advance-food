@@ -66,13 +66,13 @@ export default function Header() {
               />
             </div>
             <div>
-              <span className={`font-extrabold text-lg sm:text-xl tracking-tight transition-colors block ${isScrolled ? "text-brand-dark group-hover:text-brand-primary" : "text-white group-hover:text-orange-200"
+              <span className={`font-extrabold text-lg sm:text-xl tracking-tight transition-colors block ${isScrolled ? "text-brand-dark group-hover:text-brand-primary" : "text-white group-hover:text-sky-200"
                 }`}>
                 Advance Food
               </span>
               <span className={`text-[10px] font-semibold tracking-wider uppercase block -mt-1 transition-colors ${isScrolled ? "text-gray-500" : "text-white/70"
                 }`}>
-                Export & Import
+                Import & Export
               </span>
             </div>
           </button>
@@ -155,7 +155,7 @@ export default function Header() {
               <button
                 key={link.target}
                 onClick={() => scrollToSection(link.target)}
-                className="text-left font-bold text-lg py-2 px-3 rounded-lg text-gray-800 hover:bg-orange-50 hover:text-brand-primary transition-all cursor-pointer"
+                className="text-left font-bold text-lg py-2 px-3 rounded-lg text-gray-800 hover:bg-sky-50 hover:text-brand-primary transition-all cursor-pointer"
               >
                 {link.label}
               </button>

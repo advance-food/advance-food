@@ -7,9 +7,9 @@ interface WhatsAppButtonProps {
   message?: string;
 }
 
-export default function WhatsAppButton({ 
-  phoneNumber = "917622942202", 
-  message = "Hello Advance Food! I am visiting your website and would like to make a business enquiry." 
+export default function WhatsAppButton({
+  phoneNumber = "919825895232",
+  message = "Hello Advance Food! I am visiting your website and would like to make a business enquiry."
 }: WhatsAppButtonProps) {
   const encodedMessage = encodeURIComponent(message);
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -29,7 +29,7 @@ export default function WhatsAppButton({
 
       {/* Dynamic ring effect */}
       <span className="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-75 animate-ping group-hover:animate-none -z-10"></span>
-      
+
       {/* WhatsApp SVG Icon (official white speech bubble with green receiver cutout) */}
       <svg
         className="w-8 h-8"

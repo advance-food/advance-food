@@ -43,7 +43,7 @@ export default function Footer() {
                   Advance Food
                 </span>
                 <span className="text-[10px] text-gray-400 font-semibold tracking-wider uppercase block -mt-1">
-                  Export & Import
+                  Import & Export
                 </span>
               </div>
             </button>
