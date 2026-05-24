@@ -160,7 +160,7 @@ export default function Footer() {
               <div className="flex gap-3 text-sm text-gray-400">
                 <Mail size={16} className="text-brand-primary shrink-0 mt-1" />
                 <div>
-                  <a href="mailto:info.advancefoodind@gmail.com" className="hover:text-white transition-colors block">info.advancefoodind@gmail.com</a>
+                  <a href="mailto:info@advancefood.in" className="hover:text-white transition-colors block">info@advancefood.in</a>
                 </div>
               </div>
             </div>

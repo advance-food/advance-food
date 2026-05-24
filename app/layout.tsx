@@ -4,6 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Advance Food - Celebrating 5 Years of Excellence in Food Export & Import",
   description: "Advance Food - Your trusted partner in global food trade. Premium processor and exporter of dehydrated garlic, dehydrated onion, and specialty spice powders to over 50+ countries.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   keywords: [
     "food export",
     "food import",
