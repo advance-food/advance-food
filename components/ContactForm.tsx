@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send, Loader2, CheckCircle2 } from "lucide-react";
+import { Send, Loader2, CheckCircle2 } from "lucide-react";
 
 interface ContactFormProps {
   preselectedProduct?: string;
@@ -18,8 +18,9 @@ export default function ContactForm({
     name: "",
     email: "",
     phone: "",
-    productType: preselectedProduct || "General Inquiry",
+    subject: preselectedProduct ? `Business Quote Request - ${preselectedProduct}` : "",
     message: "",
+    website: "", // Honeypot spam prevention
   });
 
   const [loading, setLoading] = useState(false);
@@ -41,10 +42,7 @@ export default function ContactForm({
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          isQuote: isModal || formData.productType !== "General Inquiry",
-        }),
+        body: JSON.stringify(formData),
       });
 
       const data = await response.json();
@@ -58,8 +56,9 @@ export default function ContactForm({
         name: "",
         email: "",
         phone: "",
-        productType: "General Inquiry",
+        subject: "",
         message: "",
+        website: "",
       });
     } catch (err: any) {
       console.error(err);
@@ -68,14 +67,6 @@ export default function ContactForm({
       setLoading(false);
     }
   };
-
-  const productOptions = [
-    "General Inquiry",
-    "Dehydrated Garlic",
-    "Dehydrated Onion",
-    "Specialty Powders",
-    "Custom Industrial Order",
-  ];
 
   const formContent = (
     <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-150 shadow-md">
@@ -104,6 +95,17 @@ export default function ContactForm({
               {error}
             </div>
           )}
+
+          {/* Invisible Honeypot Field for Spam Protection */}
+          <input
+            type="text"
+            name="website"
+            value={formData.website}
+            onChange={handleChange}
+            style={{ display: "none" }}
+            tabIndex={-1}
+            autoComplete="off"
+          />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
@@ -154,22 +156,19 @@ export default function ContactForm({
               />
             </div>
             <div>
-              <label htmlFor="productType" className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">
-                Product Interest
+              <label htmlFor="subject" className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">
+                Subject *
               </label>
-              <select
-                id="productType"
-                name="productType"
-                value={formData.productType}
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                value={formData.subject}
                 onChange={handleChange}
-                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:border-brand-primary focus:bg-white outline-hidden transition-all text-gray-800 font-semibold cursor-pointer"
-              >
-                {productOptions.map((opt) => (
-                  <option key={opt} value={opt}>
-                    {opt}
-                  </option>
-                ))}
-              </select>
+                placeholder="e.g. Bulk dehydrated onion pricing"
+                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:border-brand-primary focus:bg-white outline-hidden transition-all text-gray-800 font-semibold"
+              />
             </div>
           </div>
 
