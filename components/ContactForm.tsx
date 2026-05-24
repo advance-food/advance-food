@@ -20,7 +20,7 @@ export default function ContactForm({
     phone: "",
     subject: preselectedProduct ? `Business Quote Request - ${preselectedProduct}` : "",
     message: "",
-    website: "", // Honeypot spam prevention
+    botTrap: "", // Honeypot spam prevention (unique name to avoid browser autofill)
   });
 
   const [loading, setLoading] = useState(false);
@@ -58,7 +58,7 @@ export default function ContactForm({
         phone: "",
         subject: "",
         message: "",
-        website: "",
+        botTrap: "",
       });
     } catch (err: any) {
       console.error(err);
@@ -99,8 +99,8 @@ export default function ContactForm({
           {/* Invisible Honeypot Field for Spam Protection */}
           <input
             type="text"
-            name="website"
-            value={formData.website}
+            name="botTrap"
+            value={formData.botTrap}
             onChange={handleChange}
             style={{ display: "none" }}
             tabIndex={-1}

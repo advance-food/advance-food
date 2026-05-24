@@ -7,13 +7,13 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, phone, subject, message, website } = body;
+    const { name, email, phone, subject, message, botTrap } = body;
 
     // 1. Honeypot Spam Protection Check
-    // If 'website' field is populated, we suspect a bot.
+    // If 'botTrap' field is populated, we suspect a bot.
     // We return a mock success response immediately to trick the bot while ignoring the submission.
-    if (website) {
-      console.warn("[SPAM CAUGHT] Bot submission detected via honeypot field 'website'. Submitting payload:", { name, email, phone, subject, website });
+    if (botTrap) {
+      console.warn("[SPAM CAUGHT] Bot submission detected via honeypot field 'botTrap'. Submitting payload:", { name, email, phone, subject, botTrap });
       return NextResponse.json({
         success: true,
         message: "Your inquiry has been successfully transmitted. A confirmation email has been dispatched.",
