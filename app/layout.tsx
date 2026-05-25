@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import WhatsAppButton from "../components/WhatsAppButton";
+import { QuoteModalProvider } from "../context/QuoteModalContext";
 
 export const metadata: Metadata = {
   title: "Advance Food - Celebrating 5 Years of Excellence in Food Export & Import",
@@ -40,7 +44,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased scroll-smooth">
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <QuoteModalProvider>
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+          <WhatsAppButton />
+        </QuoteModalProvider>
+      </body>
     </html>
   );
 }

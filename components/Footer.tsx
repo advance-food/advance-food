@@ -1,24 +1,11 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { Clock, Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
 
   return (
     <footer className="bg-brand-dark text-white border-t border-gray-800 relative">
@@ -27,8 +14,8 @@ export default function Footer() {
 
           {/* Column 1: Brand & Logo */}
           <div className="space-y-4">
-            <button
-              onClick={() => scrollToSection("home")}
+            <Link
+              href="/"
               className="flex items-center gap-2 cursor-pointer text-left"
             >
               <div className="h-10 w-10 flex items-center justify-center overflow-hidden">
@@ -46,7 +33,7 @@ export default function Footer() {
                   Import & Export
                 </span>
               </div>
-            </button>
+            </Link>
             <p className="text-sm text-gray-400 leading-relaxed pt-2">
               Connecting premium quality Indian dehydrated vegetables and spice powders to global industrial food markets.
             </p>
@@ -121,20 +108,20 @@ export default function Footer() {
             </h3>
             <div className="flex flex-col gap-3.5">
               {[
-                { label: "Home", target: "home" },
-                { label: "About Us", target: "about" },
-                { label: "Products Catalog", target: "products" },
-                { label: "Why Choose Us", target: "why-choose-us" },
-                { label: "Contact Us", target: "contact" },
+                { label: "Home", target: "/" },
+                { label: "About Us", target: "/about" },
+                { label: "Products Catalog", target: "/products" },
+                { label: "Why Choose Us", target: "/why-choose-us" },
+                { label: "Contact Us", target: "/contact" },
               ].map((link, idx) => (
-                <button
+                <Link
                   key={idx}
-                  onClick={() => scrollToSection(link.target)}
-                  className="text-left text-sm text-gray-400 hover:text-white transition-colors cursor-pointer w-fit group flex items-center gap-1.5"
+                  href={link.target}
+                  className="text-left text-sm text-gray-400 hover:text-white transition-colors cursor-pointer w-fit group flex items-center gap-1.5 animate-pulse-none"
                 >
                   <span className="h-1.5 w-1.5 rounded-full bg-brand-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   <span>{link.label}</span>
-                </button>
+                </Link>
               ))}
             </div>
           </div>
