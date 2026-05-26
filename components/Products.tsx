@@ -1,13 +1,15 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 interface ProductsProps {
   onProductSelect: (productName: string) => void;
+  limit?: number;
 }
 
-export default function Products({ onProductSelect }: ProductsProps) {
+export default function Products({ onProductSelect, limit }: ProductsProps) {
   const categories = [
     {
       title: "Dehydrated Garlic",
@@ -157,9 +159,9 @@ export default function Products({ onProductSelect }: ProductsProps) {
           </p>
         </div>
 
-        {/* Categories Grid - Symmetrical 3x3 Grid */}
+        {/* Categories Grid - Symmetrical Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-          {categories.map((cat, idx) => (
+          {categories.slice(0, limit).map((cat, idx) => (
             <div
               key={idx}
               className="bg-white rounded-2xl overflow-hidden border border-gray-150 shadow-xs hover:shadow-xl hover:border-brand-primary/20 hover:-translate-y-1 transition-all duration-300 flex flex-col group"
@@ -217,7 +219,21 @@ export default function Products({ onProductSelect }: ProductsProps) {
             </div>
           ))}
         </div>
+
+        {limit && categories.length > limit && (
+          <div className="flex justify-center mt-14">
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-2 bg-brand-primary hover:bg-brand-primary/95 text-white font-extrabold px-8 py-4 rounded-xl text-base transition-all duration-300 shadow-md hover:shadow-xl cursor-pointer group"
+            >
+              <span>View All Products</span>
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
 }
+
+

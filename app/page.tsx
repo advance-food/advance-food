@@ -24,7 +24,7 @@ export default function Home() {
       <WhyChooseUs />
 
       {/* Products list with custom spec enquiry hooks */}
-      <Products onProductSelect={(productName) => openQuoteModal(productName)} />
+      <Products limit={3} onProductSelect={(productName) => openQuoteModal(productName)} />
 
       {/* CTA Conversion Banner */}
       <CTABanner onContactClick={() => openQuoteModal("General Inquiry")} />
