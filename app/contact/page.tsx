@@ -135,8 +135,8 @@ export default function ContactPage() {
             {/* Right Real Map Embed Column */}
             <div className="lg:col-span-7 relative">
               <div className="absolute -inset-3 bg-gradient-to-r from-brand-primary/10 to-sky-500/10 rounded-3xl filter blur-2xl -z-10 opacity-70"></div>
-              <div className="bg-white rounded-3xl border border-gray-150/80 p-2 sm:p-3 shadow-xl hover:shadow-2xl transition-all duration-300">
-                <div className="relative rounded-2xl overflow-hidden h-[380px] shadow-inner border border-gray-100">
+              <div className="bg-white rounded-3xl border border-gray-150/80 overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div className="relative overflow-hidden h-[380px] shadow-inner">
                   {/* Google Map IFrame */}
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3714.7335967069176!2d71.76100917604313!3d21.093284585257924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3958de6f9a0c7931%3A0x7d028448ebf5d21b!2sAPMC%20Market%20Yard%2C%20Mahuva!5e0!3m2!1sen!2sin!4v1716650000000!5m2!1sen!2sin"
