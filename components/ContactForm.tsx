@@ -1,7 +1,43 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Send, Loader2, CheckCircle2 } from "lucide-react";
+
+const PRODUCT_CATEGORIES = {
+  "Main Specialties": [
+    "Dehydrated Garlic",
+    "Dehydrated White Onion",
+    "Dehydrated Red/Pink Onion",
+    "Dried Red Chilli",
+    "Cumin Seeds",
+    "Dry Ginger",
+    "Turmeric",
+    "Green Chilli Powder",
+    "Moringa Powder",
+  ],
+  "Other Herbs & Powders": [
+    "Dehy./Fried/Coated Onion",
+    "Lemon Powder",
+    "Tamarind Powder",
+    "Beet Root Flakes/Powder",
+    "Carrot Flakes/Powder",
+    "Fennel (Saunf) Powder",
+    "Coriander (Dhania) Leaves/Powder",
+    "Fenugreek (Methi) Powder",
+    "Ajwain (Carom) Seeds/Powder",
+    "Aamchur/Mango Powder",
+    "Oregano Seasoning Green/Red",
+    "Kasuri Methi Leaves/Powder",
+    "Mint Leaves Powder",
+    "Spinach (Palak) Powder",
+    "Neem Powder",
+    "Amla (Gooseberry) Powder",
+    "Isabgol (Psyllium Husk/Powder)",
+    "Tulsi (Holy Basil) Powder",
+    "Triphala Powder",
+    "Ashwagandha Powder",
+  ],
+};
 
 interface ContactFormProps {
   preselectedProduct?: string;
@@ -18,14 +54,51 @@ export default function ContactForm({
     name: "",
     email: "",
     phone: "",
-    subject: preselectedProduct ? `Business Quote Request - ${preselectedProduct}` : "",
+    subject: preselectedProduct && preselectedProduct !== "General Inquiry" 
+      ? `Business Quote Request - ${preselectedProduct}` 
+      : "",
     message: "",
     botTrap: "", // Honeypot spam prevention (unique name to avoid browser autofill)
   });
 
+  const [selectedProducts, setSelectedProducts] = useState<string[]>(() => {
+    if (preselectedProduct && preselectedProduct !== "General Inquiry") {
+      return [preselectedProduct];
+    }
+    return [];
+  });
+  const [showProductSelector, setShowProductSelector] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (selectedProducts.length > 0) {
+      setFormData((prev) => ({
+        ...prev,
+        subject: `Business Quote Request - ${selectedProducts.join(", ")}`,
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        subject: preselectedProduct === "General Inquiry" ? "General Inquiry" : "",
+      }));
+    }
+  }, [selectedProducts, preselectedProduct]);
+
+  const handleRemoveProduct = (productName: string) => {
+    setSelectedProducts((prev) => prev.filter((p) => p !== productName));
+  };
+
+  const handleToggleProduct = (productName: string) => {
+    setSelectedProducts((prev) =>
+      prev.includes(productName)
+        ? prev.filter((p) => p !== productName)
+        : [...prev, productName]
+    );
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -37,7 +110,7 @@ export default function ContactForm({
     setLoading(true);
     setError("");
     setSuccess(false);
-
+ 
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -52,6 +125,7 @@ export default function ContactForm({
       }
 
       setSuccess(true);
+      setSelectedProducts([]);
       setFormData({
         name: "",
         email: "",
@@ -140,6 +214,100 @@ export default function ContactForm({
             </div>
           </div>
 
+          {/* Premium Multiple Products Selection Area */}
+          <div className="border border-gray-100 rounded-2xl p-4 bg-gray-50/50">
+            <div className="flex justify-between items-center mb-3">
+              <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider">
+                Select Products for Quote
+              </label>
+              <button
+                type="button"
+                onClick={() => setShowProductSelector(!showProductSelector)}
+                className="text-xs font-bold text-brand-primary hover:underline cursor-pointer focus:outline-hidden"
+              >
+                {showProductSelector ? "Hide Product List ▲" : "Manage Products ▼"}
+              </button>
+            </div>
+
+            {/* Selected products pills */}
+            <div className="flex flex-wrap gap-2 mb-1">
+              {selectedProducts.length === 0 ? (
+                <span className="text-xs text-gray-400 italic">
+                  No products selected. (Click 'Manage Products' to select items, or leave blank for general inquiries)
+                </span>
+              ) : (
+                selectedProducts.map((prod) => (
+                  <span
+                    key={prod}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-sky-50 text-brand-primary border border-sky-100 animate-fade-in"
+                  >
+                    {prod}
+                    <button
+                      type="button"
+                      onClick={() => handleRemoveProduct(prod)}
+                      className="hover:text-red-500 font-extrabold text-sm line-height-none focus:outline-hidden cursor-pointer"
+                    >
+                      &times;
+                    </button>
+                  </span>
+                ))
+              )}
+            </div>
+
+            {/* Dropdown Checklist selector */}
+            {showProductSelector && (
+              <div className="mt-4 bg-white border border-gray-200 rounded-xl p-4 shadow-xs animate-fade-in-up">
+                <input
+                  type="text"
+                  placeholder="Search products..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-xs focus:border-brand-primary focus:bg-white outline-hidden transition-all text-gray-800 font-semibold mb-3"
+                />
+                
+                <div className="max-h-48 overflow-y-auto space-y-4 pr-1">
+                  {Object.entries(PRODUCT_CATEGORIES).map(([category, items]) => {
+                    const filteredItems = items.filter(item => 
+                      item.toLowerCase().includes(searchQuery.toLowerCase())
+                    );
+                    if (filteredItems.length === 0) return null;
+                    
+                    return (
+                      <div key={category}>
+                        <h4 className="text-[10px] font-extrabold text-gray-400 uppercase tracking-wider mb-2 border-b border-gray-100 pb-1">
+                          {category}
+                        </h4>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          {filteredItems.map((item) => {
+                            const isChecked = selectedProducts.includes(item);
+                            return (
+                              <label
+                                key={item}
+                                className={`flex items-center gap-2 p-2 rounded-lg border text-xs font-semibold cursor-pointer select-none transition-all ${
+                                  isChecked
+                                    ? "bg-sky-50/50 border-brand-primary/30 text-brand-primary"
+                                    : "bg-gray-50/50 border-gray-150 text-gray-600 hover:bg-gray-100"
+                                }`}
+                              >
+                                <input
+                                  type="checkbox"
+                                  checked={isChecked}
+                                  onChange={() => handleToggleProduct(item)}
+                                  className="rounded-sm border-gray-300 text-brand-primary focus:ring-brand-primary h-3.5 w-3.5 cursor-pointer"
+                                />
+                                <span>{item}</span>
+                              </label>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label htmlFor="phone" className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">
@@ -164,10 +332,15 @@ export default function ContactForm({
                 id="subject"
                 name="subject"
                 required
+                readOnly={selectedProducts.length > 0}
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="e.g. Bulk dehydrated onion pricing"
-                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:border-brand-primary focus:bg-white outline-hidden transition-all text-gray-800 font-semibold"
+                className={`w-full border rounded-xl px-4 py-3 text-sm focus:bg-white outline-hidden transition-all text-gray-800 font-semibold ${
+                  selectedProducts.length > 0
+                    ? "bg-gray-100 border-gray-250 cursor-not-allowed text-gray-400"
+                    : "bg-gray-50 border-gray-200 focus:border-brand-primary"
+                }`}
               />
             </div>
           </div>
