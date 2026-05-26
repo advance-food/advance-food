@@ -23,7 +23,7 @@ export default function Products({ onProductSelect }: ProductsProps) {
         { label: "Packing", value: "20 Kg / 25 Kg" },
         { label: "Quality", value: "A-grade Commercial" },
       ],
-      image: "/images/products/garlic-flakes.jpg",
+      image: "/images/products/garlic-flakes.png",
     },
     {
       title: "Dehydrated White Onion",
@@ -39,7 +39,7 @@ export default function Products({ onProductSelect }: ProductsProps) {
         { label: "Packing", value: "14 Kg / 20 Kg" },
         { label: "Quality", value: "A-grade Commercial" },
       ],
-      image: "/images/products/white-onion-flakes.jpg",
+      image: "/images/products/white-onion-flakes.png",
     },
     {
       title: "Dehydrated Red/Pink Onion",
@@ -55,7 +55,7 @@ export default function Products({ onProductSelect }: ProductsProps) {
         { label: "Packing", value: "14 Kg / 20 Kg" },
         { label: "Quality", value: "A-grade Commercial" },
       ],
-      image: "/images/products/red-onion-flakes.jpg",
+      image: "/images/products/red-onion-flakes.png",
     },
     {
       title: "Dried Red Chilli",
