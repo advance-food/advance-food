@@ -23,7 +23,7 @@ export default function Products({ onProductSelect }: ProductsProps) {
         { label: "Packing", value: "20 Kg / 25 Kg" },
         { label: "Quality", value: "A-grade Commercial" },
       ],
-      image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?q=80&w=600&auto=format&fit=crop",
+      image: "/images/products/garlic-flakes.jpg",
     },
     {
       title: "Dehydrated White Onion",
@@ -39,7 +39,7 @@ export default function Products({ onProductSelect }: ProductsProps) {
         { label: "Packing", value: "14 Kg / 20 Kg" },
         { label: "Quality", value: "A-grade Commercial" },
       ],
-      image: "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=600&auto=format&fit=crop",
+      image: "/images/products/white-onion-flakes.jpg",
     },
     {
       title: "Dehydrated Red/Pink Onion",
@@ -55,7 +55,7 @@ export default function Products({ onProductSelect }: ProductsProps) {
         { label: "Packing", value: "14 Kg / 20 Kg" },
         { label: "Quality", value: "A-grade Commercial" },
       ],
-      image: "https://images.unsplash.com/photo-1508747703725-719777637510?q=80&w=600&auto=format&fit=crop",
+      image: "/images/products/red-onion-flakes.jpg",
     },
     {
       title: "Dried Red Chilli",
@@ -69,7 +69,7 @@ export default function Products({ onProductSelect }: ProductsProps) {
         { label: "Aroma & Heat", value: "Highly Pungent & Spicy" },
         { label: "Quality", value: "Export Grade" },
       ],
-      image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=600&auto=format&fit=crop",
+      image: "/images/products/red-chilli.png",
     },
     {
       title: "Cumin Seeds",
@@ -82,7 +82,7 @@ export default function Products({ onProductSelect }: ProductsProps) {
         { label: "Moisture Content", value: "Low (Safe Long Transit)" },
         { label: "Quality", value: "Pure, Machine Cleaned" },
       ],
-      image: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?q=80&w=600&auto=format&fit=crop",
+      image: "/images/products/cumin-seeds.png",
     },
     {
       title: "Dry Ginger",
@@ -95,7 +95,7 @@ export default function Products({ onProductSelect }: ProductsProps) {
         { label: "Taste & Aroma", value: "Sharp, Spicy & Warm" },
         { label: "Quality", value: "A-grade Clean" },
       ],
-      image: "https://images.unsplash.com/photo-1582515073490-39981397c445?q=80&w=600&auto=format&fit=crop",
+      image: "/images/products/dry-ginger.png",
     },
     {
       title: "Turmeric",
@@ -108,7 +108,7 @@ export default function Products({ onProductSelect }: ProductsProps) {
         { label: "Color", value: "Deep Golden Yellow" },
         { label: "Quality", value: "High Grade Export" },
       ],
-      image: "https://images.unsplash.com/photo-1615485500704-8e990f8300f7?q=80&w=600&auto=format&fit=crop",
+      image: "/images/products/turmeric.png",
     },
     {
       title: "Green Chilli Powder",
@@ -121,7 +121,7 @@ export default function Products({ onProductSelect }: ProductsProps) {
         { label: "Mesh Sizing", value: "60 - 100 Mesh" },
         { label: "Additives", value: "100% Pure & Natural" },
       ],
-      image: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?q=80&w=600&auto=format&fit=crop",
+      image: "/images/products/green-chilli-powder.png",
     },
     {
       title: "Moringa Powder",
@@ -134,7 +134,7 @@ export default function Products({ onProductSelect }: ProductsProps) {
         { label: "Nutrient Retention", value: "Cold Processed / Dry Air Dry" },
         { label: "Quality", value: "Superfood Export Grade" },
       ],
-      image: "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?q=80&w=600&auto=format&fit=crop",
+      image: "/images/products/moringa-powder.png",
     },
   ];
 
