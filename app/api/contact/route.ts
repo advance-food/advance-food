@@ -64,7 +64,7 @@ export async function POST(request: Request) {
     const smtpPass = process.env.SMTP_PASS;
 
     // Target Admin Inbox to receive submissions
-    const adminEmail = "info@advancefood.in";
+    const adminEmail = process.env.ADMIN_EMAIL || smtpUser || "info@advancefood.in";
 
     // Graceful Fallback if SMTP is not fully configured
     if (!smtpHost || !smtpUser || !smtpPass) {
