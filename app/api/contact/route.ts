@@ -108,12 +108,12 @@ export async function POST(request: Request) {
     // Premium Branded Admin Email Layout
     const adminEmailBody = `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #333; max-width: 600px; margin: 0 auto; border: 1px solid #eef2f6; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-        <div style="background: #bc4f24; color: white; padding: 24px; text-align: center;">
+        <div style="background: #0ea5e9; color: white; padding: 24px; text-align: center;">
           <h2 style="margin: 0; font-size: 22px; letter-spacing: 0.5px;">Advance Food</h2>
           <p style="margin: 6px 0 0 0; font-size: 13px; opacity: 0.9;">New Website Form Submission Received</p>
         </div>
         <div style="padding: 24px; background: #ffffff;">
-          <h3 style="margin-top: 0; color: #bc4f24; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; font-size: 16px;">Inquiry Metadata</h3>
+          <h3 style="margin-top: 0; color: #0ea5e9; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; font-size: 16px;">Inquiry Metadata</h3>
           
           <table style="width: 100%; border-collapse: collapse; margin-bottom: 24px;">
             <tr>
@@ -122,7 +122,7 @@ export async function POST(request: Request) {
             </tr>
             <tr>
               <td style="padding: 8px 0; font-weight: bold; color: #777; font-size: 14px;">Email:</td>
-              <td style="padding: 8px 0; color: #333; font-size: 14px;"><a href="mailto:${sanitizedEmail}" style="color: #bc4f24; text-decoration: none;">${sanitizedEmail}</a></td>
+              <td style="padding: 8px 0; color: #333; font-size: 14px;"><a href="mailto:${sanitizedEmail}" style="color: #0ea5e9; text-decoration: none;">${sanitizedEmail}</a></td>
             </tr>
             <tr>
               <td style="padding: 8px 0; font-weight: bold; color: #777; font-size: 14px;">Phone/WhatsApp:</td>
@@ -138,8 +138,8 @@ export async function POST(request: Request) {
             </tr>
           </table>
 
-          <h3 style="color: #bc4f24; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; font-size: 16px; margin-top: 0;">Detailed Message</h3>
-          <div style="background: #fdf6f0; border-left: 4px solid #bc4f24; padding: 18px; margin: 15px 0; border-radius: 6px; font-size: 14px; line-height: 1.6; color: #444; white-space: pre-wrap;">${sanitizedMessage.replace(/\n/g, "<br/>")}</div>
+          <h3 style="color: #0ea5e9; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; font-size: 16px; margin-top: 0;">Detailed Message</h3>
+          <div style="background: #f0f9ff; border-left: 4px solid #0ea5e9; padding: 18px; margin: 15px 0; border-radius: 6px; font-size: 14px; line-height: 1.6; color: #444; white-space: pre-wrap;">${sanitizedMessage.replace(/\n/g, "<br/>")}</div>
         </div>
         <div style="background: #f8fafc; padding: 16px; text-align: center; border-top: 1px solid #eef2f6; font-size: 12px; color: #94a3b8;">
           This message was safely processed and validated by the Advance Food website API.
@@ -153,7 +153,7 @@ export async function POST(request: Request) {
     // Premium Branded Client Thank-You Email Layout
     const clientThankYouBody = `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #333; max-width: 600px; margin: 0 auto; border: 1px solid #eef2f6; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-        <div style="background: #bc4f24; color: white; padding: 28px; text-align: center;">
+        <div style="background: #0ea5e9; color: white; padding: 28px; text-align: center;">
           <h2 style="margin: 0; font-size: 26px; font-weight: 800; letter-spacing: 0.5px;">Advance Food</h2>
           <p style="margin: 6px 0 0 0; font-size: 13px; opacity: 0.95;">Celebrating 5 Years of Excellence in Food Export & Import</p>
         </div>
@@ -162,8 +162,8 @@ export async function POST(request: Request) {
           <p style="font-size: 15px; color: #555;">Thank you for contacting Advance Food! We have successfully received your inquiry regarding <strong>"${sanitizedSubject}"</strong>.</p>
           <p style="font-size: 15px; color: #555;">Our dedicated logistics and sales team is already reviewing your requirements. We will get back to you with detailed specifications, technical options, and a pricing structure within 24 hours.</p>
           
-          <div style="background: #fdf6f0; border-left: 4px solid #bc4f24; padding: 18px; margin: 24px 0; border-radius: 6px;">
-            <h4 style="margin: 0 0 8px 0; color: #bc4f24; font-size: 14px; text-transform: uppercase; tracking-wider: 0.5px;">Submission Summary:</h4>
+          <div style="background: #f0f9ff; border-left: 4px solid #0ea5e9; padding: 18px; margin: 24px 0; border-radius: 6px;">
+            <h4 style="margin: 0 0 8px 0; color: #0ea5e9; font-size: 14px; text-transform: uppercase; tracking-wider: 0.5px;">Submission Summary:</h4>
             <p style="margin: 4px 0; font-size: 13.5px;"><strong>Subject:</strong> ${sanitizedSubject}</p>
             <p style="margin: 4px 0; font-size: 13.5px; color: #666; font-style: italic;">"${sanitizedMessage.length > 150 ? sanitizedMessage.substring(0, 150) + "..." : sanitizedMessage}"</p>
           </div>
@@ -176,7 +176,7 @@ export async function POST(request: Request) {
           <hr style="border: 0; border-top: 1px solid #f1f5f9; margin: 24px 0;" />
           <p style="font-size: 12px; color: #94a3b8; text-align: center; margin: 0; line-height: 1.5;">
             Advance Food | APMC Marketing Yard, Mahuva, Gujarat, India - 364290<br/>
-            Email: <a href="mailto:info@advancefood.in" style="color: #bc4f24; text-decoration: none;">info@advancefood.in</a> | Phone: +91 7622942202
+            Email: <a href="mailto:info@advancefood.in" style="color: #0ea5e9; text-decoration: none;">info@advancefood.in</a> | Phone: +91 7622942202
           </p>
         </div>
       </div>
