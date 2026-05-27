@@ -3,25 +3,11 @@
 import React from "react";
 import {
   Flame,
-  Citrus,
-  Droplet,
-  Heart,
-  Eye,
-  Sparkles,
-  Leaf,
-  Trees,
-  Thermometer,
-  Sun,
-  CookingPot,
-  Clover,
-  Wind,
   Sprout,
-  Shield,
-  Grape,
-  GlassWater,
-  Flower,
-  Scale,
-  Dumbbell,
+  Sparkles,
+  CookingPot,
+  Activity,
+  ChevronRight
 } from "lucide-react";
 
 interface OtherProductsProps {
@@ -29,64 +15,141 @@ interface OtherProductsProps {
 }
 
 export default function OtherProducts({ onProductSelect }: OtherProductsProps) {
-  const otherProducts = [
-    { name: "Dehy./Fried/Coated Onion", icon: Flame },
-    { name: "Lemon Powder", icon: Citrus },
-    { name: "Tamarind Powder", icon: Droplet },
-    { name: "Beet Root Flakes/Powder", icon: Heart },
-    { name: "Carrot Flakes/Powder", icon: Eye },
-    { name: "Fennel (Saunf) Powder", icon: Sparkles },
-    { name: "Coriander (Dhania) Leaves/Powder", icon: Leaf },
-    { name: "Fenugreek (Methi) Powder", icon: Trees },
-    { name: "Ajwain (Carom) Seeds/Powder", icon: Thermometer },
-    { name: "Aamchur/Mango Powder", icon: Sun },
-    { name: "Oregano Seasoning Green/Red", icon: CookingPot },
-    { name: "Kasuri Methi Leaves/Powder", icon: Clover },
-    { name: "Mint Leaves Powder", icon: Wind },
-    { name: "Spinach (Palak) Powder", icon: Sprout },
-    { name: "Neem Powder", icon: Shield },
-    { name: "Amla (Gooseberry) Powder", icon: Grape },
-    { name: "Isabgol (Psyllium Husk/Powder)", icon: GlassWater },
-    { name: "Tulsi (Holy Basil) Powder", icon: Flower },
-    { name: "Triphala Powder", icon: Scale },
-    { name: "Ashwagandha Powder", icon: Dumbbell },
+  const groups = [
+    {
+      title: "Dehydrated Products",
+      icon: Flame,
+      color: "text-amber-500 bg-amber-50 border-amber-100",
+      accentColor: "group-hover:border-amber-400 group-hover:text-amber-600",
+      products: [
+        "Dehydrated Garlic Powder",
+        "Dehydrated White Onion Powder",
+        "Dehydrated Red Onion Powder",
+        "Dehydrated Pink Onion Powder",
+        "Fresh Fried Pink Onion",
+        "Dehydrated Fried Onion",
+        "Coated Fried Onion",
+        "Dehy. Ginger Powder",
+        "Dehy. Aamchur (Mango) Powder",
+        "Dehy. Beet Root Powder",
+        "Dehy. Carrot Powder",
+        "Dehy. Potato Powder",
+        "Dehy. Chives Powder"
+      ]
+    },
+    {
+      title: "Spices & Seeds",
+      icon: Sprout,
+      color: "text-emerald-500 bg-emerald-50 border-emerald-100",
+      accentColor: "group-hover:border-emerald-400 group-hover:text-emerald-600",
+      products: [
+        "Fenugreek Seeds (Methidana)",
+        "Ajwain Seeds (Ajmo)"
+      ]
+    },
+    {
+      title: "Spray Dried Powders",
+      icon: Sparkles,
+      color: "text-sky-500 bg-sky-50 border-sky-100",
+      accentColor: "group-hover:border-sky-400 group-hover:text-sky-600",
+      products: [
+        "Tomato Powder",
+        "Tamrind Powder (Imali)"
+      ]
+    },
+    {
+      title: "Specialty & Seasonings",
+      icon: CookingPot,
+      color: "text-purple-500 bg-purple-50 border-purple-100",
+      accentColor: "group-hover:border-purple-400 group-hover:text-purple-600",
+      products: [
+        "Green Chilli Powder",
+        "Kasuri methi Leaves/Powder",
+        "Curry Leaves/Powder",
+        "Mint Leaves/Powder (Fudina)",
+        "Spinach Powder (Palak)",
+        "Oregano Seasoning"
+      ]
+    },
+    {
+      title: "Herbal Powders",
+      icon: Activity,
+      color: "text-rose-500 bg-rose-50 border-rose-100",
+      accentColor: "group-hover:border-rose-400 group-hover:text-rose-600",
+      products: [
+        "Amla Powder",
+        "Tulsi Powder",
+        "Neem Powder",
+        "Ashwagandha Powder",
+        "Triphala Powder",
+        "Isabgol Powder"
+      ]
+    }
   ];
 
   return (
-    <section className="py-20 bg-white border-t border-gray-100">
+    <section className="pt-10 pb-20 bg-gray-50 relative overflow-hidden">
+      {/* Background visual graphics */}
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-sky-50/40 rounded-full filter blur-3xl -z-10"></div>
+      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-emerald-50/20 rounded-full filter blur-3xl -z-10"></div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Badge & Headers */}
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold bg-sky-50 text-brand-primary border border-sky-100 uppercase tracking-wider">
-            More Products
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-extrabold bg-sky-50 text-brand-primary border border-sky-100 uppercase tracking-widest">
+            Extended Catalog
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-4 leading-tight">
-            Other Products <span className="text-brand-primary">We Offer</span>
+            Our Specialty <span className="text-brand-primary">Product Groups</span>
           </h2>
           <div className="h-1.5 w-16 bg-brand-primary mx-auto mt-4 rounded-full"></div>
           <p className="text-base text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
-            We also manufacture and export a wide range of herbs, powders, and specialty ingredients.
+            In addition to our primary specialties, we manufacture, process, and supply a highly diverse range of custom agricultural ingredients globally.
           </p>
         </div>
 
-        {/* Responsive Grid of Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-          {otherProducts.map((product, idx) => {
-            const IconComponent = product.icon;
+        {/* Sectional Category Rows - Completely avoids height discrepancy */}
+        <div className="space-y-6">
+          {groups.map((group, groupIdx) => {
+            const IconComponent = group.icon;
             return (
               <div
-                key={idx}
-                onClick={() => onProductSelect(product.name)}
-                className="bg-white p-6 rounded-2xl border border-gray-100 flex flex-col items-center text-center shadow-xs hover:shadow-lg hover:border-brand-primary/20 hover:-translate-y-1 transition-all duration-300 cursor-pointer group"
+                key={groupIdx}
+                className="bg-white rounded-2xl border border-gray-150 p-6 sm:p-8 flex flex-col lg:flex-row gap-6 lg:gap-8 items-start shadow-xs hover:shadow-md transition-all duration-300 group"
               >
-                {/* Icon Circle Wrapper */}
-                <div className="h-14 w-14 rounded-full bg-sky-50 text-brand-primary flex items-center justify-center mb-4 group-hover:bg-brand-primary group-hover:text-white transition-all duration-300">
-                  <IconComponent size={24} className="transition-transform group-hover:scale-110 duration-300" />
+                {/* Left side: Category Profile */}
+                <div className="flex items-center gap-4 lg:w-72 shrink-0">
+                  <div className={`h-12 w-12 rounded-xl flex items-center justify-center border ${group.color} shadow-2xs`}>
+                    <IconComponent size={22} />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-extrabold text-gray-800 tracking-tight group-hover:text-brand-primary transition-colors duration-300">
+                      {group.title}
+                    </h3>
+                    <p className="text-xs text-gray-400 font-semibold mt-0.5">
+                      {group.products.length} Items Available
+                    </p>
+                  </div>
                 </div>
-                {/* Product Name */}
-                <h3 className="text-sm font-bold text-gray-800 group-hover:text-brand-primary transition-colors duration-300 leading-snug">
-                  {product.name}
-                </h3>
+
+                {/* Right side: Modern interactive flex chips */}
+                <div className="flex-grow">
+                  <div className="flex flex-wrap gap-3">
+                    {group.products.map((prod, prodIdx) => (
+                      <button
+                        key={prodIdx}
+                        onClick={() => onProductSelect(prod)}
+                        className={`inline-flex items-center gap-2 bg-gray-50/50 hover:bg-white border border-gray-150 hover:border-brand-primary/30 text-gray-700 hover:text-brand-primary font-bold px-4 py-2.5 rounded-xl text-xs sm:text-sm shadow-2xs hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group/chip`}
+                      >
+                        <span>{prod}</span>
+                        <ChevronRight
+                          size={14}
+                          className="text-gray-400 group-hover/chip:text-brand-primary transition-colors"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                </div>
               </div>
             );
           })}

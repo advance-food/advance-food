@@ -181,7 +181,7 @@ export default function Products({ onProductSelect, limit }: ProductsProps) {
   ];
 
   return (
-    <section id="products" className="py-20 md:py-28 bg-gray-50 relative">
+    <section id="products" className="pt-20 md:pt-28 pb-10 md:pb-14 bg-gray-50 relative">
       <div className="absolute top-0 left-0 w-64 h-64 bg-sky-50/40 rounded-full filter blur-3xl -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
