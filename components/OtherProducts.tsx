@@ -27,7 +27,6 @@ export default function OtherProducts({ onProductSelect }: OtherProductsProps) {
         "Dehydrated Red Onion Powder",
         "Dehydrated Pink Onion Powder",
         "Fresh Fried Pink Onion",
-        "Dehydrated Fried Onion",
         "Coated Fried Onion",
         "Dehy. Ginger Powder",
         "Dehy. Aamchur (Mango) Powder",
@@ -63,10 +62,10 @@ export default function OtherProducts({ onProductSelect }: OtherProductsProps) {
       color: "text-purple-500 bg-purple-50 border-purple-100",
       accentColor: "group-hover:border-purple-400 group-hover:text-purple-600",
       products: [
+        "Red Chilli Flakes/Powder (Guntur, Bydgi, Kashmiri)",
         "Green Chilli Powder",
         "Kasuri methi Leaves/Powder",
         "Curry Leaves/Powder",
-        "Mint Leaves/Powder (Fudina)",
         "Spinach Powder (Palak)",
         "Oregano Seasoning"
       ]

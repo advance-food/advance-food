@@ -13,7 +13,7 @@ const PRODUCT_CATEGORIES = {
     "Dry Ginger",
     "Turmeric",
     "Green Chilli Powder",
-    "Moringa Powder",
+    "Mringa Leaves/Powder",
   ],
   "Other Herbs & Powders": [
     "Dehy./Fried/Coated Onion",
@@ -45,17 +45,17 @@ interface ContactFormProps {
   onClose?: () => void;
 }
 
-export default function ContactForm({ 
-  preselectedProduct = "", 
-  isModal = false, 
-  onClose 
+export default function ContactForm({
+  preselectedProduct = "",
+  isModal = false,
+  onClose
 }: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    subject: preselectedProduct && preselectedProduct !== "General Inquiry" 
-      ? `Business Quote Request - ${preselectedProduct}` 
+    subject: preselectedProduct && preselectedProduct !== "General Inquiry"
+      ? `Business Quote Request - ${preselectedProduct}`
       : "",
     message: "",
     botTrap: "", // Honeypot spam prevention (unique name to avoid browser autofill)
@@ -110,7 +110,7 @@ export default function ContactForm({
     setLoading(true);
     setError("");
     setSuccess(false);
- 
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -264,14 +264,14 @@ export default function ContactForm({
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-xs focus:border-brand-primary focus:bg-white outline-hidden transition-all text-gray-800 font-semibold mb-3"
                 />
-                
+
                 <div className="max-h-48 overflow-y-auto space-y-4 pr-1">
                   {Object.entries(PRODUCT_CATEGORIES).map(([category, items]) => {
-                    const filteredItems = items.filter(item => 
+                    const filteredItems = items.filter(item =>
                       item.toLowerCase().includes(searchQuery.toLowerCase())
                     );
                     if (filteredItems.length === 0) return null;
-                    
+
                     return (
                       <div key={category}>
                         <h4 className="text-[10px] font-extrabold text-gray-400 uppercase tracking-wider mb-2 border-b border-gray-100 pb-1">
@@ -283,11 +283,10 @@ export default function ContactForm({
                             return (
                               <label
                                 key={item}
-                                className={`flex items-center gap-2 p-2 rounded-lg border text-xs font-semibold cursor-pointer select-none transition-all ${
-                                  isChecked
+                                className={`flex items-center gap-2 p-2 rounded-lg border text-xs font-semibold cursor-pointer select-none transition-all ${isChecked
                                     ? "bg-sky-50/50 border-brand-primary/30 text-brand-primary"
                                     : "bg-gray-50/50 border-gray-150 text-gray-600 hover:bg-gray-100"
-                                }`}
+                                  }`}
                               >
                                 <input
                                   type="checkbox"
@@ -336,11 +335,10 @@ export default function ContactForm({
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="e.g. Bulk dehydrated onion pricing"
-                className={`w-full border rounded-xl px-4 py-3 text-sm focus:bg-white outline-hidden transition-all text-gray-800 font-semibold ${
-                  selectedProducts.length > 0
+                className={`w-full border rounded-xl px-4 py-3 text-sm focus:bg-white outline-hidden transition-all text-gray-800 font-semibold ${selectedProducts.length > 0
                     ? "bg-gray-100 border-gray-250 cursor-not-allowed text-gray-400"
                     : "bg-gray-50 border-gray-200 focus:border-brand-primary"
-                }`}
+                  }`}
               />
             </div>
           </div>
