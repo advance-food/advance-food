@@ -101,7 +101,7 @@ export async function POST(request: Request) {
     });
 
     // 5. Branded HTML Email Templates
-    
+
     // Email Subject for Admin
     const adminEmailSubject = `[Website Contact] New Inquiry: ${sanitizedSubject}`;
 
@@ -176,7 +176,7 @@ export async function POST(request: Request) {
           <hr style="border: 0; border-top: 1px solid #f1f5f9; margin: 24px 0;" />
           <p style="font-size: 12px; color: #94a3b8; text-align: center; margin: 0; line-height: 1.5;">
             Advance Food | APMC Marketing Yard, Mahuva, Gujarat, India - 364290<br/>
-            Email: <a href="mailto:info@advancefood.in" style="color: #0ea5e9; text-decoration: none;">info@advancefood.in</a> | Phone: +91 7622942202
+            Email: <a href="mailto:sales@advancefood.in" style="color: #0ea5e9; text-decoration: none;">sales@advancefood.in</a> | Phone: +91 7622942202
           </p>
         </div>
       </div>
@@ -207,7 +207,7 @@ export async function POST(request: Request) {
 
   } catch (error: any) {
     console.error("Error in contact form SMTP API endpoint:", error);
-    
+
     // Provide clean production-ready error response
     return NextResponse.json(
       { error: "We experienced an error dispatching your message. Please try again or chat via WhatsApp." },

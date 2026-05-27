@@ -15,8 +15,8 @@ export default function ContactPage() {
     {
       icon: <Mail className="w-5 h-5 mt-1 shrink-0" />,
       title: "Business Email Support",
-      value: "info@advancefood.in",
-      href: "mailto:info@advancefood.in",
+      value: "sales@advancefood.in",
+      href: "mailto:sales@advancefood.in",
     },
   ];
 
@@ -46,7 +46,7 @@ export default function ContactPage() {
         <div className="absolute top-1/4 right-0 w-80 h-80 bg-sky-50/20 rounded-full filter blur-3xl -z-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            
+
             {/* Left Corporate Coordinate Columns */}
             <div className="lg:col-span-5 space-y-8">
               <div>
@@ -101,7 +101,7 @@ export default function ContactPage() {
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-sky-50/50 rounded-full filter blur-3xl -z-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            
+
             {/* Left Strategic Information Column */}
             <div className="lg:col-span-5 space-y-6">
               <div className="space-y-3">
@@ -149,7 +149,7 @@ export default function ContactPage() {
                     title="Advance Food Mahuva Processing Unit Map Location"
                     className="grayscale-[15%] hover:grayscale-0 transition-all duration-500"
                   ></iframe>
-                  
+
                   {/* Premium Live Connection Badge */}
                   <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm border border-gray-200/80 px-3 py-1.5 rounded-full text-[10px] font-bold text-emerald-600 flex items-center gap-2 shadow-md select-none">
                     <span className="relative flex h-2 w-2">
