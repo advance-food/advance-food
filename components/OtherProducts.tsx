@@ -27,6 +27,7 @@ export default function OtherProducts({ onProductSelect }: OtherProductsProps) {
         "Dehydrated Red Onion Powder",
         "Dehydrated Pink Onion Powder",
         "Fresh Fried Pink Onion",
+        "Dehydrated Fried Onion",
         "Coated Fried Onion",
         "Dehy. Ginger Powder",
         "Dehy. Aamchur (Mango) Powder",
@@ -42,8 +43,11 @@ export default function OtherProducts({ onProductSelect }: OtherProductsProps) {
       color: "text-emerald-500 bg-emerald-50 border-emerald-100",
       accentColor: "group-hover:border-emerald-400 group-hover:text-emerald-600",
       products: [
+        "Cumin seeds (JEERA)",
+        "Coriander Seeds (Dhaniya)",
         "Fenugreek Seeds (Methidana)",
-        "Ajwain Seeds (Ajmo)"
+        "Ajwain Seeds (Ajmo)",
+        "Fennel Seeds (Variyali)"
       ]
     },
     {
@@ -53,6 +57,7 @@ export default function OtherProducts({ onProductSelect }: OtherProductsProps) {
       accentColor: "group-hover:border-sky-400 group-hover:text-sky-600",
       products: [
         "Tomato Powder",
+        "Lemon Powder (Limbu)",
         "Tamrind Powder (Imali)"
       ]
     },
@@ -63,9 +68,11 @@ export default function OtherProducts({ onProductSelect }: OtherProductsProps) {
       accentColor: "group-hover:border-purple-400 group-hover:text-purple-600",
       products: [
         "Red Chilli Flakes/Powder (Guntur, Bydgi, Kashmiri)",
+        "Turmeric Finger/Powder",
         "Green Chilli Powder",
         "Kasuri methi Leaves/Powder",
         "Curry Leaves/Powder",
+        "Mint Leaves/Powder (Fudina)",
         "Spinach Powder (Palak)",
         "Oregano Seasoning"
       ]

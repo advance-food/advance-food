@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Clock, Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from "lucide-react";
+import { Clock, Mail, Phone, MapPin, Facebook, Linkedin, Instagram, Youtube } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -72,7 +72,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/1JJqafUKCe/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook Profile"
@@ -81,7 +81,7 @@ export default function Footer() {
                 <Facebook size={18} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/advancefoodind/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile"
@@ -90,13 +90,22 @@ export default function Footer() {
                 <Linkedin size={18} />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/advance_food_?igsh=MWE0ZnB5Znd1a2J5OQ=="
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram Profile"
                 className="h-10 w-10 rounded-lg bg-gray-800 hover:bg-brand-primary text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1"
               >
                 <Instagram size={18} />
+              </a>
+              <a
+                href="https://youtube.com/@advancefoodindustries001?si=Dc4_BoDTeDegZHvW"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube Profile"
+                className="h-10 w-10 rounded-lg bg-gray-800 hover:bg-brand-primary text-gray-300 hover:text-white flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <Youtube size={18} />
               </a>
             </div>
           </div>
