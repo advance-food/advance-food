@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.advancefood.co.in/sitemap.xml
+Sitemap: https://www.advancefood.in/sitemap.xml

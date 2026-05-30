@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Advance Food - Celebrating 15 Years of Excellence in Food Export & Import",
     description: "Your trusted partner in global food trade. Celebrating 15 years of excellence with 500+ satisfied clients worldwide.",
     type: "website",
-    url: "https://www.advancefood.co.in/",
+    url: "https://www.advancefood.in/",
   },
 };
 
