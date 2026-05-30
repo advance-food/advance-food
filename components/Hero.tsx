@@ -38,7 +38,7 @@ export default function Hero({ onGetQuoteClick }: HeroProps) {
         {/* Milestone Pill indicator */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-semibold tracking-wider uppercase mb-6 shadow-lg">
           <Award className="text-amber-400" size={18} />
-          <span>Celebrating 15 Years of Excellence</span>
+          <span>One-stop solution for all masala manufacturers.</span>
         </div>
 
         {/* Brand Main Slogan Headings */}
