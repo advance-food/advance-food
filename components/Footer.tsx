@@ -166,7 +166,7 @@ export default function Footer() {
 
         {/* Divider and Copyright block */}
         <div className="mt-16 pt-8 border-t border-gray-800 text-center text-xs sm:text-sm text-gray-500">
-          <p>© {currentYear} Advance Food. All rights reserved. Celebrating 5 Years of Global Excellence.</p>
+          <p>© {currentYear} Advance Food. All rights reserved. Celebrating 15 Years of Global Excellence.</p>
         </div>
       </div>
     </footer>

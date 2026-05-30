@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Stats() {
   const stats = [
-    { value: "5+", label: "Years of Excellence", sub: "Established credibility" },
+    { value: "15+", label: "Years of Excellence", sub: "Established credibility" },
     { value: "500+", label: "Satisfied Clients", sub: "Global business partners" },
-    { value: "50+", label: "Countries Served", sub: "Worldwide logistics reach" },
+    { value: "11+", label: "Countries Served", sub: "Worldwide logistics reach" },
     { value: "100+", label: "Product Varieties", sub: "Wide food processing range" },
   ];
 

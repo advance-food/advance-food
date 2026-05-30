@@ -6,8 +6,8 @@ import WhatsAppButton from "../components/WhatsAppButton";
 import { QuoteModalProvider } from "../context/QuoteModalContext";
 
 export const metadata: Metadata = {
-  title: "Advance Food - Celebrating 5 Years of Excellence in Food Export & Import",
-  description: "Advance Food - Your trusted partner in global food trade. Premium processor and exporter of dehydrated garlic, dehydrated onion, and specialty spice powders to over 50+ countries.",
+  title: "Advance Food - Celebrating 15 Years of Excellence in Food Export & Import",
+  description: "Advance Food - Your trusted partner in global food trade. Premium processor and exporter of dehydrated garlic, dehydrated onion, and specialty spice powders to over 11+ countries.",
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Advance Food" }],
   openGraph: {
-    title: "Advance Food - Celebrating 5 Years of Excellence in Food Export & Import",
-    description: "Your trusted partner in global food trade. Celebrating 5 years of excellence with 500+ satisfied clients worldwide.",
+    title: "Advance Food - Celebrating 15 Years of Excellence in Food Export & Import",
+    description: "Your trusted partner in global food trade. Celebrating 15 years of excellence with 500+ satisfied clients worldwide.",
     type: "website",
     url: "https://www.advancefood.co.in/",
   },

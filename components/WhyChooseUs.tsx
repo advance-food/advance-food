@@ -6,7 +6,7 @@ export default function WhyChooseUs() {
     {
       icon: <Globe className="text-brand-primary w-8 h-8" />,
       title: "Global Export Reach",
-      desc: "Operating a deep distribution ecosystem connecting Indian agricultural farmers directly with major international food buyers in over 50+ countries. We handle all global customs standards seamlessly.",
+      desc: "Operating a deep distribution ecosystem connecting Indian agricultural farmers directly with major international food buyers in over 11+ countries. We handle all global customs standards seamlessly.",
     },
     {
       icon: <Truck className="text-brand-primary w-8 h-8" />,

@@ -155,7 +155,7 @@ export async function POST(request: Request) {
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #333; max-width: 600px; margin: 0 auto; border: 1px solid #eef2f6; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
         <div style="background: #0ea5e9; color: white; padding: 28px; text-align: center;">
           <h2 style="margin: 0; font-size: 26px; font-weight: 800; letter-spacing: 0.5px;">Advance Food</h2>
-          <p style="margin: 6px 0 0 0; font-size: 13px; opacity: 0.95;">Celebrating 5 Years of Excellence in Food Export & Import</p>
+          <p style="margin: 6px 0 0 0; font-size: 13px; opacity: 0.95;">Celebrating 15 Years of Excellence in Food Export & Import</p>
         </div>
         <div style="padding: 28px; background: #ffffff; line-height: 1.6;">
           <p style="margin-top: 0; font-size: 15px; color: #333;">Dear <strong>${sanitizedName}</strong>,</p>

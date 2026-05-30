@@ -38,7 +38,7 @@ export default function Hero({ onGetQuoteClick }: HeroProps) {
         {/* Milestone Pill indicator */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs sm:text-sm font-semibold tracking-wider uppercase mb-6 shadow-lg">
           <Award className="text-amber-400" size={18} />
-          <span>Celebrating 5 Years of Excellence</span>
+          <span>Celebrating 15 Years of Excellence</span>
         </div>
 
         {/* Brand Main Slogan Headings */}
@@ -46,7 +46,7 @@ export default function Hero({ onGetQuoteClick }: HeroProps) {
           Advance <span className="bg-gradient-to-r from-sky-400 via-sky-300 to-sky-500 bg-clip-text text-transparent">Food</span><span className="text-sky-400">.</span>
         </h1>
         <p className="text-base sm:text-lg text-white/80 max-w-2xl mt-6 leading-relaxed">
-          Premium processor and exporter of dehydrated vegetables and specialty spice powders. Connecting Indian agricultural excellence with international markets across 50+ countries.
+          Premium processor and exporter of dehydrated vegetables and specialty spice powders. Connecting Indian agricultural excellence with international markets across 11+ countries.
         </p>
 
         {/* Primary and Secondary CTA Button Groups */}
