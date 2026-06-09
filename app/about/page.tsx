@@ -48,12 +48,12 @@ export default function AboutPage() {
       <section className="pt-20 pb-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            
+
             {/* Left Content Text */}
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-sky-50 text-brand-primary text-xs font-bold uppercase tracking-wider select-none">
                 <Award size={14} className="shrink-0" />
-                <span>Our Journey Since 2021</span>
+                <span>Our Journey Since 2011</span>
               </div>
               <h2 className="text-3xl font-extrabold text-gray-900 leading-tight">
                 Advance Food Industries
@@ -82,7 +82,7 @@ export default function AboutPage() {
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-sky-50/20 rounded-full filter blur-3xl -z-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            
+
             {/* Mission Card */}
             <div className="bg-white p-8 sm:p-10 rounded-3xl border border-gray-150 shadow-xs hover:shadow-xl hover:border-brand-primary/30 transition-all duration-300 border-l-4 border-l-brand-primary flex flex-col group">
               <div className="h-12 w-12 rounded-xl bg-sky-50 text-brand-primary flex items-center justify-center shrink-0 mb-6 group-hover:scale-105 transition-transform duration-300">
@@ -90,7 +90,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 tracking-tight">Our Mission</h3>
               <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mt-1">Driving Purpose & Action</p>
-              
+
               <ul className="mt-6 space-y-4 flex-1">
                 <li className="flex gap-3.5 items-start">
                   <span className="h-5 w-5 rounded-full bg-sky-50 text-brand-primary flex items-center justify-center shrink-0 mt-0.5">
@@ -126,7 +126,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 tracking-tight">Our Vision</h3>
               <p className="text-sm text-amber-500/80 font-bold uppercase tracking-widest mt-1">Sights Set On The Future</p>
-              
+
               <ul className="mt-6 space-y-4 flex-1">
                 <li className="flex gap-3.5 items-start">
                   <span className="h-5 w-5 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center shrink-0 mt-0.5">

@@ -165,7 +165,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
       </div>
 
       {/* Specifications Details Section */}
-      <section className="pt-6 pb-4 bg-white relative">
+      <section className="pt-12 md:pt-16 pb-4 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h2 className="text-2xl font-extrabold text-gray-900 flex items-center gap-2">
