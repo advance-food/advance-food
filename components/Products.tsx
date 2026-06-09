@@ -4,183 +4,15 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+import { products } from "../data/products";
+
 interface ProductsProps {
   onProductSelect: (productName: string) => void;
   limit?: number;
 }
 
 export default function Products({ onProductSelect, limit }: ProductsProps) {
-  const categories = [
-    {
-      title: "Dehydrated Garlic",
-      subtitle: "Premium Vegetable Crops",
-      desc: "Rich, pungent garlic processed with aroma and nutrition fully intact, sourced directly from local agricultural hubs.",
-      specs: [
-        { label: "Clove/Flakes", value: "8 - 15 MM" },
-        { label: "Chopped", value: "3 - 5 MM" },
-        { label: "Minced", value: "1 - 3 MM" },
-        { label: "Granules", value: "0.5 - 1 MM" },
-        { label: "Powder", value: "80 - 100 Mesh" },
-        { label: "Color", value: "Brownish" },
-        { label: "Packing", value: "20 Kg / 25 Kg" },
-        { label: "Quality", value: "A Grade & Commercial Grade" },
-      ],
-      image: "/images/products/garlic-flakes.png",
-    },
-    {
-      title: "Dehydrated White Onion",
-      subtitle: "Symmetric Premium Slices",
-      desc: "Fresh agricultural white onion dehydrated under highly hygienic controls to retain maximum natural pungency.",
-      specs: [
-        { label: "Flakes", value: "8 - 15 MM" },
-        { label: "Chopped", value: "3 - 5 MM" },
-        { label: "Minced", value: "1 - 3 MM" },
-        { label: "Granules", value: "0.5 - 1 MM" },
-        { label: "Powder", value: "80 - 100 Mesh" },
-        { label: "Color", value: "White" },
-        { label: "Packing", value: "14 Kg / 20 Kg" },
-        { label: "Quality", value: "A Grade & Commercial Grade" },
-      ],
-      image: "/images/products/white-onion-flakes.png",
-    },
-    {
-      title: "Dehydrated Red/Pink Onion",
-      subtitle: "Vibrant Local Varieties",
-      desc: "Prime Gujarat field red onions processed with highly controlled dehydration technology to secure excellent flavor.",
-      specs: [
-        { label: "Flakes", value: "8 - 15 MM" },
-        { label: "Chopped", value: "3 - 5 MM" },
-        { label: "Minced", value: "1 - 3 MM" },
-        { label: "Granules", value: "0.5 - 1 MM" },
-        { label: "Powder", value: "80 - 100 Mesh" },
-        { label: "Color", value: "Red / Pink" },
-        { label: "Packing", value: "14 Kg / 20 Kg" },
-        { label: "Quality", value: "A Grade & Commercial Grade" },
-      ],
-      image: "/images/products/red-onion-flakes.png",
-    },
-    {
-      title: "Cumin Seeds",
-      subtitle: "Aromatic Spices & Seeds",
-      desc: "Aromatic, machine-cleaned cumin seeds offering a warm, earthy flavor ideal for global culinary applications.",
-      specs: [
-        { label: "Seed Length", value: "5 - 6 MM" },
-        { label: "Color", value: "Yellowish-brown to warm brown" },
-        { label: "Forms Available", value: "Whole Seeds / Fine Powder" },
-        { label: "Moisture Content", value: "Low (Safe Long Transit)" },
-        { label: "Quality", value: "Pure, Machine Cleaned" },
-      ],
-      image: "/images/products/cumin-seeds.png",
-    },
-    {
-      title: "Coriander Seeds",
-      subtitle: "Aromatic Spices & Seeds",
-      desc: "Aromatic, machine-cleaned coriander seeds offering a citrusy, mildly sweet flavor ideal for diverse culinary and spice blend applications.",
-      specs: [
-        { label: "Seed Size", value: "3 - 5 MM" },
-        { label: "Color", value: "Light greenish-brown to golden brown" },
-        { label: "Forms Available", value: "Whole Seeds / Fine Powder" },
-        { label: "Moisture Content", value: "Low (Safe Long Transit)" },
-        { label: "Quality", value: "Pure, Machine Cleaned" },
-      ],
-      image: "/images/products/coriander-seeds.png",
-    },
-    {
-      title: "Fennel Seeds",
-      subtitle: "Sweet Green Spices",
-      desc: "Aromatic, machine-cleaned fennel seeds offering a sweet, licorice-like flavor ideal for culinary, confectionery, and herbal applications.",
-      specs: [
-        { label: "Seed Length", value: "4 - 8 MM" },
-        { label: "Color", value: "Light green to pale greenish-brown" },
-        { label: "Forms Available", value: "Whole Seeds / Fine Powder" },
-        { label: "Moisture Content", value: "Low (Safe Long Transit)" },
-        { label: "Quality", value: "Pure, Machine Cleaned" },
-      ],
-      image: "/images/products/fennel-seeds.png",
-    },
-    {
-      title: "Dehy./Fresh Fried Onion",
-      subtitle: "Crispy Allium Flakes",
-      desc: "Premium crispy golden-brown fried onions processed from fresh crops, offering exceptional texture and caramelized flavor for global industrial buyers.",
-      specs: [
-        { label: "Form", value: "Crispy Flakes / Minced" },
-        { label: "Color", value: "Golden Yellow to Dark Brown" },
-        { label: "Oil Content", value: "Low (Centrifugally Drained)" },
-        { label: "Moisture Content", value: "Max 5%" },
-        { label: "Applications", value: "Ready-to-eat meals, seasoning, biryani topping" },
-        { label: "Packing", value: "10 Kg / 15 Kg Carton Boxes" },
-      ],
-      image: "/images/products/fried-onion.png",
-    },
-    {
-      title: "Red Chilli",
-      subtitle: "Aromatic Hot Spices",
-      desc: "Premium, carefully picked sun-dried red chillies and flakes offering strong spicy flavor profiles.",
-      specs: [
-        { label: "Varieties", value: "Teja, Kashmiri, Guntur, Sannam, Bydagi" },
-        { label: "Chilli Flakes", value: "Available" },
-        { label: "Chilli Seeds", value: "Available" },
-        { label: "Chilli Powder", value: "Available" },
-        { label: "Aroma & Heat", value: "Highly Pungent & Spicy" },
-        { label: "Quality", value: "Export Grade" },
-      ],
-      image: "/images/products/red-chilli.png",
-    },
-    {
-      title: "Turmeric",
-      subtitle: "Golden Active Rhizomes",
-      desc: "High-curcumin active turmeric processed cleanly to produce a deep golden yellow spice powder.",
-      specs: [
-        { label: "Varieties", value: "Salem, Lakadong, Erode, Sangli" },
-        { label: "Curcumin Content", value: "1% - 5% (High Potency)" },
-        { label: "Forms Available", value: "Turmeric Finger / Pure Powder" },
-        { label: "Color", value: "Deep Golden Yellow" },
-        { label: "Quality", value: "High Grade Export" },
-      ],
-      image: "/images/products/turmeric.png",
-    },
-    {
-      title: "Spray Dried Lemon Powder",
-      subtitle: "Zesty Citrus Extract",
-      desc: "High-purity spray dried lemon powder preserving natural tanginess, acidic freshness, and vitamin C for diverse culinary applications.",
-      specs: [
-        { label: "Form", value: "Free-flowing Fine Powder" },
-        { label: "Color Profile", value: "Light Yellow to Pale Cream" },
-        { label: "Taste & Aroma", value: "Tangy Citrus Flavor" },
-        { label: "Mesh Sizing", value: "80 - 100 Mesh" },
-        { label: "Solubility", value: "Highly Soluble in Water" },
-        { label: "Packing", value: "20 Kg / 25 Kg Carton Box" },
-      ],
-      image: "/images/products/lemon-powder.png",
-    },
-    {
-      title: "Mint Leaves/Powder",
-      subtitle: "Cooling Aromatic Herbs",
-      desc: "Premium sun-dried green mint leaves and fine powder providing an authentic cooling sensation, fresh herbal aroma, and sharp zesty flavor.",
-      specs: [
-        { label: "Form", value: "Dried Leaves / Fine Powder" },
-        { label: "Color Profile", value: "Vibrant Green" },
-        { label: "Mesh Size", value: "60 - 80 Mesh (for Powder)" },
-        { label: "Aroma", value: "Intense Menthol Cooling" },
-        { label: "Purity", value: "100% Pure & Organic" },
-      ],
-      image: "/images/products/mint-leaves.png",
-    },
-
-    {
-      title: "Moringa Leaves/Powder",
-      subtitle: "Pure Organic Superfood",
-      desc: "Rich green moringa leaves ground under clean settings to retain vitamins, minerals, and color.",
-      specs: [
-        { label: "Form", value: "Fine, free-flowing Powder" },
-        { label: "Color Profile", value: "Bright Green / Vibrant Green" },
-        { label: "Mesh Sizing", value: "60 - 100 Mesh" },
-        { label: "Nutrient Retention", value: "Cold Processed / Dry Air Dry" },
-        { label: "Quality", value: "Superfood Export Grade" },
-      ],
-      image: "/images/products/moringa-powder.png",
-    },
-  ];
+  const categories = products;
 
   return (
     <section id="products" className="pt-20 md:pt-28 pb-10 md:pb-14 bg-gray-50 relative">
@@ -209,7 +41,10 @@ export default function Products({ onProductSelect, limit }: ProductsProps) {
               className="bg-white rounded-2xl overflow-hidden border border-gray-150 shadow-xs hover:shadow-xl hover:border-brand-primary/20 hover:-translate-y-1 transition-all duration-300 flex flex-col group"
             >
               {/* Image Banner wrapper */}
-              <div className="h-52 w-full relative overflow-hidden select-none">
+              <Link
+                href={`/${cat.slug}`}
+                className="h-52 w-full relative overflow-hidden select-none block"
+              >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-transparent z-10"></div>
                 <img
                   src={cat.image}
@@ -220,11 +55,11 @@ export default function Products({ onProductSelect, limit }: ProductsProps) {
                   <span className="text-xs font-bold text-sky-300 uppercase tracking-widest block">
                     {cat.subtitle}
                   </span>
-                  <h3 className="text-2xl font-bold text-white mt-1 leading-tight tracking-tight">
+                  <h3 className="text-2xl font-bold text-white mt-1 leading-tight tracking-tight group-hover:text-sky-300 transition-colors">
                     {cat.title}
                   </h3>
                 </div>
-              </div>
+              </Link>
 
               {/* Card Body Contents */}
               <div className="p-6 sm:p-8 flex flex-col flex-grow">
