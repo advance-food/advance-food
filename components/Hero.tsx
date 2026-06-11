@@ -1,27 +1,13 @@
 "use client";
 
 import React from "react";
-import { Award, ArrowRight } from "lucide-react";
+import { Award } from "lucide-react";
 
 interface HeroProps {
   onGetQuoteClick: () => void;
 }
 
 export default function Hero({ onGetQuoteClick }: HeroProps) {
-  const scrollToProducts = () => {
-    const element = document.getElementById("products");
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <section
       id="home"
@@ -43,29 +29,11 @@ export default function Hero({ onGetQuoteClick }: HeroProps) {
 
         {/* Brand Main Slogan Headings */}
         <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight drop-shadow-md">
-          Advance <span className="bg-gradient-to-r from-sky-400 via-sky-300 to-sky-500 bg-clip-text text-transparent">Food</span><span className="text-sky-400">.</span>
+          ADVANCE <span className="bg-gradient-to-r from-sky-400 via-sky-300 to-sky-500 bg-clip-text text-transparent">FOOD</span>
         </h1>
         <p className="text-base sm:text-lg text-white/80 max-w-2xl mt-6 leading-relaxed">
-          Premium processor and exporter of dehydrated vegetables and specialty spice powders. Connecting Indian agricultural excellence with international markets across 11+ countries.
+          <span className="inline-flex items-center px-2 py-0.5 rounded bg-white/10 backdrop-blur-md border border-white/20 text-sky-300 font-semibold text-sm sm:text-base mr-1.5 align-middle">Premium</span> processor and exporter of dehydrated vegetables and specialty spice powders. Connecting Indian agricultural excellence with international markets across 11+ countries.
         </p>
-
-        {/* Primary and Secondary CTA Button Groups */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10 w-full sm:w-auto px-6 sm:px-0">
-          <button
-            onClick={scrollToProducts}
-            className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white text-brand-primary hover:bg-brand-primary hover:text-white px-8 py-4 rounded-xl font-bold text-base transition-all duration-300 shadow-xl hover:shadow-brand-primary/20 transform hover:-translate-y-0.5 cursor-pointer group"
-          >
-            <span>Explore Specialties</span>
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </button>
-
-          <button
-            onClick={onGetQuoteClick}
-            className="w-full sm:w-auto flex items-center justify-center bg-brand-primary border border-brand-primary text-white hover:bg-transparent hover:border-white px-8 py-4 rounded-xl font-bold text-base transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 cursor-pointer"
-          >
-            Get a Free Quote
-          </button>
-        </div>
       </div>
     </section>
   );

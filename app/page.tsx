@@ -4,9 +4,9 @@ import React from "react";
 import Hero from "../components/Hero";
 import Stats from "../components/Stats";
 import WhyChooseUs from "../components/WhyChooseUs";
-import Products from "../components/Products";
+import MainProducts from "../components/MainProducts";
+import Certifications from "../components/Certifications";
 import CTABanner from "../components/CTABanner";
-import ContactForm from "../components/ContactForm";
 import { useQuoteModal } from "../context/QuoteModalContext";
 
 export default function Home() {
@@ -23,14 +23,17 @@ export default function Home() {
       {/* About teaser cards representing company pillars */}
       <WhyChooseUs />
 
-      {/* Products list with custom spec enquiry hooks */}
-      <Products limit={9} onProductSelect={(productName) => openQuoteModal(productName)} />
+      {/* Main product categories section */}
+      <MainProducts />
+
+      {/* Certifications row banner */}
+      <Certifications />
+
+
 
       {/* CTA Conversion Banner */}
       <CTABanner onContactClick={() => openQuoteModal("General Inquiry")} />
 
-      {/* Embedded footer Contact Form for easy enquiries */}
-      <ContactForm preselectedProduct="General Inquiry" />
     </main>
   );
 }

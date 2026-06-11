@@ -37,24 +37,6 @@ export default function Footer() {
             <p className="text-sm text-gray-400 leading-relaxed pt-2">
               Connecting premium quality Indian dehydrated vegetables and spice powders to global industrial food markets.
             </p>
-            {/* Certifications & Registrations Badges */}
-            <div className="flex flex-wrap gap-2 pt-3">
-              <span className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-bold text-white tracking-wide select-none">
-                FSSAI Certified
-              </span>
-              <span className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-bold text-white tracking-wide select-none">
-                ISO Certified
-              </span>
-              <span className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-bold text-white tracking-wide select-none">
-                APEDA
-              </span>
-              <span className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-bold text-white tracking-wide select-none">
-                Spice Board
-              </span>
-              <span className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-bold text-white tracking-wide select-none">
-                MSME
-              </span>
-            </div>
             {/* Clock icon / Hours */}
             <div className="flex items-center gap-2.5 text-sm text-gray-400 pt-3">
               <Clock size={16} className="text-brand-primary shrink-0" />
