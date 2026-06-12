@@ -26,9 +26,9 @@ export default function BlogsPage() {
   }, [searchQuery, selectedCategory]);
 
   return (
-    <section className="bg-white min-h-screen">
+    <section className="bg-white min-h-screen pt-20">
       {/* ── Page Hero Banner ── */}
-      <div className="bg-brand-dark text-white relative overflow-hidden py-20 md:py-28">
+      <div className="bg-brand-dark text-white relative overflow-hidden py-10 md:py-20">
         {/* Gradients */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/10 rounded-full filter blur-3xl -z-10"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-emerald-500/5 rounded-full filter blur-3xl -z-10"></div>
@@ -51,12 +51,12 @@ export default function BlogsPage() {
         {/* Search & Category Pills bar */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 border-b border-gray-100 pb-8">
           {/* Category Filters */}
-          <div className="flex flex-wrap gap-2.5">
+          <div className="flex overflow-x-auto whitespace-nowrap gap-2.5 pb-3 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-none">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 cursor-pointer ${
+                className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 cursor-pointer shrink-0 ${
                   selectedCategory === cat
                     ? "bg-brand-primary text-white shadow-md shadow-brand-primary/25"
                     : "bg-gray-50 text-gray-500 hover:bg-gray-100 hover:text-gray-800"

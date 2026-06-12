@@ -173,4 +173,13 @@ body {
   background-color: #f8fafc;
 }
 
+/* Hide scrollbar utility class */
+.scrollbar-none::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 
