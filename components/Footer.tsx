@@ -103,6 +103,7 @@ export default function Footer() {
                 { label: "About Us", target: "/about" },
                 { label: "Products Catalog", target: "/products" },
                 { label: "Why Choose Us", target: "/why-choose-us" },
+                { label: "Blogs", target: "/blogs" },
                 { label: "Contact Us", target: "/contact" },
               ].map((link, idx) => (
                 <Link

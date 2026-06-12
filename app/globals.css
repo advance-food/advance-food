@@ -45,3 +45,132 @@ body {
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
 }
 
+/* Blog Content Rich Styling */
+.blog-content-rich {
+  color: #374151; /* slate/gray-700 */
+}
+
+.blog-content-rich h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #0b0f19;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 2px solid #e0f2fe; /* light sky-100 */
+  padding-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+  line-height: 1.35;
+}
+
+.blog-content-rich h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0b0f19;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
+}
+
+.blog-content-rich p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1.05rem; /* slightly larger for readability */
+}
+
+.blog-content-rich ul, .blog-content-rich ol {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.75rem;
+}
+
+.blog-content-rich ul {
+  list-style-type: none;
+}
+
+.blog-content-rich ul li {
+  position: relative;
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.blog-content-rich ul li::before {
+  content: "•";
+  color: #0ea5e9; /* brand-primary */
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  font-size: 1.3rem;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.blog-content-rich ol {
+  list-style-type: decimal;
+}
+
+.blog-content-rich ol li {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  padding-left: 0.25rem;
+  font-size: 1.05rem;
+}
+
+.blog-content-rich ol li::marker {
+  color: #0ea5e9;
+  font-weight: 800;
+}
+
+.blog-content-rich strong {
+  color: #0b0f19;
+  font-weight: 700;
+}
+
+.blog-content-rich table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.blog-content-rich th {
+  background-color: #f8fafc;
+  color: #0b0f19;
+  font-weight: 700;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+}
+
+.blog-content-rich th:last-child {
+  border-right: none;
+}
+
+.blog-content-rich td {
+  padding: 1rem;
+  color: #475569;
+  border-bottom: 1px solid #f1f5f9;
+  border-right: 1px solid #e2e8f0;
+}
+
+.blog-content-rich td:last-child {
+  border-right: none;
+}
+
+.blog-content-rich tr:last-child td {
+  border-bottom: none;
+}
+
+.blog-content-rich tr:hover td {
+  background-color: #f8fafc;
+}
+
+

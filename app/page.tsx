@@ -8,6 +8,7 @@ import WhyChooseUs from "../components/WhyChooseUs";
 import MainProducts from "../components/MainProducts";
 import Certifications from "../components/Certifications";
 import CTABanner from "../components/CTABanner";
+import LatestBlogs from "../components/LatestBlogs";
 
 // Load map client-side only to avoid SSR hydration mismatch
 const GlobalExportReach = dynamic(
@@ -41,6 +42,9 @@ export default function Home() {
 
       {/* CTA Conversion Banner */}
       <CTABanner onContactClick={() => openQuoteModal("General Inquiry")} />
+
+      {/* Latest Blogs & Insights Grid */}
+      <LatestBlogs />
 
     </main>
   );
