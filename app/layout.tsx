@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -71,20 +72,6 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="h-full antialiased scroll-smooth">
-      <head>
-        {/* Google tag (gtag.js) */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${gaId}');
-            `,
-          }}
-        />
-      </head>
       <body className="min-h-full flex flex-col">
         <QuoteModalProvider>
           <Header />
@@ -92,6 +79,20 @@ export default function RootLayout({
           <Footer />
           <WhatsAppButton />
         </QuoteModalProvider>
+
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gaId}');
+          `}
+        </Script>
       </body>
     </html>
   );
