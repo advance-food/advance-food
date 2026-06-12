@@ -25,6 +25,22 @@ const EXPORT_IDS = new Set([
   "360",        // Indonesia
 ]);
 
+// ID to country name map for geography click lookups
+const ID_TO_NAME: Record<string, string> = {
+  "276": "Germany",
+  "704": "Vietnam",
+  "156": "China",
+  "840": "United States",
+  "566": "Nigeria",
+  "784": "UAE (Dubai)",
+  "250": "France",
+  "608": "Philippines",
+  "100": "Bulgaria",
+  "56": "Belgium",
+  "056": "Belgium",
+  "360": "Indonesia",
+};
+
 // Marker [longitude, latitude] positions
 const MARKERS: { coordinates: [number, number]; label: string }[] = [
   { coordinates: [10.5, 51.2], label: "Germany" },
@@ -134,12 +150,24 @@ const GlobalExportReach = memo(function GlobalExportReach() {
                       fill={isExport ? "#38bdf8" : "#bfdbfe"}
                       stroke="#f0f9ff"
                       strokeWidth={0.6}
+                      onClick={(e: any) => {
+                        if (isExport && typeof window !== "undefined" && window.innerWidth < 768) {
+                          e.stopPropagation();
+                          const countryName = ID_TO_NAME[id];
+                          if (countryName) {
+                            setActiveLabel(activeLabel === countryName ? null : countryName);
+                          }
+                        }
+                      }}
                       style={{
-                        default: { outline: "none" },
+                        default: { 
+                          outline: "none",
+                          cursor: isExport ? "pointer" : "default" 
+                        },
                         hover: {
                           fill: isExport ? "#0284c7" : "#93c5fd",
                           outline: "none",
-                          cursor: "default",
+                          cursor: isExport ? "pointer" : "default",
                         },
                         pressed: { outline: "none" },
                       }}
