@@ -131,6 +131,7 @@ body {
 
 .blog-content-rich table {
   width: 100%;
+  min-width: 600px; /* Prevent column squishing on mobile viewports */
   border-collapse: separate;
   border-spacing: 0;
   margin: 2rem 0;

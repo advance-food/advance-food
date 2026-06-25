@@ -82,7 +82,11 @@ export default async function BlogDetailsPage({ params }: PageProps) {
 
               <div
                 className="blog-content-rich text-base sm:text-lg text-gray-600 leading-relaxed max-w-none"
-                dangerouslySetInnerHTML={{ __html: post.content }}
+                dangerouslySetInnerHTML={{
+                  __html: post.content
+                    .replace(/<table/g, '<div class="overflow-x-auto max-w-full"><table')
+                    .replace(/<\/table>/g, '</table></div>'),
+                }}
               />
             </div>
 
