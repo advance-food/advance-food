@@ -28,7 +28,7 @@ export default function WhyChooseUsPage() {
     {
       icon: <ShieldCheck className="text-brand-primary w-6 h-6" />,
       title: "Food Safety Compliance",
-      desc: "Our products fully meet strict international food safety standards (BRCGS, FDA, Halal, Kosher, ISO, FSSAI, Spice Board, APEDA etc.).",
+      desc: "Our products fully meet strict international food safety standards (ISO, FSSAI, Spice Board, APEDA etc.).",
     },
     {
       icon: <Globe className="text-brand-primary w-6 h-6" />,
@@ -49,18 +49,19 @@ export default function WhyChooseUsPage() {
 
   return (
     <main className="min-h-screen pt-20">
-      {/* Premium Watercolor Banner Header */}
+      {/* Premium Visual Banner Header */}
       <section
-        className="relative h-[40vh] sm:h-[45vh] flex items-center justify-center bg-cover bg-center border-b border-gray-150"
+        className="relative h-[40vh] sm:h-[45vh] flex items-center justify-center bg-cover bg-center"
         style={{
-          backgroundImage: `url('/premium_watercolor_why_choose_us.png')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1920&auto=format&fit=crop')`,
         }}
       >
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/20 to-brand-dark/80"></div>
         <div className="relative z-10 text-center px-4 animate-fade-in-up">
-          <span className="text-xs font-bold text-brand-primary uppercase tracking-widest block mb-2">
+          <span className="text-xs font-bold text-sky-400 uppercase tracking-widest block mb-2">
             Our Infrastructure
           </span>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-brand-dark leading-tight">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
             Why Partner With Us?
           </h1>
           <div className="h-1.5 w-16 bg-brand-primary mx-auto mt-4 rounded-full"></div>
