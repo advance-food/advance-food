@@ -22,19 +22,18 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen pt-20">
-      {/* Premium Visual Banner Header */}
+      {/* Premium Watercolor Banner Header */}
       <section
-        className="relative h-[40vh] sm:h-[45vh] flex items-center justify-center bg-cover bg-center"
+        className="relative h-[40vh] sm:h-[45vh] flex items-center justify-center bg-cover bg-center border-b border-gray-150"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=1920&auto=format&fit=crop')`,
+          backgroundImage: `url('/premium_watercolor_banner.png')`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/20 to-brand-dark/80"></div>
         <div className="relative z-10 text-center px-4 animate-fade-in-up">
-          <span className="text-xs font-bold text-sky-400 uppercase tracking-widest block mb-2">
+          <span className="text-xs font-bold text-brand-primary uppercase tracking-widest block mb-2">
             Get in Touch
           </span>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-brand-dark leading-tight">
             Contact Our Global Team
           </h1>
           <div className="h-1.5 w-16 bg-brand-primary mx-auto mt-4 rounded-full"></div>
