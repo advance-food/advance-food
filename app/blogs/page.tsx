@@ -26,25 +26,25 @@ export default function BlogsPage() {
   }, [searchQuery, selectedCategory]);
 
   return (
-    <section className="bg-white min-h-screen pt-20">
-      {/* ── Page Hero Banner ── */}
-      <div className="bg-brand-dark text-white relative overflow-hidden py-10 md:py-20">
-        {/* Gradients */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary/10 rounded-full filter blur-3xl -z-10"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-emerald-500/5 rounded-full filter blur-3xl -z-10"></div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
-          <span className="text-sm font-bold tracking-widest text-brand-primary uppercase inline-flex items-center gap-2 mb-4 bg-brand-primary/10 px-4 py-1.5 rounded-full">
-            <BookOpen size={14} /> Knowledge Hub
+    <main className="bg-white min-h-screen pt-20">
+      {/* Premium Visual Banner Header */}
+      <section
+        className="relative h-[40vh] sm:h-[45vh] flex items-center justify-center bg-cover bg-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1920&auto=format&fit=crop')`,
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/20 to-brand-dark/80"></div>
+        <div className="relative z-10 text-center px-4 animate-fade-in-up">
+          <span className="text-xs font-bold text-sky-400 uppercase tracking-widest block mb-2">
+            Knowledge Hub
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
-            Blogs & <span className="text-brand-primary">Industry Insights</span>
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+            Blogs & Industry Insights
           </h1>
-          <p className="text-base sm:text-lg text-gray-300 mt-6 max-w-2xl mx-auto leading-relaxed">
-            Stay updated with expert perspectives, technical preservation research, and global trade guidelines in the dehydrated food sector.
-          </p>
+          <div className="h-1.5 w-16 bg-brand-primary mx-auto mt-4 rounded-full"></div>
         </div>
-      </div>
+      </section>
 
       {/* ── Filters & Content Area ── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -151,6 +151,6 @@ export default function BlogsPage() {
           </div>
         )}
       </div>
-    </section>
+    </main>
   );
 }

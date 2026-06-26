@@ -33,6 +33,7 @@ export default function Header() {
     { label: "About Us", target: "/about" },
     { label: "Products", target: "/products" },
     { label: "Why Choose Us", target: "/why-choose-us" },
+    { label: "Process", target: "/process" },
     { label: "Blogs", target: "/blogs" },
     { label: "Contact", target: "/contact" },
   ];
