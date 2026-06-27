@@ -3,14 +3,14 @@
 import React from "react";
 import Link from "next/link";
 import WhyChooseUs from "../../components/WhyChooseUs";
-import { 
-  Sparkles, 
-  Cpu, 
-  ShieldCheck, 
-  Globe, 
-  Users, 
-  Leaf, 
-  ArrowRight 
+import {
+  Sparkles,
+  Cpu,
+  ShieldCheck,
+  Globe,
+  Users,
+  Leaf,
+  ArrowRight
 } from "lucide-react";
 
 export default function WhyChooseUsPage() {
@@ -28,7 +28,7 @@ export default function WhyChooseUsPage() {
     {
       icon: <ShieldCheck className="text-brand-primary w-6 h-6" />,
       title: "Food Safety Compliance",
-      desc: "Our products fully meet strict international food safety standards (ISO, FSSAI, Spice Board, APEDA etc.).",
+      desc: "Our products fully meet strict international food safety standards (BRCGS, FDA, Halal, Kosher, ISO, FSSAI, Spice Board, APEDA etc.).",
     },
     {
       icon: <Globe className="text-brand-primary w-6 h-6" />,
