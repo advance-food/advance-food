@@ -2,15 +2,11 @@
 
 import React from "react";
 import Link from "next/link";
-import Products from "../../components/Products";
-import OtherProducts from "../../components/OtherProducts";
-import { useQuoteModal } from "../../context/QuoteModalContext";
 import { ArrowRight } from "lucide-react";
 
 export default function ProductsPage() {
-  const { openQuoteModal } = useQuoteModal();
-
   return (
+
     <main className="min-h-screen pt-20">
       {/* Premium Visual Banner Header */}
       <section
@@ -31,11 +27,6 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Embedded Interactive Products Catalog */}
-      <Products onProductSelect={(productName) => openQuoteModal(productName)} />
-
-      {/* Other Products We Offer */}
-      <OtherProducts onProductSelect={(productName) => openQuoteModal(productName)} />
 
       {/* Conversion Banner leading to Contact */}
       <section className="py-16 bg-brand-dark text-white relative overflow-hidden">
