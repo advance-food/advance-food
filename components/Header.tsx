@@ -3,11 +3,17 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, PhoneCall } from "lucide-react";
+import { Menu, X, PhoneCall, ChevronDown, ChevronRight } from "lucide-react";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
+  const [isMobileVegOpen, setIsMobileVegOpen] = useState(false);
+  const [isMobileOnionsOpen, setIsMobileOnionsOpen] = useState(false);
+  const [isMobileWhiteOnionOpen, setIsMobileWhiteOnionOpen] = useState(false);
+  const [isMobilePinkOnionOpen, setIsMobilePinkOnionOpen] = useState(false);
+  const [isMobileRedOnionOpen, setIsMobileRedOnionOpen] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
   const showSolidHeader = isScrolled || !isHomePage;
@@ -30,8 +36,8 @@ export default function Header() {
 
   const navLinks = [
     { label: "Home", target: "/" },
-    { label: "About Us", target: "/about" },
     { label: "Products", target: "/products" },
+    { label: "About Us", target: "/about" },
     { label: "Why Choose Us", target: "/why-choose-us" },
     { label: "Process", target: "/process" },
     { label: "Blogs", target: "/blogs" },
@@ -79,6 +85,211 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-8">
             {filteredNavLinks.map((link) => {
               const isActive = pathname === link.target;
+              const isProducts = link.label === "Products";
+
+              if (isProducts) {
+                return (
+                  <div key={link.target} className="group relative py-6">
+                    <Link
+                      href={link.target}
+                      className={`text-sm font-semibold tracking-wide transition-colors flex items-center gap-1 relative py-2 ${isActive
+                        ? "text-brand-primary"
+                        : showSolidHeader
+                          ? "text-gray-700 hover:text-brand-primary"
+                          : "text-white/90 hover:text-white"
+                        }`}
+                    >
+                      <span>{link.label}</span>
+                      <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
+                      <span className={`absolute bottom-0 left-0 h-0.5 bg-brand-primary transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                        }`}></span>
+                    </Link>
+
+                    {/* Products Dropdown Panel (Column 1) */}
+                    <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute top-full left-1/2 -translate-x-1/2 mt-1 w-64 bg-white border border-gray-100 rounded-2xl shadow-xl py-2.5 z-50 transition-all duration-200 pointer-events-auto">
+                      
+                      {/* Dehydrated Vegetables Category (Column 2 Sub-menu) */}
+                      <div className="group/veg">
+                        <Link
+                          href="/products/dehydrated-vegetables"
+                          className="flex items-center justify-between px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-all rounded-lg mx-2"
+                        >
+                          <span>Dehydrated Vegetables</span>
+                          <ChevronRight size={14} className="text-gray-400 group-hover/veg:text-brand-primary" />
+                        </Link>
+
+                        {/* Column 2 Panel (List of Dehydrated Vegetables) */}
+                        <div className="invisible opacity-0 group-hover/veg:visible group-hover/veg:opacity-100 absolute top-0 left-full ml-1 w-64 bg-white border border-gray-100 rounded-2xl shadow-xl py-2 z-50 transition-all duration-200 pointer-events-auto shadow-2xl">
+                          
+                          {/* Dehydrated Onion Category (Column 3 Sub-menu) */}
+                          <div className="group/sub">
+                            <Link
+                              href="/products/dehydrated-vegetables/dehydrated-onion"
+                              className="flex items-center justify-between px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-all rounded-lg mx-2"
+                            >
+                              <span>Dehydrated Onion</span>
+                              <ChevronRight size={14} className="text-gray-400 group-hover/sub:text-brand-primary" />
+                            </Link>
+
+                            {/* Column 3 Panel (List of Onion varieties) */}
+                            <div className="invisible opacity-0 group-hover/sub:visible group-hover/sub:opacity-100 absolute top-0 left-full ml-1 w-48 bg-white border border-gray-100 rounded-2xl shadow-xl py-2 z-50 transition-all duration-200 pointer-events-auto">
+                              
+                              {/* White Onion Sub-menu (Column 4 Cuts) */}
+                              <div className="group/sub3">
+                                <Link
+                                  href="/products/dehydrated-vegetables/dehydrated-onion/white"
+                                  className="flex items-center justify-between px-3.5 py-2 text-[13px] font-medium text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-all rounded-lg mx-1.5"
+                                >
+                                  <span>White Onion</span>
+                                  <ChevronRight size={13} className="text-gray-400 group-hover/sub3:text-brand-primary" />
+                                </Link>
+                                <div className="invisible opacity-0 group-hover/sub3:visible group-hover/sub3:opacity-100 absolute top-0 left-full ml-1 w-32 bg-white border border-gray-100 rounded-2xl shadow-xl py-2 z-50 transition-all duration-200 pointer-events-auto">
+                                  {["Flakes", "Chopped", "Mince", "Granules", "Powder"].map((item) => (
+                                    <Link
+                                      key={item}
+                                      href="/products/dehydrated-vegetables/dehydrated-onion/white"
+                                      className="block px-3.5 py-2 text-xs font-semibold text-gray-600 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-1.5"
+                                    >
+                                      {item}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* Pink Onion Sub-menu (Column 4 Cuts) */}
+                              <div className="group/sub3">
+                                <Link
+                                  href="/products/dehydrated-vegetables/dehydrated-onion/pink"
+                                  className="flex items-center justify-between px-3.5 py-2 text-[13px] font-medium text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-all rounded-lg mx-1.5"
+                                >
+                                  <span>Pink Onion</span>
+                                  <ChevronRight size={13} className="text-gray-400 group-hover/sub3:text-brand-primary" />
+                                </Link>
+                                <div className="invisible opacity-0 group-hover/sub3:visible group-hover/sub3:opacity-100 absolute top-0 left-full ml-1 w-32 bg-white border border-gray-100 rounded-2xl shadow-xl py-2 z-50 transition-all duration-200 pointer-events-auto">
+                                  {["Flakes", "Chopped", "Mince", "Granules", "Powder"].map((item) => (
+                                    <Link
+                                      key={item}
+                                      href="/products/dehydrated-vegetables/dehydrated-onion/pink"
+                                      className="block px-3.5 py-2 text-xs font-semibold text-gray-600 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-1.5"
+                                    >
+                                      {item}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* Red Onion Sub-menu (Column 4 Cuts) */}
+                              <div className="group/sub3">
+                                <Link
+                                  href="/products/dehydrated-vegetables/dehydrated-onion/red"
+                                  className="flex items-center justify-between px-3.5 py-2 text-[13px] font-medium text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-all rounded-lg mx-1.5"
+                                >
+                                  <span>Red Onion</span>
+                                  <ChevronRight size={13} className="text-gray-400 group-hover/sub3:text-brand-primary" />
+                                </Link>
+                                <div className="invisible opacity-0 group-hover/sub3:visible group-hover/sub3:opacity-100 absolute top-0 left-full ml-1 w-32 bg-white border border-gray-100 rounded-2xl shadow-xl py-2 z-50 transition-all duration-200 pointer-events-auto">
+                                  {["Flakes", "Chopped", "Mince", "Granules", "Powder"].map((item) => (
+                                    <Link
+                                      key={item}
+                                      href="/products/dehydrated-vegetables/dehydrated-onion/red"
+                                      className="block px-3.5 py-2 text-xs font-semibold text-gray-600 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-1.5"
+                                    >
+                                      {item}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+
+                              <Link
+                                href="/products/dehydrated-vegetables/dehydrated-onion"
+                                className="block px-3.5 py-2 text-[13px] font-medium text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-1.5"
+                              >
+                                Fried Onion
+                              </Link>
+                            </div>
+                          </div>
+
+                          <Link
+                            href="/products/dehydrated-vegetables"
+                            className="block px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
+                          >
+                            Dehydrated Garlic
+                          </Link>
+                          <Link
+                            href="/products/dehydrated-vegetables"
+                            className="block px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
+                          >
+                            Dehydrated Ginger
+                          </Link>
+                          <Link
+                            href="/products/dehydrated-vegetables"
+                            className="block px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
+                          >
+                            Dehydrated Green Chilli
+                          </Link>
+                          <Link
+                            href="/products/dehydrated-vegetables"
+                            className="block px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
+                          >
+                            Dehydrated Carrot
+                          </Link>
+                          <Link
+                            href="/products/dehydrated-vegetables"
+                            className="block px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
+                          >
+                            Dehydrated Beet root
+                          </Link>
+                          <Link
+                            href="/products/dehydrated-vegetables"
+                            className="block px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
+                          >
+                            Dehydrated Amchur
+                          </Link>
+                          <Link
+                            href="/products/dehydrated-vegetables"
+                            className="block px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
+                          >
+                            Dehydrated Potato
+                          </Link>
+                          <Link
+                            href="/products/dehydrated-vegetables"
+                            className="block px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
+                          >
+                            Dehydrated Chives
+                          </Link>
+                        </div>
+                      </div>
+
+                      <Link
+                        href="/products/spices"
+                        className="block px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
+                      >
+                        Spices
+                      </Link>
+                      <Link
+                        href="/products"
+                        className="block px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
+                      >
+                        Spray dried Fruits & Vegetables
+                      </Link>
+                      <Link
+                        href="/products"
+                        className="block px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
+                      >
+                        Herbs
+                      </Link>
+                      <Link
+                        href="/products"
+                        className="block px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
+                      >
+                        Blended Spices
+                      </Link>
+
+                    </div>
+                  </div>
+                );
+              }
+
               return (
                 <Link
                   key={link.target}
@@ -156,9 +367,255 @@ export default function Header() {
           </div>
 
           {/* Mobile Nav Links list */}
-          <div className="flex flex-col gap-4 mt-8">
+          <div className="flex flex-col gap-2 mt-8 overflow-y-auto max-h-[60vh] pr-2">
             {filteredNavLinks.map((link) => {
               const isActive = pathname === link.target;
+              const isProducts = link.label === "Products";
+
+              if (isProducts) {
+                return (
+                  <div key={link.target} className="flex flex-col">
+                    {/* Level 0: Products Accordion Header */}
+                    <button
+                      onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
+                      className={`w-full flex items-center justify-between text-left font-bold text-lg py-2 px-3 rounded-lg transition-all cursor-pointer ${
+                        isMobileProductsOpen || isActive
+                          ? "bg-sky-50 text-brand-primary"
+                          : "text-gray-800 hover:bg-sky-50 hover:text-brand-primary"
+                      }`}
+                    >
+                      <span>{link.label}</span>
+                      <ChevronDown
+                        size={18}
+                        className={`transition-transform duration-200 ${isMobileProductsOpen ? "rotate-180" : ""}`}
+                      />
+                    </button>
+
+                    {/* Level 1: Products Sub-categories */}
+                    {isMobileProductsOpen && (
+                      <div className="flex flex-col gap-1 pl-4 mt-1 border-l-2 border-gray-100 ml-3">
+                        
+                        {/* Dehydrated Vegetables Accordion Header */}
+                        <div className="flex flex-col">
+                          <button
+                            onClick={() => setIsMobileVegOpen(!isMobileVegOpen)}
+                            className="w-full flex items-center justify-between text-left font-semibold text-base py-2 px-3 rounded-lg text-gray-700 hover:bg-gray-50 transition-all cursor-pointer"
+                          >
+                            <span>Dehydrated Vegetables</span>
+                            <ChevronDown
+                              size={16}
+                              className={`transition-transform duration-200 ${isMobileVegOpen ? "rotate-180" : ""}`}
+                            />
+                          </button>
+
+                          {/* Level 2: Dehydrated Vegetables list */}
+                          {isMobileVegOpen && (
+                            <div className="flex flex-col gap-1 pl-4 mt-1 border-l border-gray-100 ml-3">
+                              
+                              {/* Onion Sub-menu Accordion */}
+                              <div className="flex flex-col">
+                                <button
+                                  onClick={() => setIsMobileOnionsOpen(!isMobileOnionsOpen)}
+                                  className="w-full flex items-center justify-between text-left font-semibold text-sm py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 transition-all cursor-pointer"
+                                >
+                                  <span>Dehydrated Onion</span>
+                                  <ChevronDown
+                                    size={14}
+                                    className={`transition-transform duration-200 ${isMobileOnionsOpen ? "rotate-180" : ""}`}
+                                  />
+                                </button>
+
+                                {/* Level 3: Onion varieties */}
+                                {isMobileOnionsOpen && (
+                                  <div className="flex flex-col gap-1 pl-4 mt-1 border-l border-gray-100 ml-3">
+                                    {/* White Onion Accordion */}
+                                    <div className="flex flex-col">
+                                      <button
+                                        onClick={() => setIsMobileWhiteOnionOpen(!isMobileWhiteOnionOpen)}
+                                        className="w-full flex items-center justify-between text-left font-semibold text-xs py-1.5 px-3 rounded-lg text-gray-500 hover:bg-gray-50 transition-all cursor-pointer"
+                                      >
+                                        <span>White Onion</span>
+                                        <ChevronDown
+                                          size={12}
+                                          className={`transition-transform duration-200 ${isMobileWhiteOnionOpen ? "rotate-180" : ""}`}
+                                        />
+                                      </button>
+                                      {isMobileWhiteOnionOpen && (
+                                        <div className="flex flex-col gap-1 pl-4 mt-1 ml-3 border-l border-dashed border-gray-200">
+                                          {["Flakes", "Chopped", "Mince", "Granules", "Powder"].map((item) => (
+                                            <Link
+                                              key={item}
+                                              href="/products/dehydrated-vegetables/dehydrated-onion/white"
+                                              onClick={() => setIsMobileMenuOpen(false)}
+                                              className="text-left text-[11px] text-gray-500 py-1 px-3 rounded hover:bg-gray-50 hover:text-brand-primary block transition-colors"
+                                            >
+                                              {item}
+                                            </Link>
+                                          ))}
+                                        </div>
+                                      )}
+                                    </div>
+
+                                    {/* Pink Onion Accordion */}
+                                    <div className="flex flex-col">
+                                      <button
+                                        onClick={() => setIsMobilePinkOnionOpen(!isMobilePinkOnionOpen)}
+                                        className="w-full flex items-center justify-between text-left font-semibold text-xs py-1.5 px-3 rounded-lg text-gray-500 hover:bg-gray-50 transition-all cursor-pointer"
+                                      >
+                                        <span>Pink Onion</span>
+                                        <ChevronDown
+                                          size={12}
+                                          className={`transition-transform duration-200 ${isMobilePinkOnionOpen ? "rotate-180" : ""}`}
+                                        />
+                                      </button>
+                                      {isMobilePinkOnionOpen && (
+                                        <div className="flex flex-col gap-1 pl-4 mt-1 ml-3 border-l border-dashed border-gray-200">
+                                          {["Flakes", "Chopped", "Mince", "Granules", "Powder"].map((item) => (
+                                            <Link
+                                              key={item}
+                                              href="/products/dehydrated-vegetables/dehydrated-onion/pink"
+                                              onClick={() => setIsMobileMenuOpen(false)}
+                                              className="text-left text-[11px] text-gray-500 py-1 px-3 rounded hover:bg-gray-50 hover:text-brand-primary block transition-colors"
+                                            >
+                                              {item}
+                                            </Link>
+                                          ))}
+                                        </div>
+                                      )}
+                                    </div>
+
+                                    {/* Red Onion Accordion */}
+                                    <div className="flex flex-col">
+                                      <button
+                                        onClick={() => setIsMobileRedOnionOpen(!isMobileRedOnionOpen)}
+                                        className="w-full flex items-center justify-between text-left font-semibold text-xs py-1.5 px-3 rounded-lg text-gray-500 hover:bg-gray-50 transition-all cursor-pointer"
+                                      >
+                                        <span>Red Onion</span>
+                                        <ChevronDown
+                                          size={12}
+                                          className={`transition-transform duration-200 ${isMobileRedOnionOpen ? "rotate-180" : ""}`}
+                                        />
+                                      </button>
+                                      {isMobileRedOnionOpen && (
+                                        <div className="flex flex-col gap-1 pl-4 mt-1 ml-3 border-l border-dashed border-gray-200">
+                                          {["Flakes", "Chopped", "Mince", "Granules", "Powder"].map((item) => (
+                                            <Link
+                                              key={item}
+                                              href="/products/dehydrated-vegetables/dehydrated-onion/red"
+                                              onClick={() => setIsMobileMenuOpen(false)}
+                                              className="text-left text-[11px] text-gray-500 py-1 px-3 rounded hover:bg-gray-50 hover:text-brand-primary block transition-colors"
+                                            >
+                                              {item}
+                                            </Link>
+                                          ))}
+                                        </div>
+                                      )}
+                                    </div>
+
+                                    <Link
+                                      href="/products/dehydrated-vegetables/dehydrated-onion"
+                                      onClick={() => setIsMobileMenuOpen(false)}
+                                      className="text-left font-semibold text-xs py-1.5 px-3 rounded-lg text-gray-500 hover:bg-gray-50 block transition-colors"
+                                    >
+                                      Fried Onion
+                                    </Link>
+                                  </div>
+                                )}
+                              </div>
+                              <Link
+                                href="/products/dehydrated-vegetables"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-left font-semibold text-sm py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
+                              >
+                                Dehydrated Garlic
+                              </Link>
+                              <Link
+                                href="/products/dehydrated-vegetables"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-left font-semibold text-sm py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
+                              >
+                                Dehydrated Ginger
+                              </Link>
+                              <Link
+                                href="/products/dehydrated-vegetables"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-left font-semibold text-sm py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
+                              >
+                                Dehydrated Green Chilli
+                              </Link>
+                              <Link
+                                href="/products/dehydrated-vegetables"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-left font-semibold text-sm py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
+                              >
+                                Dehydrated Carrot
+                              </Link>
+                              <Link
+                                href="/products/dehydrated-vegetables"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-left font-semibold text-sm py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
+                              >
+                                Dehydrated Beet root
+                              </Link>
+                              <Link
+                                href="/products/dehydrated-vegetables"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-left font-semibold text-sm py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
+                              >
+                                Dehydrated Amchur
+                              </Link>
+                              <Link
+                                href="/products/dehydrated-vegetables"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-left font-semibold text-sm py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
+                              >
+                                Dehydrated Potato
+                              </Link>
+                              <Link
+                                href="/products/dehydrated-vegetables"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="text-left font-semibold text-sm py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
+                              >
+                                Dehydrated Chives
+                              </Link>
+                            </div>
+                          )}
+                        </div>
+
+                        <Link
+                          href="/products/spices"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-left font-semibold text-base py-2 px-3 rounded-lg text-gray-700 hover:bg-gray-50 block transition-colors"
+                        >
+                          Spices
+                        </Link>
+                        <Link
+                          href="/products"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-left font-semibold text-base py-2 px-3 rounded-lg text-gray-700 hover:bg-gray-50 block transition-colors"
+                        >
+                          Spray dried Fruits & Vegetables
+                        </Link>
+                        <Link
+                          href="/products"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-left font-semibold text-base py-2 px-3 rounded-lg text-gray-700 hover:bg-gray-50 block transition-colors"
+                        >
+                          Herbs
+                        </Link>
+                        <Link
+                          href="/products"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-left font-semibold text-base py-2 px-3 rounded-lg text-gray-700 hover:bg-gray-50 block transition-colors"
+                        >
+                          Blended Spices
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
               return (
                 <Link
                   key={link.target}
