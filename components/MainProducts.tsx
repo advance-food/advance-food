@@ -7,23 +7,28 @@ export default function MainProducts() {
   const categories = [
     {
       name: "Dehydrated Vegetables",
-      imageSrc: "/onion_icon.png"
+      imageSrc: "/dehydrated_vegetables_circle.jpg",
+      imageClass: "scale-[1.25] group-hover:scale-[1.3]"
     },
     {
       name: "Spices",
-      imageSrc: "/chili_icon.png"
+      imageSrc: "/spices_circle.jpg",
+      imageClass: "scale-[1.25] group-hover:scale-[1.3]"
     },
     {
       name: "Spray dried Fruits & Vegetables",
-      imageSrc: "/beetroot_icon.png"
+      imageSrc: "/spray_dried_powder_circle.jpg",
+      imageClass: "scale-[1.25] group-hover:scale-[1.3]"
     },
     {
       name: "Herbs",
-      imageSrc: "/herb_icon.png"
+      imageSrc: "/herbs_circle.jpg",
+      imageClass: "scale-[1.25] group-hover:scale-[1.3]"
     },
     {
       name: "Blended Spices",
-      imageSrc: "/blended_spices_icon.png"
+      imageSrc: "/blended_spices_circle.jpg",
+      imageClass: "scale-[1.05] group-hover:scale-[1.1]"
     }
   ];
 
@@ -70,16 +75,16 @@ export default function MainProducts() {
                 className="flex flex-col items-center group cursor-pointer transition-all duration-300 p-4 rounded-2xl hover:bg-gray-50 border border-transparent hover:border-gray-100 block"
               >
                 {/* Circular Icon Wrapper */}
-                <div className="relative flex items-center justify-center overflow-hidden rounded-full w-24 h-24 sm:w-28 sm:h-28">
+                <div className="relative flex items-center justify-center overflow-hidden rounded-full w-32 h-32 sm:w-40 sm:h-40">
                   <img
                     src={cat.imageSrc}
                     alt={cat.name}
-                    className="w-full h-full object-cover transition-all duration-500 scale-[1.28] group-hover:scale-[1.38] group-hover:rotate-2"
+                    className={`w-full h-full object-contain mix-blend-multiply transition-all duration-500 group-hover:rotate-2 ${cat.imageClass}`}
                   />
                 </div>
                 
                 {/* Product Label */}
-                <h4 className="mt-5 text-sm sm:text-base font-bold text-gray-800 text-center tracking-tight group-hover:text-brand-primary transition-colors duration-300 min-h-[40px] flex items-center justify-center">
+                <h4 className="mt-2 text-sm sm:text-base font-bold text-gray-800 text-center tracking-tight group-hover:text-brand-primary transition-colors duration-300 min-h-[40px] flex items-center justify-center">
                   {cat.name}
                 </h4>
               </Link>

@@ -14,23 +14,28 @@ function ProductsPageContent() {
   const categories = [
     {
       name: "Dehydrated Vegetables",
-      imageSrc: "/onion_icon.png"
+      imageSrc: "/dehydrated_vegetables_circle.jpg",
+      imageClass: "scale-[1.25] group-hover:scale-[1.3]"
     },
     {
       name: "Spices",
-      imageSrc: "/chili_icon.png"
+      imageSrc: "/spices_circle.jpg",
+      imageClass: "scale-[1.25] group-hover:scale-[1.3]"
     },
     {
       name: "Spray dried Fruits & Vegetables",
-      imageSrc: "/beetroot_icon.png"
+      imageSrc: "/spray_dried_powder_circle.jpg",
+      imageClass: "scale-[1.25] group-hover:scale-[1.3]"
     },
     {
       name: "Herbs",
-      imageSrc: "/herb_icon.png"
+      imageSrc: "/herbs_circle.jpg",
+      imageClass: "scale-[1.25] group-hover:scale-[1.3]"
     },
     {
       name: "Blended Spices",
-      imageSrc: "/blended_spices_icon.png"
+      imageSrc: "/blended_spices_circle.jpg",
+      imageClass: "scale-[1.05] group-hover:scale-[1.1]"
     }
   ];
 
@@ -103,16 +108,16 @@ function ProductsPageContent() {
                   }`}
                 >
                   {/* Circular Icon Wrapper */}
-                  <div className="relative flex items-center justify-center overflow-hidden rounded-full w-24 h-24 sm:w-28 sm:h-28 transition-transform duration-300 group-hover:scale-105">
+                  <div className="relative flex items-center justify-center overflow-hidden rounded-full w-32 h-32 sm:w-40 sm:h-40 transition-transform duration-300">
                     <img
                       src={cat.imageSrc}
                       alt={cat.name}
-                      className="w-full h-full object-cover scale-[1.28] transition-transform duration-500"
+                      className={`w-full h-full object-contain mix-blend-multiply transition-transform duration-500 ${cat.imageClass}`}
                     />
                   </div>
                   
                   {/* Product Label */}
-                  <h4 className="mt-5 text-sm sm:text-base font-bold text-center tracking-tight transition-colors duration-300 min-h-[40px] flex items-center justify-center text-gray-800 group-hover:text-brand-primary">
+                  <h4 className="mt-2 text-sm sm:text-base font-bold text-center tracking-tight transition-colors duration-300 min-h-[40px] flex items-center justify-center text-gray-800 group-hover:text-brand-primary">
                     {cat.name}
                   </h4>
                 </Link>
