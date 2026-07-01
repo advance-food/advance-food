@@ -83,7 +83,13 @@ function ProductsPageContent() {
                 ? "/products/dehydrated-vegetables"
                 : cat.name === "Spices"
                   ? "/products/spices"
-                  : `/products?coming-soon=${encodeURIComponent(cat.name)}`;
+                  : cat.name === "Spray dried Fruits & Vegetables"
+                    ? "/products/spray-dried-fruits-and-vegetables"
+                    : cat.name === "Herbs"
+                      ? "/products/herbs"
+                      : cat.name === "Blended Spices"
+                        ? "/products/blended-spices"
+                        : `/products?coming-soon=${encodeURIComponent(cat.name)}`;
               const isComingSoonActive = comingSoonCategory === cat.name;
 
               return (

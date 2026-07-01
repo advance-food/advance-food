@@ -14,6 +14,7 @@ export default function Header() {
   const [isMobileWhiteOnionOpen, setIsMobileWhiteOnionOpen] = useState(false);
   const [isMobilePinkOnionOpen, setIsMobilePinkOnionOpen] = useState(false);
   const [isMobileRedOnionOpen, setIsMobileRedOnionOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
   const pathname = usePathname();
   const isHomePage = pathname === "/";
   const showSolidHeader = isScrolled || !isHomePage;
@@ -89,9 +90,15 @@ export default function Header() {
 
               if (isProducts) {
                 return (
-                  <div key={link.target} className="group relative py-6">
+                  <div
+                    key={link.target}
+                    className="group relative py-6"
+                    onMouseEnter={() => setIsProductsOpen(true)}
+                    onMouseLeave={() => setIsProductsOpen(false)}
+                  >
                     <Link
                       href={link.target}
+                      onClick={() => setIsProductsOpen(false)}
                       className={`text-sm font-semibold tracking-wide transition-colors flex items-center gap-1 relative py-2 ${isActive
                         ? "text-brand-primary"
                         : showSolidHeader
@@ -100,13 +107,18 @@ export default function Header() {
                         }`}
                     >
                       <span>{link.label}</span>
-                      <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
-                      <span className={`absolute bottom-0 left-0 h-0.5 bg-brand-primary transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                      <ChevronDown size={14} className={`transition-transform duration-300 ${isProductsOpen ? "rotate-180" : ""}`} />
+                      <span className={`absolute bottom-0 left-0 h-0.5 bg-brand-primary transition-all duration-300 ${isActive ? "w-full" : isProductsOpen ? "w-full" : "w-0"
                         }`}></span>
                     </Link>
 
                     {/* Products Dropdown Panel (Column 1) */}
-                    <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute top-full left-1/2 -translate-x-1/2 mt-1 w-64 bg-white border border-gray-100 rounded-2xl shadow-xl py-2.5 z-50 transition-all duration-200 pointer-events-auto">
+                    <div
+                      onClick={() => setIsProductsOpen(false)}
+                      className={`absolute top-full left-1/2 -translate-x-1/2 mt-1 w-64 bg-white border border-gray-100 rounded-2xl shadow-xl py-2.5 z-50 transition-all duration-200 pointer-events-auto ${
+                        isProductsOpen ? "visible opacity-100" : "invisible opacity-0"
+                      }`}
+                    >
                       
                       {/* Dehydrated Vegetables Category (Column 2 Sub-menu) */}
                       <div className="group/veg">
@@ -267,19 +279,19 @@ export default function Header() {
                         Spices
                       </Link>
                       <Link
-                        href="/products"
+                        href="/products/spray-dried-fruits-and-vegetables"
                         className="block px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
                       >
                         Spray dried Fruits & Vegetables
                       </Link>
                       <Link
-                        href="/products"
+                        href="/products/herbs"
                         className="block px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
                       >
                         Herbs
                       </Link>
-                      <Link
-                        href="/products"
+                       <Link
+                        href="/products/blended-spices"
                         className="block px-3.5 py-2 text-[13px] font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
                       >
                         Blended Spices
@@ -590,21 +602,21 @@ export default function Header() {
                           Spices
                         </Link>
                         <Link
-                          href="/products"
+                          href="/products/spray-dried-fruits-and-vegetables"
                           onClick={() => setIsMobileMenuOpen(false)}
                           className="text-left font-semibold text-base py-2 px-3 rounded-lg text-gray-700 hover:bg-gray-50 block transition-colors"
                         >
                           Spray dried Fruits & Vegetables
                         </Link>
                         <Link
-                          href="/products"
+                          href="/products/herbs"
                           onClick={() => setIsMobileMenuOpen(false)}
                           className="text-left font-semibold text-base py-2 px-3 rounded-lg text-gray-700 hover:bg-gray-50 block transition-colors"
                         >
                           Herbs
                         </Link>
-                        <Link
-                          href="/products"
+                         <Link
+                          href="/products/blended-spices"
                           onClick={() => setIsMobileMenuOpen(false)}
                           className="text-left font-semibold text-base py-2 px-3 rounded-lg text-gray-700 hover:bg-gray-50 block transition-colors"
                         >

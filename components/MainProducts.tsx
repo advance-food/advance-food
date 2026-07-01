@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 export default function MainProducts() {
   const categories = [
@@ -49,26 +50,41 @@ export default function MainProducts() {
 
         {/* Circular icons grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 sm:gap-10 md:gap-6 justify-center items-stretch mt-12 max-w-5xl mx-auto">
-          {categories.map((cat, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center group cursor-pointer transition-all duration-300 p-4 rounded-2xl hover:bg-gray-50 border border-transparent hover:border-gray-100"
-            >
-              {/* Circular Icon Wrapper */}
-              <div className="relative flex items-center justify-center overflow-hidden rounded-full w-24 h-24 sm:w-28 sm:h-28">
-                <img
-                  src={cat.imageSrc}
-                  alt={cat.name}
-                  className="w-full h-full object-cover transition-all duration-500 scale-[1.28] group-hover:scale-[1.38] group-hover:rotate-2"
-                />
-              </div>
-              
-              {/* Product Label */}
-              <h4 className="mt-5 text-sm sm:text-base font-bold text-gray-800 text-center tracking-tight group-hover:text-brand-primary transition-colors duration-300 min-h-[40px] flex items-center justify-center">
-                {cat.name}
-              </h4>
-            </div>
-          ))}
+          {categories.map((cat, idx) => {
+            const href = cat.name === "Dehydrated Vegetables"
+              ? "/products/dehydrated-vegetables"
+              : cat.name === "Spices"
+                ? "/products/spices"
+                : cat.name === "Spray dried Fruits & Vegetables"
+                  ? "/products/spray-dried-fruits-and-vegetables"
+                  : cat.name === "Herbs"
+                    ? "/products/herbs"
+                    : cat.name === "Blended Spices"
+                      ? "/products/blended-spices"
+                      : `/products?coming-soon=${encodeURIComponent(cat.name)}`;
+
+            return (
+              <Link
+                key={idx}
+                href={href}
+                className="flex flex-col items-center group cursor-pointer transition-all duration-300 p-4 rounded-2xl hover:bg-gray-50 border border-transparent hover:border-gray-100 block"
+              >
+                {/* Circular Icon Wrapper */}
+                <div className="relative flex items-center justify-center overflow-hidden rounded-full w-24 h-24 sm:w-28 sm:h-28">
+                  <img
+                    src={cat.imageSrc}
+                    alt={cat.name}
+                    className="w-full h-full object-cover transition-all duration-500 scale-[1.28] group-hover:scale-[1.38] group-hover:rotate-2"
+                  />
+                </div>
+                
+                {/* Product Label */}
+                <h4 className="mt-5 text-sm sm:text-base font-bold text-gray-800 text-center tracking-tight group-hover:text-brand-primary transition-colors duration-300 min-h-[40px] flex items-center justify-center">
+                  {cat.name}
+                </h4>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
