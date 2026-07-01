@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Clock, Mail, Phone, MapPin, Facebook, Linkedin, Instagram, Youtube } from "lucide-react";
+import { Clock, Mail, Phone, MapPin, Facebook, Linkedin, Instagram, Youtube, Factory, Building2 } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -126,9 +126,17 @@ export default function Footer() {
             </h3>
             <div className="space-y-4">
               <div className="flex gap-3 text-sm text-gray-400">
-                <MapPin size={18} className="text-brand-primary shrink-0 mt-0.5" />
+                <Factory size={18} className="text-brand-primary shrink-0 mt-0.5" />
                 <span className="leading-relaxed">
-                  Mahuva, Gujarat, India - 364290
+                  <strong className="text-gray-300">Factory Address:</strong><br />
+                  Survey No. 56, NH - 51, Umaniyavadar, MAHUVA, GUJARAT 364290, IN
+                </span>
+              </div>
+              <div className="flex gap-3 text-sm text-gray-400">
+                <Building2 size={18} className="text-brand-primary shrink-0 mt-0.5" />
+                <span className="leading-relaxed">
+                  <strong className="text-gray-300">Corporate Office:</strong><br />
+                  GF-1, 749/7 Nr. Purohit Char Rasta, Makarpura GIDC, Makarpura, 390010, IN
                 </span>
               </div>
               <div className="flex gap-3 text-sm text-gray-400">

@@ -2,7 +2,7 @@
 
 import React from "react";
 import ContactForm from "../../components/ContactForm";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Factory, Building2 } from "lucide-react";
 
 export default function ContactPage() {
   const contacts = [
@@ -17,6 +17,18 @@ export default function ContactPage() {
       title: "Business Email Support",
       value: "sales@advancefood.in",
       href: "mailto:sales@advancefood.in",
+    },
+    {
+      icon: <Factory className="w-5 h-5 mt-1 shrink-0" />,
+      title: "Factory Address",
+      value: "Survey No. 56, NH - 51, Umaniyavadar, MAHUVA, GUJARAT 364290, IN",
+      href: "https://maps.google.com/?q=Survey+No.+56,+NH+-+51,+Umaniyavadar,+MAHUVA,+GUJARAT+364290,+IN",
+    },
+    {
+      icon: <Building2 className="w-5 h-5 mt-1 shrink-0" />,
+      title: "Corporate Office",
+      value: "GF-1, 749/7 Nr. Purohit Char Rasta, Makarpura GIDC, Makarpura, 390010, IN",
+      href: "https://maps.google.com/?q=GF-1,+749/7+Nr.+Purohit+Char+Rasta,+Makarpura+GIDC,+Makarpura,+390010,+IN",
     },
   ];
 
@@ -76,7 +88,7 @@ export default function ContactPage() {
                       <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest">
                         {c.title}
                       </h4>
-                      <p className="text-lg sm:text-xl font-extrabold text-gray-900 mt-1.5 break-all group-hover:text-brand-primary transition-colors tracking-tight">
+                      <p className="text-sm sm:text-base font-semibold text-gray-900 mt-1.5 break-words group-hover:text-brand-primary transition-colors tracking-tight leading-snug">
                         {c.value}
                       </p>
                     </div>
