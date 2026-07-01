@@ -11,19 +11,11 @@ export default function Hero({ onGetQuoteClick }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-28 pb-20 bg-cover bg-center overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=1920&auto=format&fit=crop')`,
+      }}
     >
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover -z-20"
-      >
-        <source src="/video/hero-bg-vid.mp4" type="video/mp4" />
-      </video>
-      {/* Dark gradient overlay so the text remains readable */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60 -z-10"></div>
       {/* Visual glowing elements for deep micro-animation premium feel */}
       <div className="absolute top-1/4 left-1/10 w-96 h-96 bg-brand-primary/10 rounded-full filter blur-3xl -z-10 animate-pulse"></div>
       <div className="absolute bottom-1/4 right-1/10 w-96 h-96 bg-sky-500/10 rounded-full filter blur-3xl -z-10 animate-pulse" style={{ animationDelay: "2s" }}></div>
