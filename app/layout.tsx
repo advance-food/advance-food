@@ -73,6 +73,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased scroll-smooth">
       <head>
+        <link rel="preload" as="video" href="/video/hero-bg-vid.mp4" type="video/mp4" />
         {/* Google Analytics - Must be in <head> for Google Search Console Verification */}
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
         <script
