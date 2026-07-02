@@ -19,6 +19,7 @@ export default function Hero({ onGetQuoteClick }: HeroProps) {
         muted
         playsInline
         preload="auto"
+        poster="/poster.png"
         className="absolute inset-0 w-full h-full object-cover -z-20 bg-brand-dark"
       >
         <source src="/video/hero-bg-vid.mp4" type="video/mp4" />
