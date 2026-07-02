@@ -11,79 +11,79 @@ export default function SprayDriedFruitsAndVegetablesPage() {
   const sprayDriedProducts = [
     {
       name: "Tomato Powder",
-      image: "https://images.unsplash.com/photo-1518977822534-7049a61fc0c2?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Spray dried powder/Tomato Powder.jpg"
     },
     {
       name: "Tamarind Powder",
-      image: "https://images.unsplash.com/photo-1509358740172-6451e2622499?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Spray dried powder/Tamarind Powder.jpg"
     },
     {
       name: "Beetroot Powder",
-      image: "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Spray dried powder/Beetroot Powder.jpg"
     },
     {
       name: "Carrot Powder",
-      image: "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Spray dried powder/Carrot Powder.jpg"
     },
     {
       name: "Ginger Powder",
-      image: "/images/products/dry-ginger.png"
+      image: "/images/Spray dried powder/Ginger Powder.jpg"
     },
     {
       name: "Mint Powder",
-      image: "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Spray dried powder/Mint Powder.jpg"
     },
     {
       name: "Green Chilli Powder",
-      image: "/images/products/green-chilli-powder.png"
+      image: "/images/Spray dried powder/Green Chilli Powder.jpg"
     },
     {
       name: "Lemon Powder",
-      image: "/images/products/lemon-powder.png"
+      image: "/images/Spray dried powder/Lemon Powder.jpg"
     },
     {
       name: "Apple Powder",
-      image: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Spray dried powder/Apple Powder.jpg"
     },
     {
       name: "Pomegranate Powder",
-      image: "https://images.unsplash.com/photo-1528825871115-3581a5387919?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Spray dried powder/Pomegranate Powder.jpg"
     },
     {
       name: "Orange Powder",
-      image: "https://images.unsplash.com/photo-1547514701-42782101795e?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Spray dried powder/Orange Powder.jpg"
     },
     {
       name: "Mango Powder",
-      image: "https://images.unsplash.com/photo-1553279768-865429fa0078?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Spray dried powder/Mango Powder.jpg"
     },
     {
       name: "Pineapple Powder",
-      image: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Spray dried powder/Pineple Powder.jpg"
     },
     {
       name: "Banana Powder",
-      image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Spray dried powder/Banana Powder.jpg"
     },
     {
       name: "Guava Powder",
-      image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Spray dried powder/guava Powder.jpg"
     },
     {
       name: "Custard Apple Powder",
-      image: "https://images.unsplash.com/photo-1582293041079-7814c2f12063?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Spray dried powder/Custard Apple Powder.jpg"
     },
     {
       name: "Litchi Powder",
-      image: "https://images.unsplash.com/photo-1595855759920-86582396756a?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Spray dried powder/Litchi Powder.jpg"
     },
     {
       name: "Cheese Powder",
-      image: "https://images.unsplash.com/photo-1486887396153-fa416525c108?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Spray dried powder/cheese Powder.jpg"
     },
     {
       name: "Soya Sauce Powder",
-      image: "https://images.unsplash.com/photo-1607338989399-79b1d2452c6f?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Spray dried powder/soya sauce Powder.jpg"
     }
   ];
 

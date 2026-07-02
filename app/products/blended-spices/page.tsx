@@ -11,87 +11,87 @@ export default function BlendedSpicesPage() {
   const blendedProducts = [
     {
       name: "Garam Masala",
-      image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Garam Masala.jpg"
     },
     {
       name: "Kitchen King Masala",
-      image: "https://images.unsplash.com/photo-1608797178974-15b35a61d121?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Kitchen King Masala.jpg"
     },
     {
       name: "Chat Masala",
-      image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Chat Masala.jpg"
     },
     {
       name: "Chhole Masala",
-      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Chhole Masala.jpg"
     },
     {
       name: "Pavbhaji Masala",
-      image: "https://images.unsplash.com/photo-1606491956689-2ea866880c84?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Pavbhaji  Masala.jpg"
     },
     {
       name: "Sambhar Masala",
-      image: "https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Sambhar Masala.jpg"
     },
     {
       name: "Achar Masala",
-      image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Achar Masala.jpg"
     },
     {
       name: "Pulav Masala",
-      image: "https://images.unsplash.com/photo-1608797178974-15b35a61d121?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Pulav Masala.jpg"
     },
     {
       name: "Punjabi Gravy Masala",
-      image: "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Panjabi Gravy Masala.jpg"
     },
     {
       name: "Pani Puri Masala",
-      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Panipuri Masala.jpg"
     },
     {
       name: "Chas Masala",
-      image: "https://images.unsplash.com/photo-1511140973288-19bf21d7e771?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Chas masala.jpg"
     },
     {
       name: "Manchurian Masala",
-      image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Manchurian Masala.jpg"
     },
     {
       name: "Magic Masala",
-      image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Magic Masala.jpg"
     },
     {
       name: "Pizza Seasoning",
-      image: "https://images.unsplash.com/photo-1541745711111-c9d3cf4ff2c9?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Pizza Seasoning.jpg"
     },
     {
       name: "Peri peri Spice Mix",
-      image: "https://images.unsplash.com/photo-1595855759920-86582396756a?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Peri Peri Spice Mix.jpg"
     },
     {
       name: "Pasta Masala",
-      image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Pasta Masala.jpg"
     },
     {
       name: "Biriyani Masala",
-      image: "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Biriyani Masala.jpg"
     },
     {
       name: "Chicken Masala",
-      image: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Chicken Masala.jpg"
     },
     {
       name: "Meat Masala",
-      image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Meat Masala.jpg"
     },
     {
       name: "Fish Curry Masala",
-      image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Fish Curry Masala.jpg"
     },
     {
       name: "Chicken Biriyani Masala",
-      image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Blended Spices/Chicken Biriyani Masala.jpg"
     }
   ];
 
