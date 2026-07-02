@@ -18,7 +18,8 @@ export default function Hero({ onGetQuoteClick }: HeroProps) {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover -z-20"
+        poster="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=1920&auto=format&fit=crop"
+        className="absolute inset-0 w-full h-full object-cover -z-20 bg-brand-dark"
       >
         <source src="/video/hero-bg-vid.mp4" type="video/mp4" />
       </video>
