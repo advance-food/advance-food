@@ -21,7 +21,7 @@ export default function DehydratedOnionPage() {
         {/* Top Breadcrumb Navigation */}
         <Link
           href="/products/dehydrated-vegetables"
-          className="inline-flex items-center gap-2 text-sm font-bold text-gray-500 hover:text-brand-primary transition-colors group cursor-pointer"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-brand-primary transition-all duration-300 group cursor-pointer bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100 hover:shadow-md"
         >
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
           <span>Back to Dehydrated Vegetables</span>

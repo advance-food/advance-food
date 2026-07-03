@@ -40,9 +40,9 @@ export default async function BlogDetailsPage({ params }: PageProps) {
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in-up">
           <Link
             href="/blogs"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-400 hover:text-white transition-colors uppercase tracking-widest mb-4 group cursor-pointer"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-brand-primary transition-all duration-300 group cursor-pointer bg-white px-4 py-2 rounded-full shadow-sm border border-gray-100 hover:shadow-md"
           >
-            <ArrowLeft size={14} className="group-hover:-translate-x-0.5 transition-transform" />
+            <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
             <span>Back to Blogs</span>
           </Link>
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
