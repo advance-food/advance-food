@@ -27,8 +27,8 @@ export default function ContactPage() {
     {
       icon: <Building2 className="w-5 h-5 mt-1 shrink-0" />,
       title: "Corporate Office",
-      value: "GF-1, 749/7 Nr. Purohit Char Rasta, Makarpura GIDC, Makarpura, 390010, IN",
-      href: "https://maps.google.com/?q=GF-1,+749/7+Nr.+Purohit+Char+Rasta,+Makarpura+GIDC,+Makarpura,+390010,+IN",
+      value: "GF-1, 749/7 Nr. Purohit Char Rasta, Makkarpura GIDC, Vadodara 390010",
+      href: "https://maps.google.com/?q=GF-1,+749/7+Nr.+Purohit+Char+Rasta,+Makkarpura+GIDC,+Vadodara+390010",
     },
   ];
 

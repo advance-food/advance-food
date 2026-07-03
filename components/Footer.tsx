@@ -136,7 +136,7 @@ export default function Footer() {
                 <Building2 size={18} className="text-brand-primary shrink-0 mt-0.5" />
                 <span className="leading-relaxed">
                   <strong className="text-gray-300">Corporate Office:</strong><br />
-                  GF-1, 749/7 Nr. Purohit Char Rasta, Makarpura GIDC, Makarpura, 390010, IN
+                  GF-1, 749/7 Nr. Purohit Char Rasta, Makkarpura GIDC, Vadodara 390010
                 </span>
               </div>
               <div className="flex gap-3 text-sm text-gray-400">
