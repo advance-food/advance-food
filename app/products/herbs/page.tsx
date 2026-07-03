@@ -10,40 +10,52 @@ export default function HerbsPage() {
 
   const herbProducts = [
     {
-      name: "Moringa Leaves / Powder",
-      image: "/images/products/moringa-powder.png"
+      name: "Isabgol Psyllium",
+      image: "/images/Herbs/Isabgol-Psyllium.jpg"
     },
     {
-      name: "Mint Leaves / Powder",
-      image: "/images/products/mint-leaves.png"
+      name: "Amla Powder",
+      image: "/images/Herbs/amla_proper_natural_64612dfe.jpg"
     },
     {
-      name: "Kasuri Methi (Fenugreek Leaves)",
-      image: "https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?q=80&w=600&auto=format&fit=crop"
+      name: "Ashwagandha Powder",
+      image: "/images/Herbs/ashwagandha_powder_bowl_e2165c4b.jpg"
     },
     {
-      name: "Coriander Leaves",
-      image: "https://images.unsplash.com/photo-1588879460618-924b1f630514?q=80&w=600&auto=format&fit=crop"
+      name: "Curry Leaves Powder",
+      image: "/images/Herbs/curry_powder_with_leaves_c4376479.jpg"
+    },
+    {
+      name: "Mint Leaves",
+      image: "/images/Herbs/dried_mint_leaves_bowl_91510ed4.jpg"
+    },
+    {
+      name: "Kasuri Methi",
+      image: "/images/Herbs/kasuri_bowl_exact_leaves_6fded4b5.jpg"
+    },
+    {
+      name: "Moringa Leaves",
+      image: "/images/Herbs/moringa_realistic_leaflets_816c30a3.jpg"
+    },
+    {
+      name: "Neem Powder",
+      image: "/images/Herbs/neem_powder_exact_leaf_ref_b7a98bc6.jpg"
     },
     {
       name: "Oregano Leaves",
-      image: "https://images.unsplash.com/photo-1608797178974-15b35a61d121?q=80&w=600&auto=format&fit=crop"
+      image: "/images/Herbs/oregano_bowl_20554e5c.jpg"
     },
     {
-      name: "Basil Leaves",
-      image: "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=600&auto=format&fit=crop"
+      name: "Spinach Powder",
+      image: "/images/Herbs/spinach_powder_exact_leaves_dcab7e50.jpg"
     },
     {
-      name: "Rosemary Leaves",
-      image: "https://images.unsplash.com/photo-1594315522277-f9a4022888c5?q=80&w=600&auto=format&fit=crop"
+      name: "Triphala Powder",
+      image: "/images/Herbs/triphala_powder_bowl_5ab9bb16.jpg"
     },
     {
-      name: "Thyme Leaves",
-      image: "https://images.unsplash.com/photo-1515252873999-a1b50cfd31a5?q=80&w=600&auto=format&fit=crop"
-    },
-    {
-      name: "Parsley Leaves",
-      image: "https://images.unsplash.com/photo-1511140973288-19bf21d7e771?q=80&w=600&auto=format&fit=crop"
+      name: "Tulsi Leaves",
+      image: "/images/Herbs/tulsi_bowl_small_leaves_29faf006.jpg"
     }
   ];
 
