@@ -19,31 +19,31 @@ export default function DehydratedVegetablesPage() {
     },
     {
       name: "Dehydrated Ginger",
-      image: "/images/products/dry-ginger.png"
+      image: "/images/vegetables/Dehydrated Ginger.jpg"
     },
     {
       name: "Dehydrated Green Chilli",
-      image: "/images/products/green-chilli-powder.png"
+      image: "/images/vegetables/Dehydrated Green Chilli.jpg"
     },
     {
       name: "Dehydrated Carrot",
-      image: "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?q=80&w=600&auto=format&fit=crop"
+      image: "/images/vegetables/Dehydrated Carrot.jpg"
     },
     {
       name: "Dehydrated Beet root",
-      image: "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?q=80&w=600&auto=format&fit=crop"
+      image: "/images/vegetables/Dehydrated Beet root.jpg"
     },
     {
       name: "Dehydrated Amchur",
-      image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=600&auto=format&fit=crop"
+      image: "/images/vegetables/Dehydrated Amchur.jpg"
     },
     {
       name: "Dehydrated Potato",
-      image: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=600&auto=format&fit=crop"
+      image: "/images/vegetables/Dehydrated Potato.jpg"
     },
     {
       name: "Dehydrated Chives",
-      image: "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=600&auto=format&fit=crop"
+      image: "/images/vegetables/Dehydrated Chives.jpg"
     }
   ];
 
@@ -73,55 +73,55 @@ export default function DehydratedVegetablesPage() {
         {/* Simple Grid (No grouping) */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {vegProducts.map((prod, idx) => {
-              const isOnion = prod.name === "Dehydrated Onion";
-              const CardContent = (
-                <>
-                  {/* Image container */}
-                  <div className="aspect-square w-full relative overflow-hidden bg-gray-50 select-none flex items-center justify-center">
-                    {prod.image ? (
-                      <img
-                        src={prod.image}
-                        alt={prod.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    ) : (
-                      <div className="text-gray-400 font-bold text-xs uppercase tracking-wider">No Image</div>
-                    )}
-                  </div>
+            const isOnion = prod.name === "Dehydrated Onion";
+            const CardContent = (
+              <>
+                {/* Image container */}
+                <div className="aspect-square w-full relative overflow-hidden bg-gray-50 select-none flex items-center justify-center">
+                  {prod.image ? (
+                    <img
+                      src={prod.image}
+                      alt={prod.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className="text-gray-400 font-bold text-xs uppercase tracking-wider">No Image</div>
+                  )}
+                </div>
 
-                  {/* Label container at bottom */}
-                  <div className="p-5 flex-grow flex items-center justify-between border-t border-gray-100 bg-white">
-                    <span className="text-sm sm:text-base font-medium text-brand-primary group-hover:text-brand-primary/80 transition-colors duration-300">
-                      {prod.name}
-                    </span>
-                  </div>
-                </>
-              );
+                {/* Label container at bottom */}
+                <div className="p-5 flex-grow flex items-center justify-between border-t border-gray-100 bg-white">
+                  <span className="text-sm sm:text-base font-medium text-brand-primary group-hover:text-brand-primary/80 transition-colors duration-300">
+                    {prod.name}
+                  </span>
+                </div>
+              </>
+            );
 
-              if (isOnion) {
-                return (
-                  <Link
-                    key={idx}
-                    href="/products/dehydrated-vegetables/dehydrated-onion"
-                    className="bg-white rounded-2xl overflow-hidden border border-gray-150 shadow-xs hover:shadow-md hover:border-brand-primary/20 transition-all duration-300 flex flex-col group cursor-pointer"
-                  >
-                    {CardContent}
-                  </Link>
-                );
-              }
-
+            if (isOnion) {
               return (
-                <div
+                <Link
                   key={idx}
-                  onClick={() => openQuoteModal(prod.name)}
+                  href="/products/dehydrated-vegetables/dehydrated-onion"
                   className="bg-white rounded-2xl overflow-hidden border border-gray-150 shadow-xs hover:shadow-md hover:border-brand-primary/20 transition-all duration-300 flex flex-col group cursor-pointer"
                 >
                   {CardContent}
-                </div>
+                </Link>
               );
-            })}
-          </div>
+            }
+
+            return (
+              <div
+                key={idx}
+                onClick={() => openQuoteModal(prod.name)}
+                className="bg-white rounded-2xl overflow-hidden border border-gray-150 shadow-xs hover:shadow-md hover:border-brand-primary/20 transition-all duration-300 flex flex-col group cursor-pointer"
+              >
+                {CardContent}
+              </div>
+            );
+          })}
         </div>
+      </div>
 
       {/* Conversion Banner leading to Contact */}
       <section className="py-16 bg-brand-dark text-white relative overflow-hidden">
