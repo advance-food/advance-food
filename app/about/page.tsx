@@ -45,7 +45,7 @@ export default function AboutPage() {
       </section>
 
       {/* Main Content Section */}
-      <section className="pt-20 pb-10 bg-white">
+      <section className="pt-20 pb-10 bg-white overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -64,13 +64,36 @@ export default function AboutPage() {
             </div>
 
             {/* Right Interactive Image Board */}
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/10 to-sky-500/10 rounded-3xl filter blur-2xl -z-10 animate-pulse"></div>
-              <img
-                src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=800&auto=format&fit=crop"
-                alt="Advance Food spice trade"
-                className="rounded-3xl shadow-2xl border border-gray-100 object-cover w-full h-[450px]"
-              />
+            <div className="relative h-[300px] sm:h-[400px] w-full flex items-center justify-center lg:ml-8 mt-8 lg:mt-0">
+
+              {/* Rotating Background Brush-Stroke Circle */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[100%] sm:h-[115%] aspect-square z-0 animate-[spin_25s_linear_infinite]">
+                <img
+                  src="/images/bg-circle1.webp"
+                  alt="Decorative background"
+                  className="w-full h-full object-contain opacity-80"
+                  style={{ filter: "hue-rotate(85deg)" }}
+                />
+              </div>
+
+              {/* Upper-Right Image (Tilted Clockwise, Lower z-index) */}
+              <div className="absolute top-10 right-6 sm:right-16 w-[45%] sm:w-[40%] h-[60%] z-10 rounded shadow-[0_10px_20px_rgba(0,0,0,0.15)] border-[6px] sm:border-[8px] border-white bg-white rotate-[6deg] group">
+                <img
+                  src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=800&auto=format&fit=crop"
+                  alt="Advance Food spice trade"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                />
+              </div>
+
+              {/* Lower-Left Image (Tilted Counter-Clockwise, Higher z-index, Overlaps) */}
+              <div className="absolute bottom-10 left-6 sm:left-16 w-[45%] sm:w-[40%] h-[60%] z-20 rounded shadow-[0_10px_25px_rgba(0,0,0,0.2)] border-[6px] sm:border-[8px] border-white bg-white -rotate-[5deg] group">
+                <img
+                  src="https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=600&auto=format&fit=crop"
+                  alt="Advance Food premium ingredients"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                />
+              </div>
+
             </div>
 
           </div>
