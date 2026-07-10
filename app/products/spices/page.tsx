@@ -4,48 +4,10 @@ import React from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useQuoteModal } from "../../../context/QuoteModalContext";
+import { spiceProducts } from "../../../data/spiceProducts";
 
 export default function SpicesPage() {
   const { openQuoteModal } = useQuoteModal();
-
-  const spiceProducts = [
-    {
-      name: "Red Chilli",
-      image: "/images/spices/red-chilli.jpg"
-    },
-    {
-      name: "Turmeric",
-      image: "/images/spices/turmeric.jpg"
-    },
-    {
-      name: "Cumin seeds (JEERA)",
-      image: "/images/spices/cumin-seeds.png"
-    },
-    {
-      name: "Coriander Seeds (Dhaniya)",
-      image: "/images/spices/coriander-seeds.jpg"
-    },
-    {
-      name: "Fenugreek Seeds",
-      image: "/images/spices/fenugreek-seeds.jpg"
-    },
-    {
-      name: "Ajwain Seeds",
-      image: "/images/spices/ajwain-seeds.jpg"
-    },
-    {
-      name: "Fennel Seeds",
-      image: "/images/spices/fennel-seeds.jpg"
-    },
-    {
-      name: "Sesame Seeds",
-      image: "/images/spices/sesame-seeds.jpg"
-    },
-    {
-      name: "Mustard Seeds",
-      image: "/images/spices/mustard-seeds.jpeg"
-    }
-  ];
 
   return (
     <main className="min-h-screen bg-gray-50/50 pt-20">
@@ -74,9 +36,9 @@ export default function SpicesPage() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {spiceProducts.map((prod, idx) => {
             return (
-              <div
+              <Link
                 key={idx}
-                onClick={() => openQuoteModal(prod.name)}
+                href={`/products/spices/${prod.slug}`}
                 className="bg-white rounded-2xl overflow-hidden border border-gray-150 shadow-xs hover:shadow-md hover:border-brand-primary/20 transition-all duration-300 flex flex-col group cursor-pointer"
               >
                 {/* Image container */}
@@ -84,9 +46,9 @@ export default function SpicesPage() {
                   {prod.image ? (
                     <img
                       src={prod.image}
-                      alt={prod.name}
+                      alt={prod.title}
                       className={`w-full h-full group-hover:scale-105 transition-transform duration-500 ${
-                        prod.name === 'Fennel Seeds'
+                        prod.title === 'Fennel Seeds'
                           ? 'object-contain mix-blend-multiply'
                           : 'object-cover'
                       }`}
@@ -99,10 +61,10 @@ export default function SpicesPage() {
                 {/* Label container at bottom */}
                 <div className="p-5 flex-grow flex items-center justify-between border-t border-gray-100 bg-white">
                   <span className="text-sm sm:text-base font-medium text-brand-primary group-hover:text-brand-primary/80 transition-colors duration-300">
-                    {prod.name}
+                    {prod.title}
                   </span>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
