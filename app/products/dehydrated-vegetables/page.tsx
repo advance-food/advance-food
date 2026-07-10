@@ -11,7 +11,7 @@ export default function DehydratedVegetablesPage() {
   const vegProducts = [
     {
       name: "Dehydrated Onion",
-      image: "/images/products/white-onion-flakes.png"
+      image: "/images/products/white-onion.jpg"
     },
     {
       name: "Dehydrated Garlic",

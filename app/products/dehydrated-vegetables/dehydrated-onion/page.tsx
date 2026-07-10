@@ -9,10 +9,10 @@ export default function DehydratedOnionPage() {
   const { openQuoteModal } = useQuoteModal();
 
   const onionProducts = [
-    { name: "Dehydrated White Onion", image: "/images/products/white-onion-flakes.png" },
-    { name: "Dehydrated Pink Onion", image: "/images/products/red-onion-flakes.png" },
-    { name: "Dehydrated Red Onion", image: "/images/products/red-onion-flakes.png" },
-    { name: "Dehydrated Fried Onion", image: "/images/products/fried-onion.png" }
+    { name: "Dehydrated White Onion", image: "/images/products/white-onion.jpg" },
+    { name: "Dehydrated Pink Onion", image: "/images/products/pink-onion.jpeg" },
+    { name: "Dehydrated Red Onion", image: "/images/products/red-onion.png" },
+    { name: "Dehydrated Fried Onion", image: "/images/products/fried-onion.jpg" }
   ];
 
   return (

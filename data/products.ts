@@ -67,7 +67,7 @@ export const products: Product[] = [
       { label: "Packing", value: "14 Kg / 20 Kg" },
       { label: "Quality", value: "A Grade & Commercial Grade" },
     ],
-    image: "/images/products/white-onion-flakes.png",
+    image: "/images/products/white-onion.jpg",
     applications: [
       "Instant noodle seasoning and soup powders",
       "Salad dressings, dipping sauces, and ketchups",
@@ -101,7 +101,7 @@ export const products: Product[] = [
       { label: "Packing", value: "14 Kg / 20 Kg" },
       { label: "Quality", value: "A Grade & Commercial Grade" },
     ],
-    image: "/images/products/red-onion-flakes.png",
+    image: "/images/products/red-onion.png",
     applications: [
       "Traditional South Asian curries, gravies, and stews",
       "Dry seasonings, snack foods, and savory coatings",
@@ -226,7 +226,7 @@ export const products: Product[] = [
       { label: "Applications", value: "Ready-to-eat meals, seasoning, biryani topping" },
       { label: "Packing", value: "10 Kg / 15 Kg Carton Boxes" },
     ],
-    image: "/images/products/fried-onion.png",
+    image: "/images/products/fried-onion.jpg",
     applications: [
       "Toppings for biryanis, hot dogs, burgers, and noodles",
       "Canned soup base flavorings and thickeners",
