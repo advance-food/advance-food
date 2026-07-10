@@ -189,43 +189,7 @@ export default function Header() {
                             href="/products/dehydrated-vegetables"
                             className="block px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
                           >
-                            Dehydrated Ginger
-                          </Link>
-                          <Link
-                            href="/products/dehydrated-vegetables"
-                            className="block px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
-                          >
-                            Dehydrated Green Chilli
-                          </Link>
-                          <Link
-                            href="/products/dehydrated-vegetables"
-                            className="block px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
-                          >
-                            Dehydrated Carrot
-                          </Link>
-                          <Link
-                            href="/products/dehydrated-vegetables"
-                            className="block px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
-                          >
-                            Dehydrated Beet root
-                          </Link>
-                          <Link
-                            href="/products/dehydrated-vegetables"
-                            className="block px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
-                          >
-                            Dehydrated Amchur
-                          </Link>
-                          <Link
-                            href="/products/dehydrated-vegetables"
-                            className="block px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
-                          >
-                            Dehydrated Potato
-                          </Link>
-                          <Link
-                            href="/products/dehydrated-vegetables"
-                            className="block px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
-                          >
-                            Dehydrated Chives
+                            Other Vegetables
                           </Link>
                         </div>
                       </div>
@@ -447,49 +411,7 @@ export default function Header() {
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-left font-semibold text-[15px] py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
                               >
-                                Dehydrated Ginger
-                              </Link>
-                              <Link
-                                href="/products/dehydrated-vegetables"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-left font-semibold text-[15px] py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
-                              >
-                                Dehydrated Green Chilli
-                              </Link>
-                              <Link
-                                href="/products/dehydrated-vegetables"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-left font-semibold text-[15px] py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
-                              >
-                                Dehydrated Carrot
-                              </Link>
-                              <Link
-                                href="/products/dehydrated-vegetables"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-left font-semibold text-[15px] py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
-                              >
-                                Dehydrated Beet root
-                              </Link>
-                              <Link
-                                href="/products/dehydrated-vegetables"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-left font-semibold text-[15px] py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
-                              >
-                                Dehydrated Amchur
-                              </Link>
-                              <Link
-                                href="/products/dehydrated-vegetables"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-left font-semibold text-[15px] py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
-                              >
-                                Dehydrated Potato
-                              </Link>
-                              <Link
-                                href="/products/dehydrated-vegetables"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-left font-semibold text-[15px] py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
-                              >
-                                Dehydrated Chives
+                                Other Vegetables
                               </Link>
                             </div>
                           )}
