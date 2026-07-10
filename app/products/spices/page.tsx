@@ -11,39 +11,39 @@ export default function SpicesPage() {
   const spiceProducts = [
     {
       name: "Red Chilli",
-      image: "/images/products/red-chilli.png"
+      image: "/images/spices/red-chilli.jpg"
     },
     {
       name: "Turmeric",
-      image: "/images/products/turmeric.png"
+      image: "/images/spices/turmeric.jpg"
     },
     {
       name: "Cumin seeds (JEERA)",
-      image: "/images/products/cumin-seeds.png"
+      image: "/images/spices/cumin-seeds.png"
     },
     {
       name: "Coriander Seeds (Dhaniya)",
-      image: "/images/products/coriander-seeds.png"
+      image: "/images/spices/coriander-seeds.jpg"
     },
     {
       name: "Fenugreek Seeds",
-      image: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?q=80&w=600&auto=format&fit=crop"
+      image: "/images/spices/fenugreek-seeds.jpg"
     },
     {
       name: "Ajwain Seeds",
-      image: "https://images.unsplash.com/photo-1509358271058-acd22cc93898?q=80&w=600&auto=format&fit=crop"
+      image: "/images/spices/ajwain-seeds.jpg"
     },
     {
       name: "Fennel Seeds",
-      image: "/images/products/fennel-seeds.png"
+      image: "/images/spices/fennel-seeds.jpg"
     },
     {
       name: "Sesame Seeds",
-      image: "https://images.unsplash.com/photo-1534080564583-6be75777b70a?q=80&w=600&auto=format&fit=crop"
+      image: "/images/spices/sesame-seeds.jpg"
     },
     {
       name: "Mustard Seeds",
-      image: "https://images.unsplash.com/photo-1608797178974-15b35a61d121?q=80&w=600&auto=format&fit=crop"
+      image: "/images/spices/mustard-seeds.jpeg"
     }
   ];
 
@@ -85,7 +85,11 @@ export default function SpicesPage() {
                     <img
                       src={prod.image}
                       alt={prod.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className={`w-full h-full group-hover:scale-105 transition-transform duration-500 ${
+                        prod.name === 'Fennel Seeds'
+                          ? 'object-contain mix-blend-multiply'
+                          : 'object-cover'
+                      }`}
                     />
                   ) : (
                     <div className="text-gray-400 font-bold text-xs uppercase tracking-wider">No Image</div>
