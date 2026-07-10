@@ -50,15 +50,15 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
             {/* Left Content Text */}
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-sky-50 text-brand-primary text-xs font-bold uppercase tracking-wider select-none">
-                <Award size={14} className="shrink-0" />
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sky-50 text-brand-primary text-sm font-bold uppercase tracking-wider select-none">
+                <Award size={16} className="shrink-0" />
                 <span>Our Journey Since 2011</span>
               </div>
-              <h2 className="text-3xl font-extrabold text-gray-900 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
                 Advance Food Industries
               </h2>
-              <p className="text-base text-gray-600 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                 <strong>Advance Food Industries</strong> is a trusted manufacturer, processor and exporter of premium quality food ingredients, specializing in Dehydrated vegetables (especially dehydrated onion and garlic) and a wide spectrum of Indian spices. We are committed to delivering authentic taste, superior flavor, and unmatched food safety to customers across domestic and global markets.
               </p>
             </div>
