@@ -4,16 +4,27 @@ export const spiceProducts: Product[] = [
   {
     slug: "red-chilli",
     title: "Dried Red Chilli",
-    subtitle: "Premium Dry Red Chilli Exporter",
-    desc: "India is recognized as the world's leading producer and exporter of dry red chillies, offering exceptional varieties known for their rich colour, strong pungency, and consistent quality.",
-    detailedDesc: "We are committed to supplying premium export-grade Indian dry red chillies sourced directly from trusted farming regions and processed under strict quality standards. Our chillies are carefully selected, naturally sun-dried, machine cleaned, and graded to meet international buyer specifications. Whether you are an importer, wholesaler, food manufacturer, spice processor, or distributor, we provide reliable solutions for bulk supply with customized packaging and worldwide shipping.",
+    subtitle: "Premium Dry Red Chilli Exporter from India",
+    desc: "India is recognized as the world's leading producer and exporter of dry red chillies, offering exceptional varieties known for their rich colour, strong pungency, and consistent quality. We are committed to supplying premium export-grade Indian dry red chillies sourced directly from trusted farming regions and processed under strict quality standards.",
+    detailedDesc: "Our chillies are carefully selected, naturally sun-dried, machine cleaned, and graded to meet international buyer specifications. Whether you are an importer, wholesaler, food manufacturer, spice processor, or distributor, we provide reliable solutions for bulk supply with customized packaging and worldwide shipping.",
     specs: [
-      { label: "Formats", value: "Whole (Stem/Stemless), Ground, Crushed (IPM & Conventional)" },
-      { label: "Varieties", value: "Teja S17, Sannam S4, 341, Byadgi, DD, Guntur, Kashmiri, Deluxe, Super Deluxe" },
-      { label: "Heat Levels (Low)", value: "12,000 to 20,000 SHU" },
-      { label: "Heat Levels (Medium)", value: "25,000 to 35,000 SHU" },
-      { label: "Heat Levels (Med-High)", value: "40,000 to 50,000 SHU" },
-      { label: "Heat Levels (High)", value: "65,000 to 75,000 SHU" }
+      { label: "Formats Available", value: "Whole Chillies - Stem and Stemless - IPM and Conventional" },
+      { label: "Formats Available", value: "Ground Chillies - IPM and Conventional" },
+      { label: "Formats Available", value: "Crushed Chillies - IPM and Conventional" },
+      { label: "Our Dry Red Chilli Varieties", value: "Teja S17 Chilli" },
+      { label: "Our Dry Red Chilli Varieties", value: "Sannam S4 (334) Chilli" },
+      { label: "Our Dry Red Chilli Varieties", value: "341 Chilli" },
+      { label: "Our Dry Red Chilli Varieties", value: "Byadgi Chilli" },
+      { label: "Our Dry Red Chilli Varieties", value: "Devanur Deluxe (DD)" },
+      { label: "Our Dry Red Chilli Varieties", value: "All Guntur Varieties" },
+      { label: "Our Dry Red Chilli Varieties", value: "Kashmiri" },
+      { label: "Our Dry Red Chilli Varieties", value: "Deluxe" },
+      { label: "Our Dry Red Chilli Varieties", value: "Super Deluxe" },
+      { label: "Our Dry Red Chilli Varieties", value: "Custom Grades as per Buyer Requirements" },
+      { label: "Heat Levels", value: "Low - 12,000 to 20,000 SHU" },
+      { label: "Heat Levels", value: "Medium - 25,000 to 35,000 SHU" },
+      { label: "Heat Levels", value: "Medium-High - 40,000 to 50,000 SHU" },
+      { label: "Heat Levels", value: "High - 65,000 to 75,000 SHU" }
     ],
     image: "/images/spices/red-chilli.jpg",
     applications: [
@@ -32,55 +43,109 @@ export const spiceProducts: Product[] = [
       "Low Moisture Content",
       "Uniform Size & Appearance",
       "Cleaned and Foreign Matter Controlled",
-      "Long Shelf Life & Hygienically Processed"
+      "Long Shelf Life",
+      "Hygienically Processed",
+      "Custom SHU and ASTA specifications available",
+      "Every batch undergoes strict quality inspection to ensure consistency in colour, pungency, moisture, cleanliness, and overall appearance. We can provide laboratory analysis and export documentation based on customer requirements.",
+      "Certificate of Analysis (COA)",
+      "Phytosanitary Certificate",
+      "Health Certificate",
+      "Fumigation Certificate",
+      "SGS/Bureau Veritas Inspection (if required)",
+      "Certificate of Origin",
+      "APEDA & Spice Board Compliance Support"
     ],
     packaging: [
-      "5 kg, 10 kg, 20 kg, 25 kg, 50 kg",
-      "Materials: PP Bags, Jute Bags, Vacuum Packaging, Cartons, Private Label"
+      "5 kg",
+      "10 kg",
+      "20 kg",
+      "25 kg",
+      "50 kg",
+      "Custom Packaging Available",
+      "PP Bags",
+      "Jute Bags",
+      "Vacuum Packaging",
+      "Cartons",
+      "Private Label Packaging"
     ]
   },
   {
     slug: "turmeric",
     title: "Turmeric",
     subtitle: "Premium Indian Turmeric Exporter",
-    desc: "India is the world's largest producer and exporter of turmeric, renowned for its superior quality, vibrant golden-yellow colour, rich aroma, and high curcumin content.",
-    detailedDesc: "We supply premium export-quality turmeric sourced directly from India's leading cultivation regions and processed under strict quality standards to meet international market requirements. Our turmeric is carefully cleaned, sorted, graded, and packed to preserve its natural freshness and purity. We cater to importers, wholesalers, food manufacturers, spice processors, retailers, and private-label brands across the globe.",
+    desc: "India is the world's largest producer and exporter of turmeric, renowned for its superior quality, vibrant golden-yellow colour, rich aroma, and high curcumin content. We supply premium export-quality turmeric sourced directly from India's leading cultivation regions and processed under strict quality standards to meet international market requirements.",
+    detailedDesc: "Our turmeric is carefully cleaned, sorted, graded, and packed to preserve its natural freshness and purity. We cater to importers, wholesalers, food manufacturers, spice processors, retailers, and private-label brands across the globe with reliable supply and competitive pricing.",
     specs: [
-      { label: "Product Range", value: "Fingers (Single & Double Polished), Unpolished, Powder, Organic" },
-      { label: "Varieties", value: "Salem, Erode, Sangli, Nizamabad, Rajapuri, Lakadong, Alleppey" }
+      { label: "Our Product Range", value: "Turmeric Fingers (Single & DoublePolished)" },
+      { label: "Our Product Range", value: "Turmeric Fingers (Unpolished)" },
+      { label: "Our Product Range", value: "Turmeric Powder" },
+      { label: "Our Product Range", value: "Organic Turmeric (On Request)" },
+      { label: "Our Product Range", value: "Custom Grades as per Buyer Specification" },
+      { label: "Popular Indian Turmeric Varieties", value: "Salem Turmeric" },
+      { label: "Popular Indian Turmeric Varieties", value: "Erode Turmeric" },
+      { label: "Popular Indian Turmeric Varieties", value: "Sangli turmeric" },
+      { label: "Popular Indian Turmeric Varieties", value: "Nizamabad Turmeric" },
+      { label: "Popular Indian Turmeric Varieties", value: "Rajapuri Turmeric" },
+      { label: "Popular Indian Turmeric Varieties", value: "Lakadong Turmeric (High Curcumin)" },
+      { label: "Popular Indian Turmeric Varieties", value: "Alleppey Finger Turmeric" }
     ],
     image: "/images/spices/turmeric.jpg",
     applications: [
       "Spice Manufacturing",
       "Food Processing",
       "Curry Powder & Seasoning Blends",
-      "Pharmaceuticals & Nutraceuticals",
+      "Pharmaceuticals",
+      "Nutraceuticals",
       "Herbal Products",
       "Cosmetics & Personal Care",
-      "Restaurants, Food Service, Retail Packaging"
+      "Restaurants & Food Service",
+      "Retail Packaging",
+      "Retail Spice Brands"
     ],
     keyBenefits: [
       "Rich Golden Yellow Colour",
       "High Natural Curcumin Content",
       "Strong Aroma & Authentic Flavour",
       "Machine Cleaned & Hygienically Processed",
-      "Low Moisture Content & 99% Purity",
+      "Low Moisture Content",
+      "99% Purity",
       "Free from Artificial Colours & Preservatives",
-      "Long Shelf Life"
+      "Long Shelf Life",
+      "Quality is our highest priority. Every shipment is carefully inspected to ensure consistency in colour, aroma, purity, moisture, and overall quality. Products can be supplied with laboratory analysis and export documentation according to buyer requirements.",
+      "Certificate of Analysis (COA)",
+      "Phytosanitary Certificate",
+      "Certificate of Origin",
+      "Health Certificate",
+      "Fumigation Certificate",
+      "SGS / Third-Party Inspection (On Request)",
+      "Commercial Invoice & Packing List"
     ],
     packaging: [
-      "5 kg, 10 kg, 20 kg, 25 kg, 50 kg",
-      "Materials: PP Bags, LDPE Bags, Jute Bags, Paper Bags, Vacuum Packaging, Retail & Private Label"
+      "5 kg",
+      "10 kg",
+      "20 kg",
+      "25 kg",
+      "50 kg",
+      "PP Bags",
+      "LDPE Bags",
+      "Jute Bags",
+      "Paper Bags",
+      "Vacuum Packaging",
+      "Retail & Private Label Packaging"
     ]
   },
   {
     slug: "cumin-seeds",
     title: "Cumin Seeds",
     subtitle: "Premium Indian Cumin Seeds Exporter",
-    desc: "India is one of the world's leading producers and exporters of premium-quality cumin seeds, renowned for their distinctive aroma, rich essential oil content, and superior flavour.",
-    detailedDesc: "We export carefully selected cumin seeds sourced directly from the finest farming regions, ensuring consistent quality that meets international food safety and export standards. Our cumin seeds are machine cleaned, sorted, graded, and hygienically packed to preserve their natural freshness and aroma.",
+    desc: "India is one of the world's leading producers and exporters of premium-quality cumin seeds, renowned for their distinctive aroma, rich essential oil content, and superior flavour. We export carefully selected cumin seeds sourced directly from the finest farming regions, ensuring consistent quality that meets international food safety and export standards.",
+    detailedDesc: "Our cumin seeds are machine cleaned, sorted, graded, and hygienically packed to preserve their natural freshness and aroma. We serve importers, wholesalers, spice processors, food manufacturers, retailers, and private-label brands worldwide with reliable supply and competitive pricing.",
     specs: [
-      { label: "Product Range", value: "Whole, Machine Cleaned, Sortex Cleaned, Organic" }
+      { label: "Our Product Range", value: "Whole Cumin Seeds" },
+      { label: "Our Product Range", value: "Machine Cleaned Cumin Seeds" },
+      { label: "Our Product Range", value: "Sortex Cleaned Cumin Seeds" },
+      { label: "Our Product Range", value: "Organic Cumin Seeds (On Request)" },
+      { label: "Our Product Range", value: "Custom Quality Grades as per Buyer Requirements" }
     ],
     image: "/images/spices/cumin-seeds.png",
     applications: [
@@ -90,7 +155,8 @@ export const spiceProducts: Product[] = [
       "Bakery Products",
       "Snacks & Ready-to-Eat Foods",
       "Pickles",
-      "Restaurants & Catering, Retail Spice Packaging"
+      "Restaurants & Catering",
+      "Retail Spice Packaging"
     ],
     keyBenefits: [
       "Premium Export Quality",
@@ -98,22 +164,45 @@ export const spiceProducts: Product[] = [
       "Strong Aroma & Rich Flavour",
       "High Essential Oil Content",
       "Machine Cleaned & Sortex Processed",
-      "Low Moisture Content & High Purity",
-      "Uniform Size & Long Shelf Life"
+      "Low Moisture Content",
+      "High Purity",
+      "Uniform Size",
+      "Long Shelf Life",
+      "Every batch undergoes strict quality checks for purity, moisture, aroma, colour, and cleanliness. We ensure compliance with international export standards and can provide complete laboratory analysis and certification upon request.",
+      "Certificate of Analysis (COA)",
+      "Phytosanitary Certificate",
+      "Certificate of Origin",
+      "Health Certificate",
+      "Fumigation Certificate",
+      "SGS / Third-Party Inspection (On Request)",
+      "Commercial Invoice & Packing List"
     ],
     packaging: [
-      "5 kg, 10 kg, 20 kg, 25 kg, 50 kg",
-      "Materials: PP Bags, LDPE Bags, Jute Bags, Paper Bags, Vacuum Packaging, Retail & Private Label"
+      "5 kg",
+      "10 kg",
+      "20 kg",
+      "25 kg",
+      "50 kg",
+      "PP Bags",
+      "LDPE Bags",
+      "Jute Bags",
+      "Paper Bags",
+      "Vacuum Packaging",
+      "Retail & Private Label Packaging"
     ]
   },
   {
     slug: "coriander-seeds",
     title: "Coriander Seeds",
     subtitle: "Premium Indian Coriander Seeds Exporter",
-    desc: "Valued worldwide for their fresh citrus-like aroma, warm flavour, and high essential oil content.",
-    detailedDesc: "India is one of the leading producers and exporters of premium-quality coriander seeds. We supply export-grade coriander seeds sourced directly from trusted farming regions and processed under stringent quality standards to meet the requirements of global food industries. Our coriander seeds are carefully cleaned, graded, and hygienically packed to preserve their natural freshness, aroma, and nutritional value.",
+    desc: "India is one of the leading producers and exporters of premium-quality coriander seeds, valued worldwide for their fresh citrus-like aroma, warm flavour, and high essential oil content. We supply export-grade coriander seeds sourced directly from trusted farming regions and processed under stringent quality standards to meet the requirements of global food industries.",
+    detailedDesc: "Our coriander seeds are carefully cleaned, graded, and hygienically packed to preserve their natural freshness, aroma, and nutritional value. We serve importers, wholesalers, spice processors, food manufacturers, retailers, and private-label brands with consistent quality, competitive pricing, and dependable worldwide delivery.",
     specs: [
-      { label: "Product Range", value: "Whole, Machine Cleaned, Sortex Cleaned, Organic" }
+      { label: "Our Product Range", value: "Whole Coriander Seeds" },
+      { label: "Our Product Range", value: "Machine Cleaned Coriander Seeds" },
+      { label: "Our Product Range", value: "Sortex Cleaned Coriander Seeds" },
+      { label: "Our Product Range", value: "Organic Coriander Seeds (On Request)" },
+      { label: "Our Product Range", value: "Custom Quality Grades as per Buyer Requirements" }
     ],
     image: "/images/spices/coriander-seeds.jpg",
     applications: [
@@ -123,7 +212,8 @@ export const spiceProducts: Product[] = [
       "Pickles & Sauces",
       "Bakery & Snack Products",
       "Herbal Preparations",
-      "Restaurants, Catering, Retail Packaging"
+      "Restaurants & Catering",
+      "Retail Spice Packaging"
     ],
     keyBenefits: [
       "Premium Export Quality",
@@ -131,65 +221,115 @@ export const spiceProducts: Product[] = [
       "Fresh Aroma & Mild Citrus Flavour",
       "High Essential Oil Content",
       "Machine Cleaned & Sortex Processed",
-      "Low Moisture Content & High Purity",
-      "Uniform Size & Appearance, Long Shelf Life"
+      "Low Moisture Content",
+      "High Purity",
+      "Uniform Size & Appearance",
+      "Long Shelf Life",
+      "Every batch is thoroughly inspected for purity, moisture, colour, aroma, and cleanliness to ensure consistent export quality. Products can be supplied with laboratory reports and export documentation according to customer requirements.",
+      "Certificate of Analysis (COA)",
+      "Phytosanitary Certificate",
+      "Certificate of Origin",
+      "Health Certificate",
+      "Fumigation Certificate",
+      "SGS / Third-Party Inspection (On Request)",
+      "Commercial Invoice & Packing List"
     ],
     packaging: [
-      "5 kg, 10 kg, 20 kg, 25 kg, 50 kg",
-      "Materials: PP Bags, LDPE Bags, Jute Bags, Paper Bags, Vacuum Packaging, Retail & Private Label"
+      "5 kg",
+      "10 kg",
+      "20 kg",
+      "25 kg",
+      "50 kg",
+      "PP Bags",
+      "LDPE Bags",
+      "Jute Bags",
+      "Paper Bags",
+      "Vacuum Packaging",
+      "Retail & Private Label Packaging"
     ]
   },
   {
     slug: "fenugreek-seeds",
     title: "Fenugreek Seeds",
     subtitle: "Premium Indian Fenugreek Seeds Exporter",
-    desc: "Renowned for their rich aroma, distinctive slightly bitter taste, and excellent nutritional value.",
-    detailedDesc: "India is one of the world's largest producers and exporters of premium-quality fenugreek seeds. We supply export-grade fenugreek seeds sourced directly from trusted farming regions and processed under strict quality standards. Our fenugreek seeds are carefully cleaned, graded, and hygienically packed to preserve their natural quality, freshness, and purity.",
+    desc: "India is one of the world's largest producers and exporters of premium-quality fenugreek seeds, renowned for their rich aroma, distinctive slightly bitter taste, and excellent nutritional value. We supply export-grade fenugreek seeds sourced directly from trusted farming regions and processed under strict quality standards to meet the expectations of global food industries.",
+    detailedDesc: "Our fenugreek seeds are carefully cleaned, graded, and hygienically packed to preserve their natural quality, freshness, and purity. We supply importers, wholesalers, spice processors, food manufacturers, retailers, and private-label brands worldwide with consistent quality, competitive pricing, and reliable delivery.",
     specs: [
-      { label: "Product Range", value: "Whole, Machine Cleaned, Sortex Cleaned, Organic" }
+      { label: "Our Product Range", value: "Whole Fenugreek Seeds" },
+      { label: "Our Product Range", value: "Machine Cleaned Fenugreek Seeds" },
+      { label: "Our Product Range", value: "Sortex Cleaned Fenugreek Seeds" },
+      { label: "Our Product Range", value: "Organic Fenugreek Seeds (On Request)" },
+      { label: "Our Product Range", value: "Custom Quality Grades as per Buyer Requirements" }
     ],
     image: "/images/spices/fenugreek-seeds.jpg",
     applications: [
       "Spice Blending",
       "Curry Powder & Seasoning Mixes",
       "Pickles",
-      "Food Processing & Bakery Products",
+      "Food Processing",
+      "Bakery Products",
       "Herbal & Ayurvedic Preparations",
       "Nutraceutical Products",
-      "Restaurants, Catering, Retail Packaging"
+      "Restaurants & Catering",
+      "Retail Spice Packaging"
     ],
     keyBenefits: [
       "Premium Export Quality",
       "Natural Golden Yellow Colour",
       "Rich Aroma & Characteristic Flavour",
       "Machine Cleaned & Sortex Processed",
-      "Low Moisture Content & High Purity",
+      "Low Moisture Content",
+      "High Purity",
       "Uniform Size & Appearance",
-      "Free from Foreign Matter, Long Shelf Life"
+      "Free from Foreign Matter",
+      "Long Shelf Life",
+      "Every batch is thoroughly inspected for purity, moisture, colour, aroma, and cleanliness to ensure consistent export quality. Products can be supplied with laboratory reports and export documentation based on customer requirements.",
+      "Certificate of Analysis (COA)",
+      "Phytosanitary Certificate",
+      "Certificate of Origin",
+      "Health Certificate",
+      "Fumigation Certificate",
+      "SGS / Third-Party Inspection (On Request)",
+      "Commercial Invoice & Packing List"
     ],
     packaging: [
-      "5 kg, 10 kg, 20 kg, 25 kg, 50 kg",
-      "Materials: PP Bags, LDPE Bags, Jute Bags, Paper Bags, Vacuum Packaging, Retail & Private Label"
+      "5 kg",
+      "10 kg",
+      "20 kg",
+      "25 kg",
+      "50 kg",
+      "PP Bags",
+      "LDPE Bags",
+      "Jute Bags",
+      "Paper Bags",
+      "Vacuum Packaging",
+      "Retail & Private Label Packaging"
     ]
   },
   {
     slug: "ajwain-seeds",
     title: "Ajwain Seeds",
     subtitle: "Premium Indian Ajwain (Carom) Seeds Exporter",
-    desc: "Valued worldwide for their strong aroma, distinctive pungent flavour, and high thymol content.",
-    detailedDesc: "India is one of the leading producers and exporters of premium-quality Ajwain (Carom) Seeds. We export carefully selected Ajwain seeds sourced from trusted farming regions and processed under stringent quality standards to meet international food safety and export requirements. Our Ajwain seeds are machine cleaned, graded, and hygienically packed to retain their natural freshness, purity, and essential oils.",
+    desc: "India is one of the leading producers and exporters of premium-quality Ajwain (Carom) Seeds, valued worldwide for their strong aroma, distinctive pungent flavour, and high thymol content. We export carefully selected Ajwain seeds sourced from trusted farming regions and processed under stringent quality standards to meet international food safety and export requirements.",
+    detailedDesc: "Our Ajwain seeds are machine cleaned, graded, and hygienically packed to retain their natural freshness, purity, and essential oils. We supply importers, wholesalers, spice processors, food manufacturers, retailers, and private-label brands worldwide with consistent quality, competitive pricing, and reliable delivery.",
     specs: [
-      { label: "Product Range", value: "Whole, Machine Cleaned, Sortex Cleaned, Organic" }
+      { label: "Our Product Range", value: "Whole Ajwain (Carom) Seeds" },
+      { label: "Our Product Range", value: "Machine Cleaned Ajwain Seeds" },
+      { label: "Our Product Range", value: "Sortex Cleaned Ajwain Seeds" },
+      { label: "Our Product Range", value: "Organic Ajwain Seeds (On Request)" },
+      { label: "Our Product Range", value: "Custom Quality Grades as per Buyer Requirements" }
     ],
     image: "/images/spices/ajwain-seeds.jpg",
     applications: [
-      "Spice Blending & Seasoning Mixes",
+      "Spice Blending",
+      "Seasoning Mixes",
       "Pickles",
-      "Bakery Products & Snack Foods",
+      "Bakery Products",
+      "Snack Foods",
       "Food Processing",
       "Herbal & Ayurvedic Products",
       "Nutraceuticals",
-      "Restaurants, Catering, Retail Packaging"
+      "Retail Spice Packaging"
     ],
     keyBenefits: [
       "Premium Export Quality",
@@ -197,22 +337,45 @@ export const spiceProducts: Product[] = [
       "Rich Essential Oil Content",
       "High Thymol Content",
       "Machine Cleaned & Sortex Processed",
-      "Low Moisture Content & High Purity",
-      "Uniform Size & Appearance, Long Shelf Life"
+      "Low Moisture Content",
+      "High Purity",
+      "Uniform Size & Appearance",
+      "Long Shelf Life",
+      "Every batch is carefully inspected for purity, moisture, aroma, colour, and cleanliness to ensure consistent export quality. We follow strict quality control procedures and can provide laboratory reports and export documentation according to buyer requirements.",
+      "Certificate of Analysis (COA)",
+      "Phytosanitary Certificate",
+      "Certificate of Origin",
+      "Health Certificate",
+      "Fumigation Certificate",
+      "SGS / Third-Party Inspection (On Request)",
+      "Commercial Invoice & Packing List"
     ],
     packaging: [
-      "5 kg, 10 kg, 20 kg, 25 kg, 50 kg",
-      "Materials: PP Bags, LDPE Bags, Jute Bags, Paper Bags, Vacuum Packaging, Retail & Private Label"
+      "5 kg",
+      "10 kg",
+      "20 kg",
+      "25 kg",
+      "50 kg",
+      "PP Bags",
+      "LDPE Bags",
+      "Jute Bags",
+      "Paper Bags",
+      "Vacuum Packaging",
+      "Retail & Private Label Packaging"
     ]
   },
   {
     slug: "fennel-seeds",
     title: "Fennel Seeds",
     subtitle: "Premium Indian Fennel Seeds Exporter",
-    desc: "Renowned for their sweet aroma, refreshing flavour, and high essential oil content.",
-    detailedDesc: "India is one of the world's leading producers and exporters of premium-quality fennel seeds. We supply export-grade fennel seeds sourced directly from trusted farming regions and processed under stringent quality standards to meet the requirements of global food industries. Our fennel seeds are carefully cleaned, graded, and hygienically packed to preserve their natural freshness, purity, and aroma.",
+    desc: "India is one of the world's leading producers and exporters of premium-quality fennel seeds, renowned for their sweet aroma, refreshing flavour, and high essential oil content. We supply export-grade fennel seeds sourced directly from trusted farming regions and processed under stringent quality standards to meet the requirements of global food industries.",
+    detailedDesc: "Our fennel seeds are carefully cleaned, graded, and hygienically packed to preserve their natural freshness, purity, and aroma. We serve importers, wholesalers, spice processors, food manufacturers, retailers, and private-label brands worldwide with consistent quality, competitive pricing, and dependable delivery.",
     specs: [
-      { label: "Product Range", value: "Whole, Machine Cleaned, Sortex Cleaned, Organic" }
+      { label: "Our Product Range", value: "Whole Fennel Seeds" },
+      { label: "Our Product Range", value: "Machine Cleaned Fennel Seeds" },
+      { label: "Our Product Range", value: "Sortex Cleaned Fennel Seeds" },
+      { label: "Our Product Range", value: "Organic Fennel Seeds (On Request)" },
+      { label: "Our Product Range", value: "Custom Quality Grades as per Buyer Requirements" }
     ],
     image: "/images/spices/fennel-seeds.jpg",
     applications: [
@@ -222,7 +385,8 @@ export const spiceProducts: Product[] = [
       "Bakery & Confectionery",
       "Herbal & Ayurvedic Products",
       "Tea & Beverage Blends",
-      "Restaurants, Catering, Retail Packaging"
+      "Restaurants & Catering",
+      "Retail Spice Packaging"
     ],
     keyBenefits: [
       "Premium Export Quality",
@@ -230,22 +394,45 @@ export const spiceProducts: Product[] = [
       "Sweet Aroma & Refreshing Flavour",
       "High Essential Oil Content",
       "Machine Cleaned & Sortex Processed",
-      "Low Moisture Content & High Purity",
-      "Uniform Size & Appearance, Long Shelf Life"
+      "Low Moisture Content",
+      "High Purity",
+      "Uniform Size & Appearance",
+      "Long Shelf Life",
+      "Every batch is carefully inspected for purity, moisture, aroma, colour, and cleanliness to ensure consistent export quality. We follow strict quality control procedures and can provide laboratory reports and export documentation according to customer requirements.",
+      "Certificate of Analysis (COA)",
+      "Phytosanitary Certificate",
+      "Certificate of Origin",
+      "Health Certificate",
+      "Fumigation Certificate",
+      "SGS / Third-Party Inspection (On Request)",
+      "Commercial Invoice & Packing List"
     ],
     packaging: [
-      "5 kg, 10 kg, 20 kg, 25 kg, 50 kg",
-      "Materials: PP Bags, LDPE Bags, Jute Bags, Paper Bags, Vacuum Packaging, Retail & Private Label"
+      "5 kg",
+      "10 kg",
+      "20 kg",
+      "25 kg",
+      "50 kg",
+      "PP Bags",
+      "LDPE Bags",
+      "Jute Bags",
+      "Paper Bags",
+      "Vacuum Packaging",
+      "Retail & Private Label Packaging"
     ]
   },
   {
     slug: "sesame-seeds",
     title: "Sesame Seeds",
-    subtitle: "Premium Indian Sesame Seeds Exporter",
-    desc: "Renowned for their sweet aroma, refreshing flavour, and high essential oil content.",
-    detailedDesc: "India is one of the world's leading producers and exporters of premium-quality fennel seeds [sic], renowned for their sweet aroma, refreshing flavour, and high essential oil content. We supply export-grade seeds sourced directly from trusted farming regions and processed under stringent quality standards.",
+    subtitle: "Premium Indian Fennel Seeds Exporter",
+    desc: "India is one of the world's leading producers and exporters of premium-quality fennel seeds, renowned for their sweet aroma, refreshing flavour, and high essential oil content. We supply export-grade fennel seeds sourced directly from trusted farming regions and processed under stringent quality standards to meet the requirements of global food industries.",
+    detailedDesc: "Our fennel seeds are carefully cleaned, graded, and hygienically packed to preserve their natural freshness, purity, and aroma. We serve importers, wholesalers, spice processors, food manufacturers, retailers, and private-label brands worldwide with consistent quality, competitive pricing, and dependable delivery.",
     specs: [
-      { label: "Product Range", value: "Whole, Machine Cleaned, Sortex Cleaned, Organic" }
+      { label: "Our Product Range", value: "Whole Fennel Seeds" },
+      { label: "Our Product Range", value: "Machine Cleaned Fennel Seeds" },
+      { label: "Our Product Range", value: "Sortex Cleaned Fennel Seeds" },
+      { label: "Our Product Range", value: "Organic Fennel Seeds (On Request)" },
+      { label: "Our Product Range", value: "Custom Quality Grades as per Buyer Requirements" }
     ],
     image: "/images/spices/sesame-seeds.jpg",
     applications: [
@@ -255,7 +442,8 @@ export const spiceProducts: Product[] = [
       "Bakery & Confectionery",
       "Herbal & Ayurvedic Products",
       "Tea & Beverage Blends",
-      "Restaurants, Catering, Retail Packaging"
+      "Restaurants & Catering",
+      "Retail Spice Packaging"
     ],
     keyBenefits: [
       "Premium Export Quality",
@@ -263,22 +451,47 @@ export const spiceProducts: Product[] = [
       "Sweet Aroma & Refreshing Flavour",
       "High Essential Oil Content",
       "Machine Cleaned & Sortex Processed",
-      "Low Moisture Content & High Purity",
-      "Uniform Size & Appearance, Long Shelf Life"
+      "Low Moisture Content",
+      "High Purity",
+      "Uniform Size & Appearance",
+      "Long Shelf Life",
+      "Every batch is carefully inspected for purity, moisture, aroma, colour, and cleanliness to ensure consistent export quality. We follow strict quality control procedures and can provide laboratory reports and export documentation according to customer requirements.",
+      "Certificate of Analysis (COA)",
+      "Phytosanitary Certificate",
+      "Certificate of Origin",
+      "Health Certificate",
+      "Fumigation Certificate",
+      "SGS / Third-Party Inspection (On Request)",
+      "Commercial Invoice & Packing List"
     ],
     packaging: [
-      "5 kg, 10 kg, 20 kg, 25 kg, 50 kg",
-      "Materials: PP Bags, LDPE Bags, Jute Bags, Paper Bags, Vacuum Packaging, Retail & Private Label"
+      "5 kg",
+      "10 kg",
+      "20 kg",
+      "25 kg",
+      "50 kg",
+      "PP Bags",
+      "LDPE Bags",
+      "Jute Bags",
+      "Paper Bags",
+      "Vacuum Packaging",
+      "Retail & Private Label Packaging"
     ]
   },
   {
     slug: "mustard-seeds",
     title: "Mustard Seeds",
     subtitle: "Premium Indian Mustard Seeds Exporter",
-    desc: "Valued for their strong aroma, pungent flavour, and high oil content.",
-    detailedDesc: "India is one of the world's leading producers and exporters of premium-quality mustard seeds, valued for their strong aroma, pungent flavour, and high oil content. We supply export-grade mustard seeds sourced from trusted farming regions and processed under stringent quality standards to meet the requirements of global food manufacturers, spice processors, and wholesale buyers. Our mustard seeds are carefully cleaned, graded, sortex processed, and hygienically packed.",
+    desc: "India is one of the world's leading producers and exporters of premium-quality mustard seeds, valued for their strong aroma, pungent flavour, and high oil content. We supply export-grade mustard seeds sourced from trusted farming regions and processed under stringent quality standards to meet the requirements of global food manufacturers, spice processors, and wholesale buyers.",
+    detailedDesc: "Our mustard seeds are carefully cleaned, graded, sortex processed, and hygienically packed to preserve their natural freshness, purity, and nutritional value. We serve importers, wholesalers, food processors, edible oil manufacturers, retailers, and private-label brands worldwide with consistent quality, competitive pricing, and dependable delivery.",
     specs: [
-      { label: "Product Range", value: "Yellow, Black, Brown, Machine Cleaned, Sortex Cleaned, Organic" }
+      { label: "Our Product Range", value: "Yellow Mustard Seeds" },
+      { label: "Our Product Range", value: "Black Mustard Seeds" },
+      { label: "Our Product Range", value: "Brown Mustard Seeds" },
+      { label: "Our Product Range", value: "Machine Cleaned Mustard Seeds" },
+      { label: "Our Product Range", value: "Sortex Cleaned Mustard Seeds" },
+      { label: "Our Product Range", value: "Organic Mustard Seeds (On Request)" },
+      { label: "Our Product Range", value: "Custom Quality Grades as per Buyer Requirements" }
     ],
     image: "/images/spices/mustard-seeds.jpeg",
     applications: [
@@ -288,20 +501,40 @@ export const spiceProducts: Product[] = [
       "Mustard Oil Production",
       "Food Processing",
       "Sauces & Condiments",
-      "Restaurants, Catering, Retail Packaging"
+      "Restaurants & Catering",
+      "Retail Spice Packaging"
     ],
     keyBenefits: [
       "Premium Export Quality",
       "Strong Aroma & Pungent Flavour",
       "High Oil Content",
       "Machine Cleaned & Sortex Processed",
-      "High Purity & Low Moisture Content",
+      "High Purity",
+      "Low Moisture Content",
       "Uniform Size & Colour",
-      "Free from Foreign Matter, Long Shelf Life"
+      "Free from Foreign Matter",
+      "Long Shelf Life",
+      "Every batch is thoroughly inspected for purity, moisture, colour, aroma, oil content, and cleanliness to ensure consistent export quality. We follow strict quality control procedures and provide laboratory reports and export documentation based on customer requirements.",
+      "Certificate of Analysis (COA)",
+      "Phytosanitary Certificate",
+      "Certificate of Origin",
+      "Health Certificate",
+      "Fumigation Certificate",
+      "SGS / Third-Party Inspection (On Request)",
+      "Commercial Invoice & Packing List"
     ],
     packaging: [
-      "5 kg, 10 kg, 20 kg, 25 kg, 50 kg",
-      "Materials: PP Bags, LDPE Bags, Jute Bags, Paper Bags, Vacuum Packaging, Retail & Private Label"
+      "5 kg",
+      "10 kg",
+      "20 kg",
+      "25 kg",
+      "50 kg",
+      "PP Bags",
+      "LDPE Bags",
+      "Jute Bags",
+      "Paper Bags",
+      "Vacuum Packaging",
+      "Retail & Private Label Packaging"
     ]
   }
 ];

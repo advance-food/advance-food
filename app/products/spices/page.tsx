@@ -48,7 +48,7 @@ export default function SpicesPage() {
                       src={prod.image}
                       alt={prod.title}
                       className={`w-full h-full group-hover:scale-105 transition-transform duration-500 ${
-                        prod.title === 'Fennel Seeds'
+                        prod.slug === 'fennel-seeds'
                           ? 'object-contain mix-blend-multiply'
                           : 'object-cover'
                       }`}
