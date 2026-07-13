@@ -74,6 +74,7 @@ export default function DehydratedVegetablesPage() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {vegProducts.map((prod, idx) => {
             const isOnion = prod.name === "Dehydrated Onion";
+            const isGarlic = prod.name === "Dehydrated Garlic";
             const CardContent = (
               <>
                 {/* Image container */}
@@ -103,6 +104,18 @@ export default function DehydratedVegetablesPage() {
                 <Link
                   key={idx}
                   href="/products/dehydrated-vegetables/dehydrated-onion"
+                  className="bg-white rounded-2xl overflow-hidden border border-gray-150 shadow-xs hover:shadow-md hover:border-brand-primary/20 transition-all duration-300 flex flex-col group cursor-pointer"
+                >
+                  {CardContent}
+                </Link>
+              );
+            }
+
+            if (isGarlic) {
+              return (
+                <Link
+                  key={idx}
+                  href="/products/dehydrated-vegetables/dehydrated-garlic"
                   className="bg-white rounded-2xl overflow-hidden border border-gray-150 shadow-xs hover:shadow-md hover:border-brand-primary/20 transition-all duration-300 flex flex-col group cursor-pointer"
                 >
                   {CardContent}
