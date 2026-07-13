@@ -213,10 +213,42 @@ export const products: Product[] = [
     ]
   },
   {
-    slug: "dehy-fresh-fried-onion",
-    title: "Dehy./Fresh Fried Onion",
+    slug: "dehydrated-fried-onion",
+    title: "Dehydrate Fried Onion",
     subtitle: "Crispy Allium Flakes",
-    desc: "Premium crispy golden-brown fried onions processed from fresh crops, offering exceptional texture and caramelized flavor for global industrial buyers.",
+    desc: "Premium crispy golden-brown dehydrated fried onions processed from fresh crops, offering exceptional texture and caramelized flavor for global industrial buyers.",
+    detailedDesc: "Prepared by frying premium fresh onions in high-quality vegetable oil and then dehydrating. Using advanced technology, we reduce excess oil content to the absolute minimum, resulting in ultra-crispy, flavorful golden-brown flakes. Ideal for quick-service restaurants, ready-to-eat meal manufacturers, and food service groups.",
+    specs: [
+      { label: "Form", value: "Crispy Flakes / Minced" },
+      { label: "Color", value: "Golden Yellow to Dark Brown" },
+      { label: "Oil Content", value: "Low (Centrifugally Drained)" },
+      { label: "Moisture Content", value: "Max 5%" },
+      { label: "Applications", value: "Ready-to-eat meals, seasoning, biryani topping" },
+      { label: "Packing", value: "10 Kg / 15 Kg Carton Boxes" },
+    ],
+    image: "/images/Fried Onion/dehydrate fried onion.webp",
+    applications: [
+      "Toppings for biryanis, hot dogs, burgers, and noodles",
+      "Canned soup base flavorings and thickeners",
+      "Instant food formulations and seasoning mixes",
+      "Savory bakery decorations and toppings"
+    ],
+    keyBenefits: [
+      "Superb crispy crunch that holds up over time",
+      "Rich, natural caramelized onion flavor with no artificial additives",
+      "Extended shelf stability compared to home-fried onions",
+      "Fried using trans-fat-free, quality vegetable oil"
+    ],
+    packaging: [
+      "10 Kg / 15 Kg carton boxes with thick inner aluminum foil bag to preserve crunchiness",
+      "Custom nitrogen-flushed packaging options"
+    ]
+  },
+  {
+    slug: "fresh-fried-onion",
+    title: "Fresh Fried Onion",
+    subtitle: "Crispy Allium Flakes",
+    desc: "Premium crispy golden-brown fresh fried onions, offering exceptional texture and caramelized flavor for global industrial buyers.",
     detailedDesc: "Prepared by frying premium fresh onions in high-quality vegetable oil. Using advanced centrifugal oil-draining technology, we reduce excess oil content to the absolute minimum, resulting in ultra-crispy, flavorful golden-brown flakes. Ideal for quick-service restaurants, ready-to-eat meal manufacturers, and food service groups.",
     specs: [
       { label: "Form", value: "Crispy Flakes / Minced" },
@@ -226,7 +258,7 @@ export const products: Product[] = [
       { label: "Applications", value: "Ready-to-eat meals, seasoning, biryani topping" },
       { label: "Packing", value: "10 Kg / 15 Kg Carton Boxes" },
     ],
-    image: "/images/products/fried-onion.jpg",
+    image: "/images/Fried Onion/Fresh fried onion.jpg",
     applications: [
       "Toppings for biryanis, hot dogs, burgers, and noodles",
       "Canned soup base flavorings and thickeners",

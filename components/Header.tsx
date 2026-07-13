@@ -171,7 +171,7 @@ export default function Header() {
                               </Link>
 
                               <Link
-                                href="/products/dehydrated-vegetables/dehydrated-onion"
+                                href="/products/dehydrated-vegetables/fried-onion"
                                 className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-1.5"
                               >
                                 Fried Onion
@@ -390,7 +390,7 @@ export default function Header() {
                                     </Link>
 
                                     <Link
-                                      href="/products/dehydrated-vegetables/dehydrated-onion"
+                                      href="/products/dehydrated-vegetables/fried-onion"
                                       onClick={() => setIsMobileMenuOpen(false)}
                                       className="text-left font-medium text-sm py-2 px-3 rounded-lg text-gray-500 hover:bg-gray-50 block transition-colors"
                                     >
