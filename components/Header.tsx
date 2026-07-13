@@ -63,7 +63,7 @@ export default function Header() {
             href="/"
             className="flex items-center gap-2 cursor-pointer group text-left"
           >
-            <div className="h-10 w-10 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform">
+            <div className={`h-10 w-10 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-all duration-300 ${!showSolidHeader ? "bg-white p-1 rounded-lg shadow-sm" : ""}`}>
               <img
                 src="/logo.png"
                 alt="Advance Food Logo"
@@ -180,13 +180,13 @@ export default function Header() {
                           </div>
 
                           <Link
-                            href="/products/dehydrated-vegetables"
+                            href="/products/dehydrated-vegetables/dehydrated-garlic"
                             className="block px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
                           >
                             Dehydrated Garlic
                           </Link>
                           <Link
-                            href="/products/dehydrated-vegetables"
+                            href="/products/dehydrated-vegetables/other-vegetables"
                             className="block px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-sky-50 hover:text-brand-primary transition-colors rounded-lg mx-2"
                           >
                             Other Vegetables
@@ -400,14 +400,14 @@ export default function Header() {
                                 )}
                               </div>
                               <Link
-                                href="/products/dehydrated-vegetables"
+                                href="/products/dehydrated-vegetables/dehydrated-garlic"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-left font-semibold text-[15px] py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
                               >
                                 Dehydrated Garlic
                               </Link>
                               <Link
-                                href="/products/dehydrated-vegetables"
+                                href="/products/dehydrated-vegetables/other-vegetables"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-left font-semibold text-[15px] py-2 px-3 rounded-lg text-gray-600 hover:bg-gray-50 block transition-colors"
                               >
