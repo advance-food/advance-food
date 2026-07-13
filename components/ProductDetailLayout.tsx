@@ -81,7 +81,7 @@ export default function ProductDetailLayout({ product, backUrl, backLabel }: Pro
               {/* Image Bento Box */}
               <div className="bg-white rounded-[2rem] p-4 border border-gray-100 shadow-xl shadow-gray-200/50 group relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-                <div className="relative h-[400px] w-full rounded-[1.5rem] overflow-hidden bg-gray-50/50">
+                <div className="relative aspect-square sm:h-[400px] sm:aspect-auto w-full rounded-[1.5rem] overflow-hidden bg-gray-50/50">
                   <img
                     src={product.image}
                     alt={product.title}

@@ -18,7 +18,7 @@ export default function Footer() {
               href="/"
               className="flex items-center gap-2 cursor-pointer text-left"
             >
-              <div className="h-10 w-10 flex items-center justify-center overflow-hidden">
+              <div className="h-10 w-10 flex items-center justify-center overflow-hidden bg-white p-1 rounded-lg">
                 <img
                   src="/logo.png"
                   alt="Advance Food Logo"
