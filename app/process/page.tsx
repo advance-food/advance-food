@@ -22,49 +22,56 @@ export default function ProcessPage() {
       title: "Raw material sourcing",
       desc: "Fresh vegetables, spices, and herbs are procured directly from trusted farmers across Gujarat and nearby regions. Each batch is evaluated for moisture content, freshness, freedom from pesticides, and overall quality before acceptance.",
       qcChecks: ["Farm-direct sourcing", "Pesticide testing", "Seasonal procurement"],
-      icon: Sprout
+      icon: Sprout,
+      image: "/images/process/1 raw material Sourcing.jpg"
     },
     {
       number: "2",
       title: "Washing & cleaning",
       desc: "Raw materials undergo a multi-stage washing process using clean, food-grade water to remove dirt, foreign matter, and surface contaminants, ensuring hygienically clean produce enters processing.",
       qcChecks: ["Multi-stage washing", "Food-grade water", "Foreign matter removal"],
-      icon: Droplets
+      icon: Droplets,
+      image: "/images/process/2 washing.jpg"
     },
     {
       number: "3",
       title: "Peeling, cutting & sizing",
       desc: "Produce is peeled where applicable and precision-cut into uniform sizes — slices, granules, minced, or powder grade — as per product specification and buyer requirement. Uniformity ensures consistent dehydration results.",
       qcChecks: ["Uniform sizing", "Custom cut grades", "Slices / granules / powder"],
-      icon: Crop
+      icon: Crop,
+      image: "/images/process/3 peeling , Cutting.jpg"
     },
     {
       number: "4",
       title: "Dehydration / drying",
       desc: "Cut material is loaded into our industrial dehydration units and dried at carefully controlled temperatures and airflow rates. The process preserves colour, aroma, and nutritional value while reducing moisture to safe export levels (typically below 6-8%).",
       qcChecks: ["Temperature controlled", "Aroma preserved", "6-8% moisture target"],
-      icon: Thermometer
+      icon: Thermometer,
+      image: "/images/process/4 dehydrated.jpg"
     },
     {
       number: "5",
       title: "Quality inspection & sorting",
       desc: "Dried product is inspected on vibro-sifters and optical/manual sorters to remove discoloured, undersized, or defective pieces. Lab testing checks moisture %, microbial counts, colour value, and compliance with FSSAI and ISO 22000:2018.",
       qcChecks: ["FSSAI compliant", "ISO 22000:2018", "Lab-tested every batch"],
-      icon: ShieldCheck
+      icon: ShieldCheck,
+      image: "/images/process/5 quality inspection.jpg"
     },
     {
       number: "6",
       title: "Packaging & labelling",
       desc: "Approved product is packed in food-grade laminated pouches, HDPE bags, or cartons as per client requirement — from 1 kg retail packs to 25 kg bulk export bags. Each pack is labelled with batch number, manufacturing date, and all regulatory information.",
       qcChecks: ["1 kg - 25 kg options", "Food-grade packaging", "Batch traceability"],
-      icon: Box
+      icon: Box,
+      image: "/images/process/6 packing.jpg"
     },
     {
       number: "7",
       title: "Storage & dispatch",
       desc: "Finished goods are stored in a cool, dry, hygienic warehouse. Domestic orders are dispatched via road freight; export orders are shipped via JNPT/Mundra ports under APEDA registration with full documentation including COA, COO, and phytosanitary certificates.",
       qcChecks: ["APEDA registered", "Mundra / JNPT ports", "Full export documentation"],
-      icon: Truck
+      icon: Truck,
+      image: "/images/process/7 Storage & Dispatch.jpg"
     }
   ];
 
@@ -109,6 +116,15 @@ export default function ProcessPage() {
                     <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl pointer-events-none" />
 
                     <div className="relative z-10">
+                      {step.image && (
+                        <div className="mb-6 rounded-2xl overflow-hidden aspect-[16/9]">
+                          <img 
+                            src={step.image} 
+                            alt={step.title} 
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                          />
+                        </div>
+                      )}
                       {/* Top Row: Icon & Title */}
                       <div className="flex items-center gap-3.5 pr-4 sm:pr-8 mb-5">
                         <div className="w-12 h-12 rounded-2xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all duration-300 shrink-0">
