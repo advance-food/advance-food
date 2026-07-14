@@ -15,7 +15,7 @@ export default function DehydratedVegetablesPage() {
     },
     {
       name: "Dehydrated Garlic",
-      image: "/images/products/garlic-flakes.png"
+      image: "/images/Dehydrated Garlic.jpeg"
     },
     {
       name: "Dehydrated Ginger",

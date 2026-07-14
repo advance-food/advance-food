@@ -33,7 +33,7 @@ export const products: Product[] = [
       { label: "Packing", value: "20 Kg / 25 Kg" },
       { label: "Quality", value: "A Grade & Commercial Grade" },
     ],
-    image: "/images/products/garlic-flakes.png",
+    image: "/images/Dehydrated Garlic.jpeg",
     applications: [
       "Seasoning blends, dry rubs, and marinades",
       "Canned food, instant soups, and gravies",
