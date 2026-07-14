@@ -33,7 +33,7 @@ export default function DehydratedOnionPage() {
             Dehydrated Vegetables
           </span>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 leading-tight">
-            Dehydrated Onion
+            Dehydrated Onion | Advanced Onion Dehydration Plant
           </h1>
           <div className="h-1.5 w-16 bg-brand-primary mt-4 rounded-full mx-auto md:mx-0"></div>
         </div>

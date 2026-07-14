@@ -7,8 +7,8 @@ import WhatsAppButton from "../components/WhatsAppButton";
 import { QuoteModalProvider } from "../context/QuoteModalContext";
 
 export const metadata: Metadata = {
-  title: "Top Supplier of Dehydrated Onion, Garlic and Spices | Export and Wholesale",
-  description: "Advance Food - Your trusted partner in global food trade. Premium processor and exporter of dehydrated garlic, dehydrated onion, and specialty spice powders to over 11+ countries.",
+  title: "Advance Food | Premium Food Ingredients Exporter",
+  description: "Advance Food is a premium food ingredients exporter. Your trusted partner in global food trade as a top food ingredients exporters. Processor of dehydrated garlic, onion, and spices.",
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",

@@ -367,8 +367,8 @@ export const spiceProducts: Product[] = [
   {
     slug: "fennel-seeds",
     title: "Fennel Seeds",
-    subtitle: "Premium Indian Fennel Seeds Exporter",
-    desc: "India is one of the world's leading producers and exporters of premium-quality fennel seeds, renowned for their sweet aroma, refreshing flavour, and high essential oil content. We supply export-grade fennel seeds sourced directly from trusted farming regions and processed under stringent quality standards to meet the requirements of global food industries.",
+    subtitle: "Fennel Seeds Exporter Manufacturer | Premium Indian Exporter",
+    desc: "India is one of the world's leading producers and exporters of premium-quality fennel seeds, renowned for their sweet aroma, refreshing flavour, and high essential oil content. We specialize in the export of fennel seed sourced directly from trusted farming regions and processed under stringent quality standards to meet the requirements of global food industries.",
     detailedDesc: "Our fennel seeds are carefully cleaned, graded, and hygienically packed to preserve their natural freshness, purity, and aroma. We serve importers, wholesalers, spice processors, food manufacturers, retailers, and private-label brands worldwide with consistent quality, competitive pricing, and dependable delivery.",
     specs: [
       { label: "Our Product Range", value: "Whole Fennel Seeds" },
