@@ -44,6 +44,7 @@ export default function DehydratedOnionPage() {
               const isWhiteOnion = item.name === "Dehydrated White Onion";
               const isPinkOnion = item.name === "Dehydrated Pink Onion";
               const isRedOnion = item.name === "Dehydrated Red Onion";
+              const isFriedOnion = item.name === "Dehydrated Fried Onion";
 
               const CardContent = (
                 <>
@@ -69,6 +70,7 @@ export default function DehydratedOnionPage() {
               if (isWhiteOnion) href = "/products/dehydrated-vegetables/dehydrated-onion/white";
               if (isPinkOnion) href = "/products/dehydrated-vegetables/dehydrated-onion/pink";
               if (isRedOnion) href = "/products/dehydrated-vegetables/dehydrated-onion/red";
+              if (isFriedOnion) href = "/products/dehydrated-vegetables/fried-onion/dehydrated-fried-onion";
 
               if (href) {
                 return (
