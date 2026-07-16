@@ -4,8 +4,18 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
+import { Montserrat, Open_Sans } from "next/font/google";
 import { QuoteModalProvider } from "../context/QuoteModalContext";
 
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-open-sans",
+});
 export const metadata: Metadata = {
   title: "Advance Food | Premium Food Ingredients Exporter",
   description: "Advance Food is a premium food ingredients exporter. Your trusted partner in global food trade as a top food ingredients exporters. Processor of dehydrated garlic, onion, and spices.",
@@ -71,7 +81,7 @@ export default function RootLayout({
   const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-NQWB310SDQ";
 
   return (
-    <html lang="en" className="h-full antialiased scroll-smooth">
+    <html lang="en" className={`h-full antialiased scroll-smooth ${montserrat.variable} ${openSans.variable}`}>
       <head>
         <link rel="preload" as="video" href="/video/hero-bg-vid.mp4" type="video/mp4" />
         {/* Google Analytics - Must be in <head> for Google Search Console Verification */}
