@@ -110,7 +110,7 @@ export const products: Product[] = [
     ],
     keyBenefits: [
       "Retains authentic sweet-sharp flavor profile of fresh red onions",
-      "Visually appealing natural reddish-pink color",
+      "Visually appealing natural reddish-red color",
       "Drastically reduces preparation labor and wastage in bulk kitchens",
       "Highly stable shelf life at room temperature"
     ],

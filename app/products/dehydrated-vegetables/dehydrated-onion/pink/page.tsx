@@ -9,7 +9,11 @@ export default function DehydratedPinkOnionPage() {
 
   const product = {
     ...productData,
-    title: "Dehydrated Pink Onion"
+    title: "Dehydrated Pink Onion",
+    image: "/images/products/pink-onion.jpeg",
+    desc: productData.desc.replace("red onions", "pink onions"),
+    detailedDesc: productData.detailedDesc.replace("red and pink", "pink").replace("reddish-pink", "pink"),
+    specs: productData.specs.map(spec => spec.label === "Color" ? { ...spec, value: "Pink" } : spec)
   };
 
   return (
