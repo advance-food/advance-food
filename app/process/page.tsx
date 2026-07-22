@@ -117,7 +117,7 @@ export default function ProcessPage() {
 
                     <div className="relative z-10">
                       {step.image && (
-                        <div className="mb-6 rounded-2xl overflow-hidden aspect-[16/9]">
+                        <div className="mb-6 rounded-2xl overflow-hidden aspect-[16/9] md:hidden">
                           <img 
                             src={step.image} 
                             alt={step.title} 
@@ -168,24 +168,35 @@ export default function ProcessPage() {
                   </div>
                 );
 
+                const imageJSX = step.image ? (
+                  <div className="hidden md:block w-full rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 relative group hover:-translate-y-1.5 h-full min-h-[300px] border-4 border-white/60 bg-white">
+                    <img 
+                      src={step.image} 
+                      alt={step.title} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 absolute inset-0" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  </div>
+                ) : null;
+
                 return (
                   <div
                     key={idx}
-                    className="flex flex-col md:flex-row justify-between items-center w-full relative"
+                    className="flex flex-col md:flex-row justify-between items-stretch w-full relative"
                   >
-                    {/* Left Column (Even index holds card, Odd is empty) */}
+                    {/* Left Column */}
                     <div className="w-full md:w-[calc(50%-35px)] flex justify-end z-10 pl-10 sm:pl-14 md:pl-0">
-                      {!isEven && cardJSX}
+                      {!isEven ? cardJSX : imageJSX}
                     </div>
 
-                    {/* Central/Left Timeline Circle Node (Mobile left, Desktop center) */}
+                    {/* Central/Left Timeline Circle Node */}
                     <div className="absolute left-4 sm:left-6 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-gradient-to-r from-sky-400 to-sky-500 z-20 border-4 border-white flex items-center justify-center shadow-md select-none top-8 sm:top-10 md:top-1/2 md:-translate-y-1/2">
                       <span className="text-white text-[10px] font-black">{step.number}</span>
                     </div>
 
-                    {/* Right Column (Odd index holds card, Even is empty) */}
+                    {/* Right Column */}
                     <div className="w-full md:w-[calc(50%-35px)] flex justify-start z-10 pl-10 sm:pl-14 md:pl-0">
-                      {isEven && cardJSX}
+                      {isEven ? cardJSX : imageJSX}
                     </div>
                   </div>
                 );
