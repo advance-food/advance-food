@@ -11,31 +11,38 @@ export default function OtherVegetablesPage() {
   const vegProducts = [
     {
       name: "Dehydrated Ginger",
-      image: "/images/vegetables/Dehydrated Ginger.jpg"
+      image: "/images/vegetables/Dehydrated Ginger.jpg",
+      slug: "dehydrated-ginger"
     },
     {
       name: "Dehydrated Green Chilli",
-      image: "/images/vegetables/Dehydrated Green Chilli.jpg"
+      image: "/images/vegetables/Dehydrated Green Chilli.jpg",
+      slug: "dehydrated-green-chilli"
     },
     {
       name: "Dehydrated Carrot",
-      image: "/images/vegetables/Dehydrated Carrot.jpg"
+      image: "/images/vegetables/Dehydrated Carrot.jpg",
+      slug: "dehydrated-carrot"
     },
     {
       name: "Dehydrated Beet root",
-      image: "/images/vegetables/Dehydrated Beet root.jpg"
+      image: "/images/vegetables/Dehydrated Beet root.jpg",
+      slug: "dehydrated-beetroot"
     },
     {
       name: "Dehydrated Amchur",
-      image: "/images/vegetables/Dehydrated Amchur.jpg"
+      image: "/images/vegetables/Dehydrated Amchur.jpg",
+      slug: "dehydrated-amchur"
     },
     {
       name: "Dehydrated Potato",
-      image: "/images/vegetables/Dehydrated Potato.jpg"
+      image: "/images/vegetables/Dehydrated Potato.jpg",
+      slug: "dehydrated-potato"
     },
     {
       name: "Dehydrated Chives",
-      image: "/images/vegetables/Dehydrated Chives.jpg"
+      image: "/images/vegetables/Dehydrated Chives.jpg",
+      slug: "dehydrated-chives"
     }
   ];
 
@@ -65,9 +72,9 @@ export default function OtherVegetablesPage() {
         {/* Simple Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {vegProducts.map((prod, idx) => (
-            <div
+            <Link
               key={idx}
-              onClick={() => openQuoteModal(prod.name)}
+              href={`/products/dehydrated-vegetables/other-vegetables/${prod.slug}`}
               className="bg-white rounded-2xl overflow-hidden border border-gray-150 shadow-xs hover:shadow-md hover:border-brand-primary/20 transition-all duration-300 flex flex-col group cursor-pointer"
             >
               {/* Image container */}
@@ -89,7 +96,7 @@ export default function OtherVegetablesPage() {
                   {prod.name}
                 </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

@@ -128,12 +128,14 @@ export default function ProductDetailLayout({ product, backUrl, backLabel }: Pro
                 </div>
                 
                 <div className="prose prose-gray max-w-none">
-                  <p className="text-lg text-gray-600 leading-relaxed font-medium">
+                  <p className="text-lg text-gray-600 leading-relaxed font-medium mb-4">
                     {product.desc}
                   </p>
-                  <p className="text-base text-gray-500 leading-relaxed mt-4">
-                    {product.detailedDesc}
-                  </p>
+                  {product.detailedDesc && product.detailedDesc.split('\n\n').map((paragraph, index) => (
+                    <p key={index} className="text-base text-gray-500 leading-relaxed mb-4 last:mb-0">
+                      {paragraph}
+                    </p>
+                  ))}
                 </div>
               </div>
             </div>

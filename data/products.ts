@@ -431,5 +431,356 @@ export const products: Product[] = [
     packaging: [
       "20/25 Kg fiber drums or carton boxes with inner barrier film"
     ]
+  },
+  {
+    slug: "dehydrated-carrot",
+    title: "Dehydrated Carrot",
+    subtitle: "Premium Quality",
+    desc: "Dehydrated Carrot is made from carefully selected fresh carrots that are washed, peeled, sliced, and gently dehydrated to preserve their natural color, flavor, nutrients, and long shelf life. It is widely used in the food processing industry as a convenient and cost-effective ingredient.",
+    detailedDesc: "",
+    specs: [
+      { label: "Types / Varieties", value: "Carrot Flakes, Carrot Chopped, Carrot Minced, Carrot Granules, Carrot Powder" },
+      { label: "Quality", value: "100% Natural, Premium Grade" },
+      { label: "Moisture", value: "Max. 7–8%" },
+      { label: "Foreign Matter", value: "Nil" },
+      { label: "Free from", value: "insects and impurities" },
+      { label: "Non-GMO", value: "Yes" },
+      { label: "Suitability", value: "Suitable for export quality" },
+      { label: "Manufacturing", value: "Manufactured under strict food safety standards" },
+      { label: "Shelf Life", value: "Up to 24 months when stored in a cool, dry place in airtight packaging." },
+      { label: "Origin", value: "India" },
+      { label: "Availability", value: "Year-round supply in bulk export quantities." }
+    ],
+    image: "/images/products/white-onion.jpg",
+    applications: [
+      "Instant Soups",
+      "Noodles & Pasta",
+      "Ready-to-Eat Meals",
+      "Seasoning & Spice Blends",
+      "Snack Foods",
+      "Frozen Foods",
+      "Baby Food",
+      "Pet Food",
+      "Bakery Products",
+      "Food Service & HoReCa",
+      "Vegetable Mixes",
+      "Health Food Products"
+    ],
+    keyBenefits: [
+      "Bright orange natural color",
+      "Sweet, fresh carrot flavor",
+      "High rehydration capacity",
+      "No artificial colors or preservatives",
+      "Long shelf life",
+      "Easy to store and transport",
+      "Uniform particle size",
+      "Hygienically processed"
+    ],
+    packaging: [
+      "1 kg Food Grade Pouch",
+      "5 kg Food Grade Bag",
+      "10 kg Carton",
+      "20 kg Carton",
+      "25 kg PP Bag with Inner Liner",
+      "Customized private label packaging available"
+    ]
+  },
+  {
+    slug: "dehydrated-ginger",
+    title: "Dehydrated Ginger",
+    subtitle: "Premium Quality",
+    desc: "Dehydrated Ginger is produced from carefully selected fresh ginger roots that are washed, peeled (or unpeeled, as required), sliced, and gently dehydrated to retain their natural aroma, pungent flavor, and nutritional properties. It offers excellent shelf life and is widely used by food manufacturers, spice processors, and the beverage industry.",
+    detailedDesc: "",
+    specs: [
+      { label: "Types / Varieties", value: "Ginger Flakes, Ginger Chopped, Ginger Minced, Ginger Granules, Ginger Powder" },
+      { label: "Quality", value: "100% Natural, Premium Export Quality" },
+      { label: "Moisture", value: "Max. 7–8%" },
+      { label: "Purity", value: "Free from foreign matter and impurities" },
+      { label: "Non-GMO", value: "Yes" },
+      { label: "Particle size", value: "Uniform particle size" },
+      { label: "Manufacturing", value: "Manufactured under strict food safety standards" },
+      { label: "Suitability", value: "Suitable for food processing and export markets" },
+      { label: "Shelf Life", value: "Up to 24 months when stored in a cool, dry place in airtight packaging." },
+      { label: "Origin", value: "India" },
+      { label: "Availability", value: "Year-round supply in bulk quantities for domestic and export markets." }
+    ],
+    image: "/images/products/white-onion.jpg",
+    applications: [
+      "Spice Blends & Seasonings",
+      "Tea & Herbal Infusions",
+      "Instant Soups",
+      "Ready-to-Eat Foods",
+      "Curry Mixes",
+      "Sauces & Marinades",
+      "Bakery & Confectionery",
+      "Beverages",
+      "Health & Nutraceutical Products",
+      "Pickles",
+      "Snack Seasonings",
+      "HoReCa & Food Service"
+    ],
+    keyBenefits: [
+      "Strong, natural ginger aroma",
+      "Characteristic spicy and pungent taste",
+      "Light cream to pale yellow color",
+      "High rehydration capacity",
+      "No artificial colors or preservatives",
+      "Long shelf life",
+      "Hygienically processed",
+      "Easy to store and transport"
+    ],
+    packaging: [
+      "1 kg Food Grade Pouch",
+      "5 kg Food Grade Bag",
+      "10 kg Carton",
+      "20 kg Carton",
+      "25 kg PP Bag with Food Grade Inner Liner",
+      "Customized private label and bulk packaging available"
+    ]
+  },
+  {
+    slug: "dehydrated-amchur",
+    title: "Dehydrated Amchur (Dry Mango)",
+    subtitle: "Premium Quality",
+    desc: "Dehydrated Amchur is produced from carefully selected unripe green mangoes that are washed, peeled, sliced, dehydrated, and finely ground to preserve their natural tangy flavor, aroma, and nutritional value. It is a popular ingredient in spice blends and food processing, offering a distinctive sour taste without adding moisture.",
+    detailedDesc: "",
+    specs: [
+      { label: "Types / Varieties", value: "Amchur Flakes, Amchur Powder" },
+      { label: "Quality", value: "100% Natural, Premium Export Quality" },
+      { label: "Moisture", value: "Max. 7–8%" },
+      { label: "Purity", value: "Free from foreign matter and impurities" },
+      { label: "Non-GMO", value: "Yes" },
+      { label: "Texture", value: "Fine and consistent texture" },
+      { label: "Manufacturing", value: "Manufactured under strict food safety standards" },
+      { label: "Suitability", value: "Suitable for domestic and export markets" }
+    ],
+    image: "/images/products/white-onion.jpg",
+    applications: [
+      "Spice Blends & Seasonings",
+      "Curry Powders",
+      "Chaat Masala",
+      "Snacks & Namkeen",
+      "Pickles",
+      "Sauces & Chutneys",
+      "Instant Food Mixes",
+      "Ready-to-Eat Meals",
+      "Marinades",
+      "Bakery & Savory Products",
+      "HoReCa & Food Service"
+    ],
+    keyBenefits: [
+      "Natural tangy and sour flavor",
+      "Light cream to pale beige color",
+      "Rich fruity aroma",
+      "100% natural with no artificial colors or preservatives",
+      "Long shelf life",
+      "Hygienically processed",
+      "Uniform particle size",
+      "Easy to store and transport"
+    ],
+    packaging: [
+      "1 kg Food Grade Pouch",
+      "5 kg Food Grade Bag",
+      "10 kg Carton",
+      "20 kg Carton",
+      "25 kg PP Bag with Food Grade Inner Liner",
+      "Customized private label and bulk packaging available"
+    ]
+  },
+  {
+    slug: "dehydrated-green-chilli",
+    title: "Dehydrated Green Chilli",
+    subtitle: "Premium Quality",
+    desc: "Dehydrated Green Chilli is manufactured from carefully selected fresh green chillies that are washed, trimmed, sliced, and gently dehydrated to retain their natural green color, pungent flavor, and aroma. It is widely used by food manufacturers, seasoning companies, and ready-to-eat food processors for consistent heat and long shelf life.",
+    detailedDesc: "",
+    specs: [
+      { label: "Types / Varieties", value: "Green Chilli Flakes, Green Chilli Powder" },
+      { label: "Quality", value: "100% Natural, Premium Export Quality" },
+      { label: "Moisture", value: "Max. 7–8%" },
+      { label: "Purity", value: "Free from foreign matter and impurities" },
+      { label: "Non-GMO", value: "Yes" },
+      { label: "Quality consistency", value: "Uniform size and consistent quality" },
+      { label: "Manufacturing", value: "Manufactured under strict food safety standards" },
+      { label: "Suitability", value: "Suitable for domestic and export markets" }
+    ],
+    image: "/images/products/white-onion.jpg",
+    applications: [
+      "Spice Blends & Seasonings",
+      "Instant Noodles & Pasta",
+      "Ready-to-Eat & Ready-to-Cook Foods",
+      "Snack Seasonings",
+      "Sauces & Dips",
+      "Pickles",
+      "Frozen Foods",
+      "Meat & Seafood Seasonings",
+      "Bakery & Savory Products",
+      "HoReCa & Food Service",
+      "Food Processing Industry"
+    ],
+    keyBenefits: [
+      "Fresh green color",
+      "Sharp, natural pungent flavor",
+      "Characteristic chilli aroma",
+      "High rehydration capacity",
+      "No artificial colors or preservatives",
+      "Hygienically processed",
+      "Long shelf life",
+      "Uniform particle size"
+    ],
+    packaging: [
+      "1 kg Food Grade Pouch",
+      "5 kg Food Grade Bag",
+      "10 kg Carton",
+      "20 kg Carton",
+      "25 kg PP Bag with Food Grade Inner Liner",
+      "Customized private label and bulk packaging available"
+    ]
+  },
+  {
+    slug: "dehydrated-beetroot",
+    title: "Dehydrated Beetroot",
+    subtitle: "Premium Quality",
+    desc: "Dehydrated Beetroot is produced from carefully selected fresh beetroots that are washed, peeled, sliced, and gently dehydrated to preserve their natural deep red color, earthy flavor, and nutritional value. It is widely used in the food, beverage, bakery, and health food industries due to its natural color and long shelf life.",
+    detailedDesc: "",
+    specs: [
+      { label: "Types / Varieties", value: "Beetroot Flakes, Beetroot Powder" },
+      { label: "Quality", value: "100% Natural, Premium Export Quality" },
+      { label: "Moisture", value: "Max. 7–8%" },
+      { label: "Purity", value: "Free from foreign matter and impurities" },
+      { label: "Non-GMO", value: "Yes" },
+      { label: "Quality consistency", value: "Uniform size and consistent quality" },
+      { label: "Manufacturing", value: "Manufactured under strict food safety standards" },
+      { label: "Suitability", value: "Suitable for domestic and export markets" }
+    ],
+    image: "/images/products/white-onion.jpg",
+    applications: [
+      "Health & Nutritional Products",
+      "Smoothies & Functional Beverages",
+      "Bakery & Confectionery",
+      "Soups & Ready-to-Eat Meals",
+      "Seasoning & Spice Blends",
+      "Snack Foods",
+      "Natural Food Coloring",
+      "Instant Food Mixes",
+      "Pet Food",
+      "HoReCa & Food Service",
+      "Food Processing Industry"
+    ],
+    keyBenefits: [
+      "Deep natural red color",
+      "Rich earthy flavor and aroma",
+      "Excellent rehydration properties",
+      "No artificial colors or preservatives",
+      "Hygienically processed",
+      "Long shelf life",
+      "Uniform particle size",
+      "Easy to store and transport"
+    ],
+    packaging: [
+      "1 kg Food Grade Pouch",
+      "5 kg Food Grade Bag",
+      "10 kg Carton",
+      "20 kg Carton",
+      "25 kg PP Bag with Food Grade Inner Liner",
+      "Customized private label and bulk packaging available"
+    ]
+  },
+  {
+    slug: "dehydrated-potato",
+    title: "Dehydrated Potato",
+    subtitle: "Premium Quality",
+    desc: "Dehydrated Potato is produced from carefully selected fresh potatoes that are washed, peeled, sliced, diced, or shredded and gently dehydrated to preserve their natural taste, color, and nutritional value. It is widely used by food manufacturers for its convenience, consistent quality, and extended shelf life.",
+    detailedDesc: "",
+    specs: [
+      { label: "Types / Varieties", value: "Potato Flakes, Potato Powder" },
+      { label: "Quality", value: "100% Natural, Premium Export Quality" },
+      { label: "Moisture", value: "Max. 7–8%" },
+      { label: "Purity", value: "Free from foreign matter and impurities" },
+      { label: "Non-GMO", value: "Yes" },
+      { label: "Quality consistency", value: "Uniform size and consistent quality" },
+      { label: "Manufacturing", value: "Manufactured under strict food safety standards" },
+      { label: "Suitability", value: "Suitable for domestic and export markets" }
+    ],
+    image: "/images/products/white-onion.jpg",
+    applications: [
+      "Instant Mashed Potatoes",
+      "Soups & Sauces",
+      "Ready-to-Eat & Ready-to-Cook Meals",
+      "Instant Noodles & Pasta",
+      "Snack Foods",
+      "Seasoning & Spice Blends",
+      "Frozen Food Products",
+      "Bakery & Savory Products",
+      "Potato Mixes",
+      "HoReCa & Food Service",
+      "Food Processing Industry"
+    ],
+    keyBenefits: [
+      "Natural cream to light yellow color",
+      "Mild potato flavor and aroma",
+      "Excellent rehydration properties",
+      "No artificial colors or preservatives",
+      "Hygienically processed",
+      "Long shelf life",
+      "Uniform particle size",
+      "Easy to store, handle, and transport"
+    ],
+    packaging: [
+      "1 kg Food Grade Pouch",
+      "5 kg Food Grade Bag",
+      "10 kg Carton",
+      "20 kg Carton",
+      "25 kg PP Bag with Food Grade Inner Liner",
+      "Customized private label and bulk packaging available"
+    ]
+  },
+  {
+    slug: "dehydrated-chives",
+    title: "Dehydrated Chives",
+    subtitle: "Premium Quality",
+    desc: "Dehydrated Chives are made from freshly harvested chive leaves that are carefully cleaned, cut, and gently dehydrated to preserve their natural green color, mild onion-like flavor, and aroma. They are widely used in the food processing industry as a convenient ingredient for enhancing the taste and appearance of various food products.",
+    detailedDesc: "",
+    specs: [
+      { label: "Types / Varieties", value: "Chive Flakes, Chive Cuts, Chive Granules, Chive Powder" },
+      { label: "Quality", value: "100% Natural, Premium Export Quality" },
+      { label: "Moisture", value: "Max. 7–8%" },
+      { label: "Purity", value: "Free from foreign matter and impurities" },
+      { label: "Non-GMO", value: "Yes" },
+      { label: "Quality consistency", value: "Uniform size and consistent quality" },
+      { label: "Manufacturing", value: "Manufactured under strict food safety standards" },
+      { label: "Suitability", value: "Suitable for domestic and export markets" }
+    ],
+    image: "/images/products/white-onion.jpg",
+    applications: [
+      "Seasoning & Spice Blends",
+      "Soups & Sauces",
+      "Instant Noodles & Pasta",
+      "Ready-to-Eat & Ready-to-Cook Meals",
+      "Snack Seasonings",
+      "Salad Dressings",
+      "Dips & Spreads",
+      "Bakery & Savory Products",
+      "Frozen Foods",
+      "HoReCa & Food Service",
+      "Food Processing Industry"
+    ],
+    keyBenefits: [
+      "Bright natural green color",
+      "Mild onion-like flavor and fresh aroma",
+      "Excellent flavor retention",
+      "High rehydration capacity",
+      "No artificial colors or preservatives",
+      "Hygienically processed",
+      "Long shelf life",
+      "Uniform particle size"
+    ],
+    packaging: [
+      "1 kg Food Grade Pouch",
+      "5 kg Food Grade Bag",
+      "10 kg Carton",
+      "20 kg Carton",
+      "25 kg PP Bag with Food Grade Inner Liner",
+      "Customized private label and bulk packaging available"
+    ]
   }
 ];
