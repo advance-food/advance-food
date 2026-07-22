@@ -88,7 +88,7 @@ export default function AboutPage() {
               {/* Lower-Left Image (Tilted Counter-Clockwise, Higher z-index, Overlaps) */}
               <div className="absolute bottom-10 left-6 sm:left-16 w-[45%] sm:w-[40%] h-[60%] z-20 rounded shadow-[0_10px_25px_rgba(0,0,0,0.2)] border-[6px] sm:border-[8px] border-white bg-white -rotate-[5deg] group">
                 <img
-                  src="https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=600&auto=format&fit=crop"
+                  src="/images/444.jpeg"
                   alt="Advance Food premium ingredients"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
