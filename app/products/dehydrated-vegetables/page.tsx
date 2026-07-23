@@ -11,39 +11,48 @@ export default function DehydratedVegetablesPage() {
   const vegProducts = [
     {
       name: "Dehydrated Onion",
-      image: "/images/products/white-onion.jpg"
+      image: "/images/products/white-onion.jpg",
+      href: "/products/dehydrated-vegetables/dehydrated-onion"
     },
     {
       name: "Dehydrated Garlic",
-      image: "/images/Dehydrated Garlic.jpeg"
+      image: "/images/Dehydrated Garlic.jpeg",
+      href: "/products/dehydrated-vegetables/dehydrated-garlic"
     },
     {
       name: "Dehydrated Ginger",
-      image: "/images/vegetables/Dehydrated Ginger.jpg"
+      image: "/images/vegetables/Dehydrated Ginger.jpg",
+      href: "/products/dehydrated-vegetables/other-vegetables/dehydrated-ginger"
     },
     {
       name: "Dehydrated Green Chilli",
-      image: "/images/vegetables/Dehydrated Green Chilli.jpg"
+      image: "/images/vegetables/Dehydrated Green Chilli.jpg",
+      href: "/products/dehydrated-vegetables/other-vegetables/dehydrated-green-chilli"
     },
     {
       name: "Dehydrated Carrot",
-      image: "/images/vegetables/Dehydrated Carrot.jpg"
+      image: "/images/vegetables/Dehydrated Carrot.jpg",
+      href: "/products/dehydrated-vegetables/other-vegetables/dehydrated-carrot"
     },
     {
       name: "Dehydrated Beet root",
-      image: "/images/vegetables/Dehydrated Beet root.jpg"
+      image: "/images/vegetables/Dehydrated Beet root.jpg",
+      href: "/products/dehydrated-vegetables/other-vegetables/dehydrated-beetroot"
     },
     {
       name: "Dehydrated Amchur",
-      image: "/images/vegetables/Dehydrated Amchur.jpg"
+      image: "/images/vegetables/Dehydrated Amchur.jpg",
+      href: "/products/dehydrated-vegetables/other-vegetables/dehydrated-amchur"
     },
     {
       name: "Dehydrated Potato",
-      image: "/images/vegetables/Dehydrated Potato.jpg"
+      image: "/images/vegetables/Dehydrated Potato.jpg",
+      href: "/products/dehydrated-vegetables/other-vegetables/dehydrated-potato"
     },
     {
       name: "Dehydrated Chives",
-      image: "/images/vegetables/Dehydrated Chives.jpg"
+      image: "/images/vegetables/Dehydrated Chives.jpg",
+      href: "/products/dehydrated-vegetables/other-vegetables/dehydrated-chives"
     }
   ];
 
@@ -72,67 +81,33 @@ export default function DehydratedVegetablesPage() {
 
         {/* Simple Grid (No grouping) */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {vegProducts.map((prod, idx) => {
-            const isOnion = prod.name === "Dehydrated Onion";
-            const isGarlic = prod.name === "Dehydrated Garlic";
-            const CardContent = (
-              <>
-                {/* Image container */}
-                <div className="aspect-square w-full relative overflow-hidden bg-gray-50 select-none flex items-center justify-center">
-                  {prod.image ? (
-                    <img
-                      src={prod.image}
-                      alt={prod.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  ) : (
-                    <div className="text-gray-400 font-bold text-xs uppercase tracking-wider">No Image</div>
-                  )}
-                </div>
-
-                {/* Label container at bottom */}
-                <div className="p-5 flex-grow flex items-center justify-between border-t border-gray-100 bg-white">
-                  <span className="text-sm sm:text-base font-medium text-brand-primary group-hover:text-brand-primary/80 transition-colors duration-300">
-                    {prod.name}
-                  </span>
-                </div>
-              </>
-            );
-
-            if (isOnion) {
-              return (
-                <Link
-                  key={idx}
-                  href="/products/dehydrated-vegetables/dehydrated-onion"
-                  className="bg-white rounded-2xl overflow-hidden border border-gray-150 shadow-xs hover:shadow-md hover:border-brand-primary/20 transition-all duration-300 flex flex-col group cursor-pointer"
-                >
-                  {CardContent}
-                </Link>
-              );
-            }
-
-            if (isGarlic) {
-              return (
-                <Link
-                  key={idx}
-                  href="/products/dehydrated-vegetables/dehydrated-garlic"
-                  className="bg-white rounded-2xl overflow-hidden border border-gray-150 shadow-xs hover:shadow-md hover:border-brand-primary/20 transition-all duration-300 flex flex-col group cursor-pointer"
-                >
-                  {CardContent}
-                </Link>
-              );
-            }
-
-            return (
-              <div
-                key={idx}
-                onClick={() => openQuoteModal(prod.name)}
-                className="bg-white rounded-2xl overflow-hidden border border-gray-150 shadow-xs hover:shadow-md hover:border-brand-primary/20 transition-all duration-300 flex flex-col group cursor-pointer"
-              >
-                {CardContent}
+          {vegProducts.map((prod, idx) => (
+            <Link
+              key={idx}
+              href={prod.href}
+              className="bg-white rounded-2xl overflow-hidden border border-gray-150 shadow-xs hover:shadow-md hover:border-brand-primary/20 transition-all duration-300 flex flex-col group cursor-pointer"
+            >
+              {/* Image container */}
+              <div className="aspect-square w-full relative overflow-hidden bg-gray-50 select-none flex items-center justify-center">
+                {prod.image ? (
+                  <img
+                    src={prod.image}
+                    alt={prod.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <div className="text-gray-400 font-bold text-xs uppercase tracking-wider">No Image</div>
+                )}
               </div>
-            );
-          })}
+
+              {/* Label container at bottom */}
+              <div className="p-5 flex-grow flex items-center justify-between border-t border-gray-100 bg-white">
+                <span className="text-sm sm:text-base font-medium text-brand-primary group-hover:text-brand-primary/80 transition-colors duration-300">
+                  {prod.name}
+                </span>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
 

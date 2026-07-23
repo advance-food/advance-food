@@ -214,7 +214,7 @@ export const products: Product[] = [
   },
   {
     slug: "dehydrated-fried-onion",
-    title: "Dehydrate Fried Onion",
+    title: "Dehydrated Fried Onion",
     subtitle: "Crispy Allium Flakes",
     desc: "Premium crispy golden-brown dehydrated fried onions processed from fresh crops, offering exceptional texture and caramelized flavor for global industrial buyers.",
     detailedDesc: "Prepared by frying premium fresh onions in high-quality vegetable oil and then dehydrating. Using advanced technology, we reduce excess oil content to the absolute minimum, resulting in ultra-crispy, flavorful golden-brown flakes. Ideal for quick-service restaurants, ready-to-eat meal manufacturers, and food service groups.",

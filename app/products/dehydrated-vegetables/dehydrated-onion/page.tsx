@@ -12,7 +12,7 @@ export default function DehydratedOnionPage() {
     { name: "Dehydrated White Onion", image: "/images/products/white-onion.jpg" },
     { name: "Dehydrated Pink Onion", image: "/images/products/pink-onion.jpeg" },
     { name: "Dehydrated Red Onion", image: "/images/products/red-onion.png" },
-    { name: "Dehydrated Fried Onion", image: "/images/products/fried-onion.jpg" }
+    { name: "Fried Onion", image: "/images/products/fried-onion.jpg" }
   ];
 
   return (
@@ -40,62 +40,62 @@ export default function DehydratedOnionPage() {
 
         {/* Sub-products Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {onionProducts.map((item, itemIdx) => {
-              const isWhiteOnion = item.name === "Dehydrated White Onion";
-              const isPinkOnion = item.name === "Dehydrated Pink Onion";
-              const isRedOnion = item.name === "Dehydrated Red Onion";
-              const isFriedOnion = item.name === "Dehydrated Fried Onion";
+          {onionProducts.map((item, itemIdx) => {
+            const isWhiteOnion = item.name === "Dehydrated White Onion";
+            const isPinkOnion = item.name === "Dehydrated Pink Onion";
+            const isRedOnion = item.name === "Dehydrated Red Onion";
+            const isFriedOnion = item.name === "Dehydrated Fried Onion" || item.name === "Fried Onion";
 
-              const CardContent = (
-                <>
-                  {/* Image container */}
-                  <div className="aspect-square w-full relative overflow-hidden bg-gray-50 select-none">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
+            const CardContent = (
+              <>
+                {/* Image container */}
+                <div className="aspect-square w-full relative overflow-hidden bg-gray-50 select-none">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
 
-                  {/* Label container at bottom */}
-                  <div className="p-5 flex-grow flex items-center justify-between border-t border-gray-100 bg-white">
-                    <span className="text-sm sm:text-base font-medium text-brand-primary group-hover:text-brand-primary/80 transition-colors duration-300">
-                      {item.name}
-                    </span>
-                  </div>
-                </>
-              );
+                {/* Label container at bottom */}
+                <div className="p-5 flex-grow flex items-center justify-between border-t border-gray-100 bg-white">
+                  <span className="text-sm sm:text-base font-medium text-brand-primary group-hover:text-brand-primary/80 transition-colors duration-300">
+                    {item.name}
+                  </span>
+                </div>
+              </>
+            );
 
-              let href = "";
-              if (isWhiteOnion) href = "/products/dehydrated-vegetables/dehydrated-onion/white";
-              if (isPinkOnion) href = "/products/dehydrated-vegetables/dehydrated-onion/pink";
-              if (isRedOnion) href = "/products/dehydrated-vegetables/dehydrated-onion/red";
-              if (isFriedOnion) href = "/products/dehydrated-vegetables/fried-onion/dehydrated-fried-onion";
+            let href = "";
+            if (isWhiteOnion) href = "/products/dehydrated-vegetables/dehydrated-onion/white";
+            if (isPinkOnion) href = "/products/dehydrated-vegetables/dehydrated-onion/pink";
+            if (isRedOnion) href = "/products/dehydrated-vegetables/dehydrated-onion/red";
+            if (isFriedOnion) href = "/products/dehydrated-vegetables/fried-onion";
 
-              if (href) {
-                return (
-                  <Link
-                    key={itemIdx}
-                    href={href}
-                    className="bg-white rounded-2xl overflow-hidden border border-gray-150 shadow-xs hover:shadow-md hover:border-brand-primary/20 transition-all duration-300 flex flex-col group cursor-pointer"
-                  >
-                    {CardContent}
-                  </Link>
-                );
-              }
-
+            if (href) {
               return (
-                <div
+                <Link
                   key={itemIdx}
-                  onClick={() => openQuoteModal(item.name)}
+                  href={href}
                   className="bg-white rounded-2xl overflow-hidden border border-gray-150 shadow-xs hover:shadow-md hover:border-brand-primary/20 transition-all duration-300 flex flex-col group cursor-pointer"
                 >
                   {CardContent}
-                </div>
+                </Link>
               );
-            })}
-          </div>
+            }
+
+            return (
+              <div
+                key={itemIdx}
+                onClick={() => openQuoteModal(item.name)}
+                className="bg-white rounded-2xl overflow-hidden border border-gray-150 shadow-xs hover:shadow-md hover:border-brand-primary/20 transition-all duration-300 flex flex-col group cursor-pointer"
+              >
+                {CardContent}
+              </div>
+            );
+          })}
         </div>
+      </div>
 
       {/* Conversion Banner leading to Contact */}
       <section className="py-16 bg-brand-dark text-white relative overflow-hidden">
