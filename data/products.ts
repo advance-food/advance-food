@@ -451,7 +451,7 @@ export const products: Product[] = [
       { label: "Origin", value: "India" },
       { label: "Availability", value: "Year-round supply in bulk export quantities." }
     ],
-    image: "/images/products/white-onion.jpg",
+    image: "/images/vegetables/Dehydrated Carrot.jpg",
     applications: [
       "Instant Soups",
       "Noodles & Pasta",
@@ -504,7 +504,7 @@ export const products: Product[] = [
       { label: "Origin", value: "India" },
       { label: "Availability", value: "Year-round supply in bulk quantities for domestic and export markets." }
     ],
-    image: "/images/products/white-onion.jpg",
+    image: "/images/vegetables/Dehydrated Ginger.jpg",
     applications: [
       "Spice Blends & Seasonings",
       "Tea & Herbal Infusions",
@@ -554,7 +554,7 @@ export const products: Product[] = [
       { label: "Manufacturing", value: "Manufactured under strict food safety standards" },
       { label: "Suitability", value: "Suitable for domestic and export markets" }
     ],
-    image: "/images/products/white-onion.jpg",
+    image: "/images/vegetables/Dehydrated Amchur.jpg",
     applications: [
       "Spice Blends & Seasonings",
       "Curry Powders",
@@ -603,7 +603,7 @@ export const products: Product[] = [
       { label: "Manufacturing", value: "Manufactured under strict food safety standards" },
       { label: "Suitability", value: "Suitable for domestic and export markets" }
     ],
-    image: "/images/products/white-onion.jpg",
+    image: "/images/vegetables/Dehydrated Green Chilli.jpg",
     applications: [
       "Spice Blends & Seasonings",
       "Instant Noodles & Pasta",
@@ -652,7 +652,7 @@ export const products: Product[] = [
       { label: "Manufacturing", value: "Manufactured under strict food safety standards" },
       { label: "Suitability", value: "Suitable for domestic and export markets" }
     ],
-    image: "/images/products/white-onion.jpg",
+    image: "/images/vegetables/Dehydrated Beet root.jpg",
     applications: [
       "Health & Nutritional Products",
       "Smoothies & Functional Beverages",
@@ -701,7 +701,7 @@ export const products: Product[] = [
       { label: "Manufacturing", value: "Manufactured under strict food safety standards" },
       { label: "Suitability", value: "Suitable for domestic and export markets" }
     ],
-    image: "/images/products/white-onion.jpg",
+    image: "/images/vegetables/Dehydrated Potato.jpg",
     applications: [
       "Instant Mashed Potatoes",
       "Soups & Sauces",
@@ -750,7 +750,7 @@ export const products: Product[] = [
       { label: "Manufacturing", value: "Manufactured under strict food safety standards" },
       { label: "Suitability", value: "Suitable for domestic and export markets" }
     ],
-    image: "/images/products/white-onion.jpg",
+    image: "/images/vegetables/Dehydrated Chives.jpg",
     applications: [
       "Seasoning & Spice Blends",
       "Soups & Sauces",
